@@ -1,0 +1,18 @@
+{
+  "name": "music-style",
+  "version": "1.0.0",
+  "description": "To develop musicstyle Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "MusicStyle"
+  },
+  "keywords": [
+    "music"
+  ],
+  "author": "Berkley Lim (Hyunsik Lim)",
+  "license": "ISC"
+}
