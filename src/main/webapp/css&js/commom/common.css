@@ -8,8 +8,13 @@ a {color: #333;}
 .header {
   width:100%;
   height: 100px;
-  background-color: #3b8822;
+  background-color: #fa0;
   color: #ccc;
+
+  /*여긴 임시*/
+  display: flex;
+  padding-left: 200px;
+  align-items: center;
 }
 
 /***************** 본문 css **********************/
@@ -23,7 +28,7 @@ a {color: #333;}
 .footer {
   width:100%;
   height: 250px;
-  background-color: #3b8822;
+  background-color: #fa0;
   color: #333;
 }
 .ft-content {
