@@ -13,9 +13,28 @@ a {color: #333;}
 }
 
 .hd-content1 {
-  display: flex;
+  display:flex;
+  align-items: center;
   width: 1200px;
   height: 100px;
+  margin: 0 auto;
+}
+
+.header_logo {
+  display:flex;
+  width:200px;
+}
+
+.header_search {
+  width:700px;
+}
+
+.header_language {
+  width:100px;
+}
+
+.header_mymenu {
+  width:200px;
 }
 
 .hd-content2 {
@@ -23,6 +42,7 @@ a {color: #333;}
   align-items: center;
   width: 1200px;
   height: 50px;
+  margin: 0 auto;
 }
 
 /***************** 본문 css **********************/

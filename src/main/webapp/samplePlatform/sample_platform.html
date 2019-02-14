@@ -12,16 +12,31 @@
             <!-- 헤더 작성 : 맴버, 소개, 곡목록, 악보, 음원, 커뮤니티, 다국어기능, 검색 -->
             <div class="header">
                 <div class="hd-content1">
-                    <div class="col-sm-2 header_logo">
+                    <div class="header_logo">
                         <a href="">로고(추가예정)<img src=""></a>
                     </div>
-                    <div class="col-sm-6 header_search">
-                        <input type="text"> 검색
+                    <div class="header_search">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div role="separator" class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </div>
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                        </div>
                     </div>
-                    <div class="col-sm-1 header_language">
+                    <div class="header_language">
                         다국어기능
                     </div>
-                    마이메뉴 등등
+                    <div class="header_mymenu">
+                        마이메뉴 등등
+                    </div>
+                    
                 </div>
                 <div class="hd-content2">
                     <nav class="navbar navbar-dark bg-dark">
