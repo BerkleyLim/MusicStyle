@@ -3,6 +3,7 @@
         <!-- 제목을 뮤직스타일 -->
         <title>뮤직스타일</title>
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="../css&js/commom/common.css">
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     </head>
@@ -18,16 +19,23 @@
                     <div class="header_search">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                <button class="btn btn-outline-secondary dropdown-toggle" 
+                                    type="button" data-toggle="dropdown" 
+                                    aria-haspopup="true" aria-expanded="false">전체</button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">전체</a>
+                                    <a class="dropdown-item" href="#">곡목록</a>
+                                    <a class="dropdown-item" href="#">악보</a>
+                                    <a class="dropdown-item" href="#">음원</a>
+                                    <a class="dropdown-item" href="#">커뮤니티</a>
+                                    <a class="dropdown-item" href="#">레슨샘찾기</a>
+                                    <a class="dropdown-item" href="#">연습실정보</a>
                                     <div role="separator" class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
                             </div>
-                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <i class="fas fa-search"></i>
                         </div>
                     </div>
                     <div class="header_language">
