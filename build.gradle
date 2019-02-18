@@ -1,51 +1,51 @@
 //build.gradle
-// - gradle buildµµ±¸°¡ »ç¿ëÇÏ´Â ¼³Á¤ÆÄÀÏ
-//gradle buildµµ±¸°¡ ½ÇÇàÇÒ ¸í·ÉÀ» ÀÛ¼º
+// - gradle buildï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//gradle buildï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
 
-// 1) gradle ºôµå µµ±¸°¡ »ç¿ëÇÒ ÇÃ·¯±×ÀÎ Ãß°¡
-//  ÀÌÅ¬¸³½º °ü·Ã ÆÄÀÏÀ» »ý¼ºÇÏ°í Á¦°ÅÇÏ´Â ¸í·É¾î°¡ µé¾îÀÖ´Â ÇÃ·¯±×ÀÎ
+// 1) gradle ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+//  ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½É¾î°¡ ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½
 apply plugin: 'eclipse-wtp'
 
-//ÀÚ¹Ù°ü·Ã ÀÛ¾÷À» ¼öÇàÇÒ ¸í·É¾î°¡ µé¾îÀÖ´Â ÇÃ·¯±×ÀÎ
+//ï¿½Ú¹Ù°ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½É¾î°¡ ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½
 apply plugin: 'java'
 
-//Web Archive¸¦ ´Ù·ç´Â ¸í·É¾î°¡ µé¾îÀÖ´Â ÇÁ·¯±×ÀÎ
+//Web Archiveï¿½ï¿½ ï¿½Ù·ï¿½ï¿½ ï¿½ï¿½É¾î°¡ ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 apply plugin: 'war'
 
 compileJava {
-    //compile½Ã ¼Ò½ºÆÄÀÏÀÇ ÀÎÄÚµù ¿É¼ÇÀ» Ãß°¡
+    //compileï¿½ï¿½ ï¿½Ò½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ ï¿½É¼ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
     options.encoding = 'UTF-8'
-    //ÇØ´ç ¹öÀüÀÌ ¾Æ´Ñ °æ¿ì ¿¡·¯¸¦ ¶ç¿ò
+    //ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     sourceCompatibility = "1.8"
     targetCompatibility = "1.8"
 }
 
 
 war {
-	//war »ý¼º½Ã »ç¿ëÇÒ ÆÄÀÏ¸í ¼³Á¤
-	//¹Ì»ç¿ë½Ã ÇÁ·ÎÁ§Æ® ¸íÀ¸·Î ¼³Á¤
+	//war ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½
+	//ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	archiveName = "interior.war"
 }
 
-//ÇÁ·ÎÁ§Æ®¿¡¼­ »ç¿ëÇÏ´Â ÀÇÁ¸ ¶óÀÌºê·¯¸®¸¦ ¿ÜºÎÀÇ µð·ºÅä¸®·Î º¹»çÇÏ´Â ¸í·É Ãß°¡
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ï¿½ï¿½ ï¿½Üºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 task copyJars(type: Copy) {
 	from configurations.runtime
 	into "build/libs/deps"
 }
 
-//ÀÇÁ¸¶óÀÌºê·¯¸® ´Ù¿î·Îµå ÇÒ ¼­¹ö ÁöÁ¤
-//ÀÇÁ¸¶óÀÌºê·¯¸® Á¤º¸
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ ï¿½Ù¿ï¿½Îµï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 repositories {
-    mavenCentral() // https://repo.maven.apache.org/maven2/ ¼­¹ö¿¡¼­ ´Ù¿î·Îµå ¹Þ´Â´Ù.
+    mavenCentral() // https://repo.maven.apache.org/maven2/ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½Îµï¿½ ï¿½Þ´Â´ï¿½.
 }
 
-//´Ù¿î·Îµå ÇÒ ÀÇÁ¸¶óÀÌºê·¯¸® ÁöÁ¤
+//ï¿½Ù¿ï¿½Îµï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 dependencies {
 // MySQL JDBC Driver Library
 // https://mvnrepository.com/artifact/mysql/mysql-connector-java
 //compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
 
-//Mariadb JDBC ¶óÀÌºê·¯¸®
+//Mariadb JDBC ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½
 // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
 // compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.5'
     
@@ -55,23 +55,27 @@ compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.46'
     
 // MyBatis Liberary
 // https://mvnrepository.com/artifact/org.mybatis/mybatis
-compile group: 'org.mybatis', name: 'mybatis', version: '3.4.6'
+compile group: 'org.mybatis', name: 'mybatis', version: '3.5.0'
 
 //MyBatis-Spring Library
 // https://mvnrepository.com/artifact/org.mybatis/mybatis-spring
-compile group: 'org.mybatis', name: 'mybatis-spring', version: '1.3.2'
+compile group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.0'
 
 //Spring web MVC
 // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
-compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.6.RELEASE'
+compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.5.RELEASE'
 
 //Spring IOC container Library
 // https://mvnrepository.com/artifact/org.springframework/spring-context
-//compile group: 'org.springframework', name: 'spring-context', version: '5.0.6.RELEASE'
+//compile group: 'org.springframework', name: 'spring-context', version: '5.1.5.RELEASE'
 
 //Spring jdbc Library
 // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
-compile group: 'org.springframework', name: 'spring-jdbc', version: '5.0.6.RELEASE'
+compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.5.RELEASE'
+
+// https://mvnrepository.com/artifact/org.springframework/spring-aop
+compile group: 'org.springframework', name: 'spring-aop', version: '5.1.5.RELEASE'
+
 
 //Datasource Library(DB ConnectionPool)
 // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
@@ -81,49 +85,51 @@ compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
 
 
 
-// JSP È®Àå ÅÂ±× JSTL ¶óÀÌºê·¯¸®
+// JSP È®ï¿½ï¿½ ï¿½Â±ï¿½ JSTL ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½
 compile group: 'javax.servlet', name: 'jstl', version: '1.2'
 
-//JSON µ¥ÀÌÅÍ Ã³¸® ¶óÀÌºê·¯¸®
+//JSON ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½
 
-//@Controller°¡ ºÙÀº ÀÏ¹ÝÀûÀÎ ÆäÀÌÁö ÄÁÆ®·Ñ·¯ÀÇ ¿äÃ»ÇÚµé·¯¸¦ ½ÇÇàÇÒ ¶§´Â
-// ¿äÃ» ÆÄ¶ó¹ÌÅÍÀÇ ¹®ÀÚ¿­À» int³ª booleanµÕ À¸·Î ¹Ù²Ù±â À§ÇØ °´Ã¼·Î ¸¸µé°Å³ª ¸®ÅÏ °ªÀ» ´Ù¸¥ Å¸ÀÔÀ¸·Î ¸¸µé±â À§ÇØ 
-// ±âº»À¸·Î ÀåÂøµÈ º¯È¯±â¸¦ »ç¿ëÇÑ´Ù.
-// ±× º¯È¯±â´Â HttpMessageConverter ±ÔÄ¢¿¡ µû ¸¸µç º¯È¯±âÀÌ´Ù.
-//±×·±µ¥ @RestController ¾Ö³ëÅ×ÀÌ¼ÇÀÌ ºÙÀº ÆäÀÌÁö ÄÁÆ®·Ñ·¯ÀÇ ¿äÃ»ÇÚµé·¯¸¦ ½ÇÇàÇÒ ¶§
-//½ºÇÁ¸µÀº ±âº»µ¥ÀÌÅÍ º¯È¯±â·Î MappingJackson2HttpMessageConverter¸¦ »ç¿ëÇÑ´Ù
-//ÀÌ ÄÁ¹öÅÍ´Â JSONµ¥ÀÌÅÍ¸¦ Ã³¸®ÇÒ ¼ö ÀÖ´Ù.
+//@Controllerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Úµé·¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+// ï¿½ï¿½Ã» ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ intï¿½ï¿½ booleanï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ù±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
+// ï¿½âº»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+// ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ HttpMessageConverter ï¿½ï¿½Ä¢ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½Ì´ï¿½.
+//ï¿½×·ï¿½ï¿½ï¿½ @RestController ï¿½Ö³ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Úµé·¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ MappingJackson2HttpMessageConverterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
+//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ JSONï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
 // MappingJackson2HttpMessageConverter?
-// => ¿äÃ» ÆÄ¶ó¹ÌÅÍ·Î JSON µ¥ÀÌÅÍ¸¦ ¹ÞÀ¸¸é ¿äÃ»ÇÚµé·¯¸¦ ¹ÞÀ» ´ë ÀÚ¹Ù°´Ã¼·Î º¯È¯½ÃÅ²´Ù.
-// => ¿äÃ»ÇÚµé·¯°¡ ÀÚ¹Ù°´Ã¼¸¦ ¸®ÅÏÇÒ ¶§ (ÀÚ¹Ù °´Ã¼¸¦ Å¬¶óÀÌ¾ðÆ®·Î º¸³¾ ¶§) JSON ¹®ÀÚ¿­·Î º¯È¯ÇÑ´Ù.
+// => ï¿½ï¿½Ã» ï¿½Ä¶ï¿½ï¿½ï¿½Í·ï¿½ JSON ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Úµé·¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ú¹Ù°ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½Å²ï¿½ï¿½.
+// => ï¿½ï¿½Ã»ï¿½Úµé·¯ï¿½ï¿½ ï¿½Ú¹Ù°ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ (ï¿½Ú¹ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½) JSON ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 //
-//ÁÖÀÇ!
-// MappingJackson2HttpMessageConverter¸¦ »ç¿ëÇÏ·Á¸é ÀÌ °´Ã¼°¡ ÀÇÁ¸ÇÏ´Â
-// ¶óÀÌºê·¯¸®¸¦ ´ÙÀ½°ú°°ÀÌ Ãß°¡ÇØ¾ßÇÑ´Ù.
+//ï¿½ï¿½ï¿½ï¿½!
+// MappingJackson2HttpMessageConverterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½
+// ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
 // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
 compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
 
-//±×·±µ¥ JSONµ¥ÀÌÅÍ¸¦ Ã³¸®ÇÒ ¶§
-//MappingJackson2HttpMessageConverter´ë½Å GsonHttpMessageConverter¸¦ »ç¿ëÇØµµ µÈ´Ù.
-//´Ü GsonHttpMessageConverter¸¦ »ç¿ëÇÏ·Á¸é ÀÌ °´Ã¼°¡ ÀÇÁ¸ÇÏ´Â ¶óÀÌºê·¯¸®¸¦ ´ÙÀ½°ú °°ÀÌ Ãß°¡ÇØ¾ßÇÑ´Ù.
+//ï¿½×·ï¿½ï¿½ï¿½ JSONï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+//MappingJackson2HttpMessageConverterï¿½ï¿½ï¿½ GsonHttpMessageConverterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Øµï¿½ ï¿½È´ï¿½.
+//ï¿½ï¿½ GsonHttpMessageConverterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
 // https://mvnrepository.com/artifact/com.google.code.gson/gson
 //compile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
-//Jackson or Gson µÑ Áß ÇÏ³ª¸¸ »ç¿ëÇÒ °Í
+//Jackson or Gson ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-//½æ³×ÀÏ ÀÌ¹ÌÁö »ý¼º ¶óÀÌºê·¯¸®
+//ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½
 // https://mvnrepository.com/artifact/net.coobird/thumbnailator
 compile group: 'net.coobird', name: 'thumbnailator', version: '0.4.8'
     
 //Java Servlet API Library
-// => ¾î¶² ¼­ºí¸´ ±ÔÄ¢¿¡ µû¶ó ¸¸µç ¼­¹öÀÎÁö¿¡ µû¶ó ÇØ´ç ¹öÀüÀÇ ¶óÀÌºê·¯¸®¸¦ ´Ù¿î·Îµå ¹Þ¾Æ¾ßÇÑ´Ù.
-//    Áï, ¼­¹ö¿Í °°Àº ¹öÀüÀÇ ¶óÀÌºê·¯¸®¸¦ ´Ù¿î·Îµå ¹Þ¾Æ¼­ »ç¿ëÇØ¾ß¸¸ ±× ¼­¹ö¿¡¼­ ½ÇÇàÇÒ ¼ö ÀÖ´Ù.
+// => ï¿½î¶² ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½Îµï¿½ ï¿½Þ¾Æ¾ï¿½ï¿½Ñ´ï¿½.
+//    ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½Îµï¿½ ï¿½Þ¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¾ß¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
 // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
 providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 
-//AOP °ü·Ã ¶óÀÌºê·¯¸®
+//AOP ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½
 // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
 compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.1'
 
+// Android Settings library
+compile group: 'com.android.support', name: 'appcompat-v7', version: '24.1.1'
 
 
 }
