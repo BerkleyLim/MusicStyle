@@ -27,8 +27,15 @@ a {color: #333;}
   background: #fff;
 }
 
-.header_search_icon {
+.input-group .header-search-input {
+  width:300px;
+}
+.header-icon {
   font-size:2em;
+}
+
+.header_mymenu {
+  font-size:2rem;
 }
 
 .hd-content2 {
