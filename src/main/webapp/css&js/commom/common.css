@@ -21,6 +21,12 @@ a {color: #333;}
   margin: 0 auto;
 }
 
+.hd-dropdown-color {
+  color: #6c757d;
+  border-color: #6c757d;
+  background: #fff;
+}
+
 .header_search_icon {
   font-size:2em;
 }
