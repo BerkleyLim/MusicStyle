@@ -6,3 +6,6 @@
 # 프로젝트 작성자
 - 저작자 : Berkley Lim (HyunSik Lim)
 - 이메일 : berkleylim16@gmail.com
+
+# 개발기간 
+- Since 2019.2.1 (금) ~ 
