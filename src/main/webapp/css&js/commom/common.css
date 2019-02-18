@@ -21,24 +21,6 @@ a {color: #333;}
   margin: 0 auto;
 }
 
-.header_logo {
-  display:flex;
-  width:200px;
-}
-
-.header_search {
-  width:700px;
-  height:50px;
-}
-
-.header_language {
-  width:100px;
-}
-
-.header_mymenu {
-  width:200px;
-}
-
 .header_search_icon {
   font-size:2em;
 }
