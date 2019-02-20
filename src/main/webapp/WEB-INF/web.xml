@@ -29,6 +29,7 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     
+    <!-- 여기는 한글이 깨지지 않게 해주는 웹 필터! -->
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -37,6 +38,8 @@
             <param-value>UTF-8</param-value>
         </init-param>
     </filter>
+    
+    <!-- 여기는 모든 경로를 지정 -->
     <filter-mapping>
         <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
