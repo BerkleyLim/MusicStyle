@@ -11,23 +11,19 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     
-    <context:component-scan base-package="bitcamp.java106.pms.web">
+    <!-- 여기서  autowired할 패키지경로를 기재,  
+         여러개의 패키지로 구분할수도 있고(콤모로 구분), 상위 패키지를 한번에 등록 가능
+         autowired할 클래스에 @component로 표시
+         @RequestMapping을 제외한 @Controller, @Repository, @Service 
+         이들은 모두 @Component를 메타 어노테이션으로 갖고 있는 어노테이션이다.
+    -->
+    <context:component-scan base-package="com.musicstyle.www.author.hyunsik.lim.pms.web">
         <context:exclude-filter type="aspectj" 
-            expression="bitcamp.java106.pms.web.*Controller"/>
+            expression="com.musicstyle.www.author.hyunsik.lim.pms.web.*Controller"/>
     </context:component-scan>
     
     <mvc:annotation-driven enable-matrix-variables="true"/>
-    
-    
-    <!-- 
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <mvc:exclude-mapping path="/auth/**"/>
-            <bean class="bitcamp.java106.pms.web.interceptor.AuthCheckInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
-    -->
+
 </beans>
 
 

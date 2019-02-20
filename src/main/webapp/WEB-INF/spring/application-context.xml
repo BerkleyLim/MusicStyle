@@ -14,19 +14,24 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
     
-    <context:component-scan base-package="bitcamp.java106.pms">
-        <context:exclude-filter type="regex" expression="bitcamp.java106.pms.web.*"/>
+
+    <!-- 다음과 같이 spring IoC를 사용할 환경 변수를 세팅해준다. -->
+    <context:component-scan base-package="com.musicstyle.www.author.hyunsik.lim.pms">
+        <context:exclude-filter type="regex" expression="com.musicstyle.www.author.hyunsik.lim.pms.web.*"/>
     </context:component-scan>
     
+    <!-- mybatis 환경설정 -->
     <bean id="sqlSessionFactory"
           class="org.mybatis.spring.SqlSessionFactoryBean">
+          <!-- 데이터 소스 -->
       <property name="dataSource" ref="dataSource" />
       <property name="mapperLocations" 
-                value="classpath*:bitcamp/java106/pms/sql/*Mapper.xml" />  
+                value="classpath*:com/musicstyle/www/author/hyunsik/lim/pms/sql/*Mapper.xml" />  
       <property name="typeAliasesPackage" 
-                value="bitcamp.java106.pms.domain"/>   
+                value="com.musicstyle.www.author.hyunsik.lim.pms.domain"/>   
     </bean>
     
+    <!-- 데이터베이스 연결(JDBC) -->
     <bean id="dataSource" 
           class="org.apache.commons.dbcp.BasicDataSource" 
           destroy-method="close">
@@ -36,12 +41,14 @@
         <property name="password" value="${jdbc.password}" />
     </bean>
     
+    <!-- 데이터 베이스 연결 -->
     <context:property-placeholder 
         location="classpath:jdbc.properties,
         		  classpath:aws.properties"/> 
         
+    <!-- spring 으로 이용한 데이터베이스 사용방법 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="bitcamp.java106.pms.dao" />
+        <property name="basePackage" value="com.musicstyle.www.author.hyunsik.lim.pms.dao" />
     </bean>
     
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -54,9 +61,11 @@
             <tx:method name="*"/>
         </tx:attributes>
     </tx:advice>
+
+    <!-- aop 관련 -->
     <aop:config>
         <aop:advisor advice-ref="txAdvice" 
-                     pointcut="execution(* bitcamp.java106.pms.service.impl.*.*(..))"/>
+                     pointcut="execution(* com.musicstyle.www.author.hyunsik.lim.pms.service.impl.*.*(..))"/>
     </aop:config>     
 </beans>
 
