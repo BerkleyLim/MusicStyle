@@ -1,17 +1,8 @@
-package bitcamp.java106.pms.service.impl;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+package com.musicstyle.www.author.hyunsik.lim.pms.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import bitcamp.java106.pms.dao.BoardDao;
-import bitcamp.java106.pms.dao.MainDao;
-import bitcamp.java106.pms.dao.TagDao;
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.domain.Tag;
-import bitcamp.java106.pms.service.BoardService;
+import com.musicstyle.www.author.hyunsik.lim.pms.service.BoardService;
 
 @Service
 public class BoardServiceImpl implements BoardService {

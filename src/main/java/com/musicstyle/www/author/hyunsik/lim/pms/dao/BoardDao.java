@@ -1,9 +1,4 @@
-package bitcamp.java106.pms.dao;
-
-import java.util.List;
-import java.util.Map;
-
-import bitcamp.java106.pms.domain.Board;
+package com.musicstyle.www.author.hyunsik.lim.pms.dao;
 
 public interface BoardDao {
     // List<Board> selectList(Map<String,Object> params);

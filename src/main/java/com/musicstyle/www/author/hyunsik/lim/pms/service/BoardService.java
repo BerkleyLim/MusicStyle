@@ -1,8 +1,4 @@
-package bitcamp.java106.pms.service;
-
-import java.util.List;
-
-import bitcamp.java106.pms.domain.Board;
+package com.musicstyle.www.author.hyunsik.lim.pms.service;
 
 public interface BoardService {
     // List<Board> list(int pageNo, int pageSize);
