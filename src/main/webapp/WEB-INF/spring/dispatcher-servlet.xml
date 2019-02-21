@@ -12,8 +12,8 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     
     <!-- 패키지에서  -->
-    <context:component-scan base-package="bitcamp.java106.pms.web">
-        <context:exclude-filter type="regex" expression="bitcamp.java106.pms.web.json.*"/>
+    <context:component-scan base-package="com.musicstyle.www.author.hyunsik.lim.pms.web">
+        <context:exclude-filter type="regex" expression="com.musicstyle.www.author.hyunsik.lim.pms.web.json.*"/>
     </context:component-scan>
     
     <!-- 애노테이선 관련 -->
@@ -38,11 +38,13 @@
         3. 구현 방식
         Filter는 web.xml에서 설정을 하면 구현이 가능하지만, Interceptor는 설정은 물론 메서드 구현이 필요합니다.
      -->
+     
+     <!-- mvc 인터셉터 : 특정 URI로 요청시 Controller로 가는 요청을 가로채는 역할을 한다. -->
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/auth/**"/>
-            <bean class="bitcamp.java106.pms.web.interceptor.AuthCheckInterceptor"/>
+            <bean class="com.musicstyle.www.author.hyunsik.lim.pms.web.interceptor.AuthCheckInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>

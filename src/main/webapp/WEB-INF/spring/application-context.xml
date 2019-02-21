@@ -41,7 +41,7 @@
         <property name="password" value="${jdbc.password}" />
     </bean>
     
-    <!-- 데이터 베이스 연결 -->
+    <!-- 데이터 베이스 연결할 경로 -->
     <context:property-placeholder 
         location="classpath:jdbc.properties,
         		  classpath:aws.properties"/> 
