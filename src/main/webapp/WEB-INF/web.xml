@@ -37,6 +37,16 @@
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
         </init-param>
+        <!-- 이부분에서 forceEncoding 값이 true일 경우 강제적으로 인코딩 형식 변환, 단 값을 넣지 않으면 아무것도 안한다
+            . 만일 false일경우 httpServletRequest 객체의 getCharacterEncoding() 값이 null일때만
+            . setCharacterEncoding 메소드를 이용하여 문자 인코딩 세팅
+            . true일 경우 HttpServletRequest, HttpServletResponse 객체 둘다 setCharacterEncoding
+            . 메소드를 이용하여 기존값 무시하고 encoding 값으로 세팅
+         -->
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
     </filter>
     
     <!-- 여기는 모든 경로를 지정 -->
