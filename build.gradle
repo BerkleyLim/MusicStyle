@@ -33,6 +33,16 @@ task copyJars(type: Copy) {
 	into "build/libs/deps"
 }
 
+// Android 환경설정
+//android {
+//    compileSdkVersion 24
+//    buildToolsVersion "24.2.1"
+//    defaultConfig {
+//        minSdkVersion 19
+//        targetSdkVersion 24
+//        ...
+//}
+
 //�������̺귯�� �ٿ�ε� �� ���� ����
 //�������̺귯�� ����
 repositories {
@@ -41,93 +51,93 @@ repositories {
 
 //�ٿ�ε� �� �������̺귯�� ����
 dependencies {
-// MySQL JDBC Driver Library
-// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-//compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
-
-//Mariadb JDBC ���̺귯��
-// https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
-// compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.5'
+    // MySQL JDBC Driver Library
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    //compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
     
-// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.46'
+    //Mariadb JDBC ���̺귯��
+    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    // compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.5'
+        
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.46'
+        
+        
+    // MyBatis Liberary
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.5.0'
+    
+    //MyBatis-Spring Library
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis-spring
+    compile group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.0'
+    
+    //Spring web MVC
+    // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.5.RELEASE'
+    
+    //Spring IOC container Library
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    //compile group: 'org.springframework', name: 'spring-context', version: '5.1.5.RELEASE'
+    
+    //Spring jdbc Library
+    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.5.RELEASE'
+    
+    // https://mvnrepository.com/artifact/org.springframework/spring-aop
+    compile group: 'org.springframework', name: 'spring-aop', version: '5.1.5.RELEASE'
     
     
-// MyBatis Liberary
-// https://mvnrepository.com/artifact/org.mybatis/mybatis
-compile group: 'org.mybatis', name: 'mybatis', version: '3.5.0'
-
-//MyBatis-Spring Library
-// https://mvnrepository.com/artifact/org.mybatis/mybatis-spring
-compile group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.0'
-
-//Spring web MVC
-// https://mvnrepository.com/artifact/org.springframework/spring-webmvc
-compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.5.RELEASE'
-
-//Spring IOC container Library
-// https://mvnrepository.com/artifact/org.springframework/spring-context
-//compile group: 'org.springframework', name: 'spring-context', version: '5.1.5.RELEASE'
-
-//Spring jdbc Library
-// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
-compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.5.RELEASE'
-
-// https://mvnrepository.com/artifact/org.springframework/spring-aop
-compile group: 'org.springframework', name: 'spring-aop', version: '5.1.5.RELEASE'
-
-
-//Datasource Library(DB ConnectionPool)
-// https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
-//compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.3.0'
-// https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp
-compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
-
-
-
-// JSP Ȯ�� �±� JSTL ���̺귯��
-compile group: 'javax.servlet', name: 'jstl', version: '1.2'
-
-//JSON ������ ó�� ���̺귯��
-
-//@Controller�� ���� �Ϲ����� ������ ��Ʈ�ѷ��� ��û�ڵ鷯�� ������ ����
-// ��û �Ķ������ ���ڿ��� int�� boolean�� ���� �ٲٱ� ���� ��ü�� ����ų� ���� ���� �ٸ� Ÿ������ ����� ���� 
-// �⺻���� ������ ��ȯ�⸦ ����Ѵ�.
-// �� ��ȯ��� HttpMessageConverter ��Ģ�� �� ���� ��ȯ���̴�.
-//�׷��� @RestController �ֳ����̼��� ���� ������ ��Ʈ�ѷ��� ��û�ڵ鷯�� ������ ��
-//�������� �⺻������ ��ȯ��� MappingJackson2HttpMessageConverter�� ����Ѵ�
-//�� �����ʹ� JSON�����͸� ó���� �� �ִ�.
-// MappingJackson2HttpMessageConverter?
-// => ��û �Ķ���ͷ� JSON �����͸� ������ ��û�ڵ鷯�� ���� �� �ڹٰ�ü�� ��ȯ��Ų��.
-// => ��û�ڵ鷯�� �ڹٰ�ü�� ������ �� (�ڹ� ��ü�� Ŭ���̾�Ʈ�� ���� ��) JSON ���ڿ��� ��ȯ�Ѵ�.
-//
-//����!
-// MappingJackson2HttpMessageConverter�� ����Ϸ��� �� ��ü�� �����ϴ�
-// ���̺귯���� ���������� �߰��ؾ��Ѵ�.
-// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
-
-//�׷��� JSON�����͸� ó���� ��
-//MappingJackson2HttpMessageConverter��� GsonHttpMessageConverter�� ����ص� �ȴ�.
-//�� GsonHttpMessageConverter�� ����Ϸ��� �� ��ü�� �����ϴ� ���̺귯���� ������ ���� �߰��ؾ��Ѵ�.
-// https://mvnrepository.com/artifact/com.google.code.gson/gson
-//compile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
-//Jackson or Gson �� �� �ϳ��� ����� ��
-
-// Thumbnail Library
-// https://mvnrepository.com/artifact/net.coobird/thumbnailator
-compile group: 'net.coobird', name: 'thumbnailator', version: '0.4.8'
+    //Datasource Library(DB ConnectionPool)
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+    //compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.3.0'
+    // https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp
+    compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
     
-//Java Servlet API Library
-// https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
-providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
-
-//AOP �
-// https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
-compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.1'
-
-// Android Settings library
-compile group: 'com.android.support', name: 'appcompat-v7', version: '24.1.1'
-
+    
+    
+    // JSP Ȯ�� �±� JSTL ���̺귯��
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+    
+    //JSON ������ ó�� ���̺귯��
+    
+    //@Controller�� ���� �Ϲ����� ������ ��Ʈ�ѷ��� ��û�ڵ鷯�� ������ ����
+    // ��û �Ķ������ ���ڿ��� int�� boolean�� ���� �ٲٱ� ���� ��ü�� ����ų� ���� ���� �ٸ� Ÿ������ ����� ����
+    // �⺻���� ������ ��ȯ�⸦ ����Ѵ�.
+    // �� ��ȯ��� HttpMessageConverter ��Ģ�� �� ���� ��ȯ���̴�.
+    //�׷��� @RestController �ֳ����̼��� ���� ������ ��Ʈ�ѷ��� ��û�ڵ鷯�� ������ ��
+    //�������� �⺻������ ��ȯ��� MappingJackson2HttpMessageConverter�� ����Ѵ�
+    //�� �����ʹ� JSON�����͸� ó���� �� �ִ�.
+    // MappingJackson2HttpMessageConverter?
+    // => ��û �Ķ���ͷ� JSON �����͸� ������ ��û�ڵ鷯�� ���� �� �ڹٰ�ü�� ��ȯ��Ų��.
+    // => ��û�ڵ鷯�� �ڹٰ�ü�� ������ �� (�ڹ� ��ü�� Ŭ���̾�Ʈ�� ���� ��) JSON ���ڿ��� ��ȯ�Ѵ�.
+    //
+    //����!
+    // MappingJackson2HttpMessageConverter�� ����Ϸ��� �� ��ü�� �����ϴ�
+    // ���̺귯���� ���������� �߰��ؾ��Ѵ�.
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+    
+    //�׷��� JSON�����͸� ó���� ��
+    //MappingJackson2HttpMessageConverter��� GsonHttpMessageConverter�� ����ص� �ȴ�.
+    //�� GsonHttpMessageConverter�� ����Ϸ��� �� ��ü�� �����ϴ� ���̺귯���� ������ ���� �߰��ؾ��Ѵ�.
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    //compile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+    //Jackson or Gson �� �� �ϳ��� ����� ��
+    
+    // Thumbnail Library
+    // https://mvnrepository.com/artifact/net.coobird/thumbnailator
+    compile group: 'net.coobird', name: 'thumbnailator', version: '0.4.8'
+        
+    //Java Servlet API Library
+    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    
+    //AOP �
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.1'
+    
+    // Android Settings library
+    //compile group: 'com.android.support', name: 'appcompat-v7', version: '24.1.1'
+    
 
 }
