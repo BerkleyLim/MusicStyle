@@ -91,7 +91,7 @@
     <!-- 서블릿 실행 도중 특정 예외가 발생하면 실행될 JSP를 지정한다. -->
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>
-        <location>/error.jsp</location>
+        <location>/error.html</location>
     </error-page>
     
     <!-- 클라이언트가 요청한 자원을 찾을 수 없을 때 
