@@ -185,7 +185,7 @@ public class informationController {
 //    public Object selectLinkOne() throws Exception {
 //        return boardService.selectLinkOne();
 //    }
-    @RequestMapping("/information1")
+    @RequestMapping("/list")
     public String list(
             HttpServletRequest request, 
             HttpServletResponse response) throws Exception {        

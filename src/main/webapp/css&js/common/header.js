@@ -2,7 +2,7 @@ $(window).on("scroll touchmove", function () {
     $('#header_bg').toggleClass('tiny', $(document).scrollTop() > 0);
 });
 
-$.get(serverRoot + "/interia/html/header.html", (data) => {
+$.get(serverRoot + "/header.html", (data) => {
     $("#header").html(data);
     loadLoginUser();
 });
