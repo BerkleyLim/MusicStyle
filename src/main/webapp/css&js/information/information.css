@@ -1,29 +1,11 @@
-.title-information {
-    /* position: fixed; */
-    top: 65px;
-    background: #fcfdfd;
-    /* width: 493px; */
-    padding: 19px 390px 18px 48px;
-    border: 1px solid #ebecec;
-    border-width: 0 1px 1px 0;
-    border-bottom-right-radius: 3px;
-    z-index: 10;
-}
-
-.title-information .title_area {
-    position: relative;
-}
-
-.title-information .title_area .bs-info {
-    float: left;
-    position: relative;
-    padding: 0 0 0 12px;
-}
-
-[tip] {
-    position: relative;
-    overflow: visible;
-    color: transparent;
+input[type="text"], input[type="number"], input[type="password"] {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    color: inherit;
+    font-family: inherit;
+    outline: none;
+    -webkit-appearance: none;
 }
 
 button {
@@ -35,6 +17,17 @@ button {
     outline: none;
     cursor: pointer;
     font-family: inherit;
+}
+
+/* 카테코리 안의 있는 헤더 */
+.title-information {
+    top: 65px;
+    background: #fcfdfd;
+    padding: 19px 390px 18px 48px;
+    border: 1px solid #ebecec;
+    border-width: 0 1px 1px 0;
+    border-bottom-right-radius: 3px;
+    z-index: 10;
 }
 
 
@@ -50,13 +43,6 @@ button {
     padding: 0;
 }
 
-.title-information .items_wrap .all-information em {
-    background-position: -175px -80px;
-    width: 16px;
-    height: 15px;
-    margin-right: 6px;
-}
-
 .title-information .items_wrap button {
     display: inline-block;
     font: 0/0 a;
@@ -70,10 +56,6 @@ button {
     padding: 0;
 }
 
-/* .title-information .items_wrap button {
-    transition: all .2s ease;
-}
- */
 
 .title-information .items_wrap button {
     float: left;
@@ -90,9 +72,509 @@ button {
 }
 
 
+.search-box {
+    /* position: relative; */
+    text-align: right;
+    font-size: 0;
+    line-height: 0;
+}
+
+.select-box {
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    z-index: 10;
+}
+
+.select-box .selected {
+    display: block;
+    position: relative;
+    height: 34px;
+    padding: 0 38px 0 12px;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+    color: #666;
+    font-size: 13px;
+    line-height: 34px;
+}
+
+.select-box .select-layer {
+    display: none;
+    position: absolute;
+    top: 33px;
+    background: #fff;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+}
+
+.select-box .select-layer[data-align="left"] {
+    left: 0;
+}
+
+.select-box .select-layer li {
+    padding: 0 !important;
+    border: 0 !important;
+    white-space: nowrap;
+    animation: none;
+}
+
+.select-box .select-layer li a {
+    display: block;
+    padding: 10px 34px 10px 16px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.search-box .input-box {
+    display: inline-block;
+    position: relative;
+    margin-left: 4px;
+    vertical-align: -14px;
+}
+
+.search-box .input-box input[type=text] {
+    float: left;
+    width: 186px;
+    height: 34px;
+    padding: 0 0 0 12px;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+    color: #000;
+    font-size: 13px;
+    line-height: 34px;
+}
+
+.search-box .input-box .submit {
+    float: left;
+    background: #fff;
+    width: 58px;
+    height: 36px;
+    margin-left: -3px;
+    border: 1px solid #fa0;
+    border-radius: 2px;
+    color: #fa0;
+    font-size: 13px;
+    text-align: center;
+    line-height: 34px;
+}
+
 button > * {
     position: relative;
 }
 
 /* 다음으로는 게시판 css */
+.title_wrap h2 {
+    color: #000;
+    font-size: 28px;
+    font-weight: normal;
+}
 
+.sub-menu {
+    margin-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.sub-menu.board {
+    border-color: #888;
+}
+
+.sub-menu .text {
+    float: left;
+    padding-top: 10px;
+    color: #666;
+    font-size: 13px;
+}
+
+.sub-menu .sort-list {
+    float: right;
+}
+
+.sub-menu .sort-list > * {
+    float: left;
+}
+
+.sub-menu .sort-list .chk-box {
+    margin: 10px 18px 0 0;
+}
+
+.chk-box {
+    position: relative;
+}
+
+.chk-box span input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.chk-box label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    color: #333;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+.view_mode button {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.view_mode button span {
+    display: block;
+    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    font: 0/0 a;
+}
+
+.view_mode .b-feed.on span {
+    background-position: -95px -140px;
+}
+
+.view_mode button span {
+    display: block;
+    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    font: 0/0 a;
+}
+
+.view_mode .b-list span {
+    background-position: -115px -160px;
+}
+
+.select-box .selected {
+    display: block;
+    position: relative;
+    height: 34px;
+    padding: 0 38px 0 12px;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+    color: #666;
+    font-size: 13px;
+    line-height: 34px;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.select-box .select-layer li {
+    padding: 0 !important;
+    border: 0 !important;
+    white-space: nowrap;
+    animation: none;
+}
+
+.select-box .select-layer li a {
+    display: block;
+    padding: 10px 34px 10px 16px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+/* 여기가 진짜 게시판 */
+.board-feed li {
+    position: relative;
+    padding: 20px 8px 32px;
+    border-bottom: 1px solid #eee;
+    animation: list-up 0.4s ease;
+    -webkit-animation: list-up 0.4s ease;
+}
+
+.autor_wrap {
+    display: table;
+    position: relative;
+}
+
+
+.autor_wrap .thum {
+    display: table-cell;
+    width: 51px;
+    text-align: left;
+    font: 0/0 a;
+}
+
+
+.autor_wrap .thum img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.autor_wrap .info_box {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+
+
+.autor_wrap .info_box > * {
+    line-height: 1.2;
+}
+
+.autor_wrap .info_box .nick {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "NGBS", verdana, applegothic, sans-serif;
+}
+
+.board-feed .autor_wrap .info_box .nick {
+    font-weight: bold;
+}
+
+.autor_wrap .info_box .nick p {
+    position: relative;
+}
+
+.autor_wrap .info_box .nick em {
+    color: #aaa;
+}
+
+.board-feed .autor_wrap .info_box .nick em {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.board-feed .autor_wrap .info_box span, .board-feed .autor_wrap .info_box span em {
+    color: #888;
+}
+
+
+.board-feed .conts {
+    display: table;
+    width: 100%;
+    height: 132px;
+    margin-top: 12px;
+}
+
+.board-feed .conts .post_conts {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+}
+
+.board-feed .conts .post_conts a {
+    display: block;
+    word-break: break-all;
+}
+
+.board-feed .conts .post_conts .text {
+    display: table;
+    table-layout: fixed;
+}
+
+.board-feed .conts .post_conts .text > div {
+    display: table-cell;
+}
+
+.board-feed .conts .post_conts .text strong {
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    height: 22px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.board-feed .conts .post_conts .text strong .ic_noti {
+    display: inline-block;
+    height: 20px;
+    margin: 0 6px 0 0;
+    padding: 0 6px;
+    border: 1px solid #00bbed;
+    border-radius: 30px;
+    color: #00bbed;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    vertical-align: 2px;
+}
+
+.board-feed .conts .post_conts .text .cate {
+    display: table-cell;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.board-feed .conts .post_conts .text .cate span {
+    display: block;
+    position: relative;
+    margin: 0 0 0 25px;
+    color: #666;
+    font-size: 13px;
+}
+
+.board-feed .conts .post_conts .cont {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 602px;
+    height: 40px;
+    margin-top: 11px;
+    color: #888;
+    font-size: 14px;
+    line-height: 22px;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+}
+
+.btn-grid {
+    font: 0/0 a;
+}
+
+.board-feed .conts .btn-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+.btn-grid [class$=start] {
+    float: left;
+    position: relative;
+}
+
+.board-feed .conts .btn-grid .grid-start {
+    padding: 0;
+}
+
+.btn-basic {
+    padding: 0 16px;
+    min-width: 60px;
+    height: 36px;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+    color: #333;
+    font-size: 13px;
+    line-height: 34px;
+    text-align: center;
+}
+
+a.btn-basic {
+    display: inline-block;
+    line-height: 36px;
+    box-sizing: border-box;
+}
+
+.btn-grid .btn-basic {
+    margin-left: 8px;
+}
+
+.btn-grid .btn-basic:first-child {
+    margin-left: 0;
+}
+
+button.cmmt_list span {
+    display: inline-block;
+    background: url(/images/bj/sp_bj.png) -70px -190px no-repeat;
+    width: 18px;
+    height: 16px;
+    margin-right: 6px;
+    font: 0/0 a;
+    vertical-align: 12px;
+}
+
+button.up span {
+    display: inline-block;
+    background: url(/images/bj/sp_bj.png) -95px -190px no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    font: 0/0 a;
+    vertical-align: 12px;
+}
+
+button.btn-detail {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    width: 21px;
+    height: 21px;
+}
+
+.board-feed li .btn-detail {
+    position: absolute;
+    top: 24px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+}
+
+.board-feed li .btn-detail span {
+    background-position: -155px -140px;
+    width: 4px;
+    height: 20px;
+}
+
+.btn-grid.board {
+    margin-top: 12px;
+}
+
+.btn-grid [class$=end] {
+    float: right;
+    position: relative;
+    text-align: right;
+}
+
+.btn-basic.write span {
+    position: relative;
+    padding-left: 19px;
+    font-weight: bold;
+}
+
+section[class$=-srh_wrap] {
+    padding: 24px 0 44px;
+}
+
+.paging {
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.paging a {
+    display: inline-block;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 2px;
+    color: #555;
+    font-size: 13px;
+    line-height: 28px;
+}
+
+.paging a:first-child {
+    margin-left: 0;
+}
+
+.paging a.on {
+    background: #4279ff;
+    color: #fff;
+}

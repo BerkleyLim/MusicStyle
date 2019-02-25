@@ -1,16 +1,17 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.web.json;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/information")
 public class informationController {
-//    
-//    @Autowired ServletContext sc;
+    @Autowired ServletContext sc;
 //    
 //    BoardService boardService;
 //    
@@ -185,11 +186,12 @@ public class informationController {
 //    public Object selectLinkOne() throws Exception {
 //        return boardService.selectLinkOne();
 //    }
-    @RequestMapping("/list")
+    @RequestMapping("/")
     public String list(
             HttpServletRequest request, 
             HttpServletResponse response) throws Exception {        
-            
-        return "/information/all_information.html";
+        
+        System.out.println(request.getContextPath());
+        return "redirect:information/list.html";
     }
 }
