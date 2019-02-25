@@ -1,0 +1,98 @@
+.title-information {
+    /* position: fixed; */
+    top: 65px;
+    background: #fcfdfd;
+    /* width: 493px; */
+    padding: 19px 390px 18px 48px;
+    border: 1px solid #ebecec;
+    border-width: 0 1px 1px 0;
+    border-bottom-right-radius: 3px;
+    z-index: 10;
+}
+
+.title-information .title_area {
+    position: relative;
+}
+
+.title-information .title_area .bs-info {
+    float: left;
+    position: relative;
+    padding: 0 0 0 12px;
+}
+
+[tip] {
+    position: relative;
+    overflow: visible;
+    color: transparent;
+}
+
+button {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+.title-information .items_wrap {
+    position: absolute;
+    top: 13px;
+    right: 16px;
+}
+
+
+.title-information.my-bs .items_wrap button {
+    margin-left: 24px;
+    padding: 0;
+}
+
+.title-information .items_wrap .all-information em {
+    background-position: -175px -80px;
+    width: 16px;
+    height: 15px;
+    margin-right: 6px;
+}
+
+.title-information .items_wrap button {
+    display: inline-block;
+    font: 0/0 a;
+    vertical-align: 11px;
+    font-size: 18px;
+}
+
+
+.title-information.my-bs .items_wrap button {
+    margin-left: 24px;
+    padding: 0;
+}
+
+/* .title-information .items_wrap button {
+    transition: all .2s ease;
+}
+ */
+
+.title-information .items_wrap button {
+    float: left;
+    background: #fff;
+    height: 36px;
+    margin-left: 8px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+}
+
+.title-information.my-bs .items_wrap button {
+    margin-left: 24px;
+    padding: 0;
+}
+
+
+button > * {
+    position: relative;
+}
+
+/* 다음으로는 게시판 css */
+
