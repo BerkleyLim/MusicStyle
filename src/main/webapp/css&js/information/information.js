@@ -1,3 +1,6 @@
-$.get(serverRoot + "/information/all_information.html", (data) => {
-    $("#information").html(data);
-});
+$(function information(menu){
+	$.get(serverRoot + menu , (data) => {
+		location.href = data;
+	});
+})
+

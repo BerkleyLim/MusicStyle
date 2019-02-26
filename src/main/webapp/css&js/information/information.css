@@ -1,23 +1,4 @@
-input[type="text"], input[type="number"], input[type="password"] {
-    margin: 0;
-    padding: 0;
-    border: 1px solid #ddd;
-    color: inherit;
-    font-family: inherit;
-    outline: none;
-    -webkit-appearance: none;
-}
 
-button {
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: top;
-    outline: none;
-    cursor: pointer;
-    font-family: inherit;
-}
 
 /* 카테코리 안의 있는 헤더 */
 .title-information {
