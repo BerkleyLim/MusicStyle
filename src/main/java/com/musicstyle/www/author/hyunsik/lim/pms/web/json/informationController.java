@@ -1,5 +1,7 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.web.json;
 
+import java.io.File;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -192,6 +194,7 @@ public class informationController {
             HttpServletResponse response) throws Exception {        
         
         System.out.println(request.getContextPath());
-        return "redirect:information/list.html";
+        System.out.println(request.authenticate(response));
+        return "information/list.html";
     }
 }
