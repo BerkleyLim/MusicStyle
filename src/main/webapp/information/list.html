@@ -37,10 +37,10 @@
         <header id="header"></header>
 
         <!-- 본문 작성 -> 1200px 기준 -->
-        <div id="information" class="container">
+        <div class="container">
             <div class="title-information">
-                <div class="row title_area">
-                    <h1 class="col-sm-8">곡정보 < 전체</h1>
+                <nav class="navbar title_area">
+                    <h1>곡정보</h1>
                     <form>
                         <div class="search-box">
                             <div class="select-box">
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </nav>
                 <nav class="navbar items_wrap">
                     <button type="button" class="all-information">전체</button>
                     <button type="button" class="classic-information">클래식</button>
@@ -81,10 +81,10 @@
                     <div class="sort-list">
                         <div class="view_mode">
                             <button type="button" class="b-feed v-feed on" data-viewtype="3">
-                                <span>피드형</span>
+                                <span>카드형</span>
                             </button>
                             <button type="button" class="b-list v-list" data-viewtype="1">
-                                <span>리스트형</span>
+                                <span>게시판형</span>
                             </button>
                         </div>
                         <div class="select-box">
@@ -98,259 +98,52 @@
                         </div>
                     </div>
                 </section>
+            </section>
 
-                <!-- <section class="board-feed">
-                    <ul>
-                        <li>
-                            <div class="autor_wrap">
-                                <span class="thum">
-                                    <img src="//stimg.afreecatv.com/LOGO/as/asq1177/asq1177.jpg?dummy=1550743501" alt="">
-                                </span>
-                                <div class="info_box">
-                                    <button type="button" class="nick">
-                                        <p>루나별피아노<em>(asq1177)</em></p>
-                                    </button>
-                                    <span>2019-02-02 10:41</span>
-                                    <span><em>조회 </em>90</span>
+            <div class="board-feed">
+                <!-- 이부분 handlebars.js로 처리 예정 -->
+                <div class="autor_wrap card mb-3" style="height:250px;">
+                    <div class="information-title">이루마</div>
+                    <div class="card-body">
+                        <div class="card mb-3 content" >
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
                                 </div>
-                            </div>
-                            <div class="conts">
-                                <div class="post_conts">
-                                    <a href="/asq1177/post/41110205">
-                                        <div class="text">
-                                            <div><strong><span class="ic_noti">공지</span>^^</strong></div>
-                                            <em class="cate"><span>LUNA 공지사항</span></em>
-                                        </div>
-                                        <p class="cont">안뇽하세요 루나입니당저는 클래식 피아노 전공을 하였고반주학과 석사과정중에 있는 피아니스트입니다💕&nbsp;공연,&nbsp;레슨, 반주, 학업을 병행하고 있어서주 4회 방송을 진행하고 있습니다!&nbsp;물어보시는 분들이 계셔서..!&nbsp;피아노 : 야마하 YDP-163가상악기 : Ivory 2.5 (스타인웨이 샘플링)마이크 : Bluebird스피커 : 야마하 ...</p>
-                                    </a>
-                                    <div class="btn-grid ">
-                                        <div class="grid-start">
-                                            <button class="btn-basic cmmt_list"><span>댓글</span><em>2 </em></button>
-                                            <button type="button" class="btn-basic up on"><span>up</span><em>7 </em></button>
-                                        </div>
+                                <div class="col-md-8">
+                                    <div class="">
+                                        <h5 class="card-title">장르 : 뉴에이지</h5>
+                                        <p class="card-text">● 발매날짜 : 1996년 <br>
+                                                ● 앨범명 : <br>
+                                                ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="btn-detail"><span>상세정보</span></button>
-                        </li>
-                        <li>
-                            <div class="autor_wrap">
-                                <span class="thum">
-                                    <img src="//stimg.afreecatv.com/LOGO/a5/a507758/a507758.jpg?dummy=1550743501" alt="">
-                                </span>
-                                <div class="info_box">
-                                    <button type="button" class="nick"><p>[야금]빛나♡<em>(a507758)</em></p></button>
-                                    <span>2019-02-21 17:27</span>
-                                    <span><em>조회 </em>1</span>
-                                </div>
-                            </div>
-                            <div class="conts">
-                                <div class="post_conts">
-                                    <a href="/asq1177/post/41709955">
-                                        <div class="text">
-                                            <div><strong>미세먼지...</strong></div>
-                                            <em class="cate"><span>루나에게-0-*</span></em>
-                                        </div>
-                                        <p class="cont">계속 경보가 울리는거 보니 미세먼지 조심 해야 겠네요~! ㅠㅠ</p>
-                                    </a>
-                                    <div class="btn-grid ">
-                                        <div class="grid-start">
-                                            <button class="btn-basic cmmt_list"><span>댓글</span><em>0 </em></button>
-                                            <button type="button" class="btn-basic up"><span>up</span><em>0 </em></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="video-img">
-                                    <a href="/asq1177/post/41709955">
-                                        <img src="//stimg.afreecatv.com/PHOTO_BBS/4/13606754/da325cb0d2804c8e9307296abf519873.PNG" alt="">
-                                    </a>
-                                    <span>1</span>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-detail"><span>상세정보</span></button>
-                        </li>
-                        <li>
-                            <div class="autor_wrap">
-                                <span class="thum">
-                                    <div class="lazyload-placeholder" style="height: 40px;"></div>
-                                </span>
-                                <div class="info_box">
-                                    <button type="button" class="nick"><p>루나별피아노<em>(asq1177)</em></p></button>
-                                    <span>2019-02-21 03:18</span>
-                                    <span><em>조회 </em>24</span>
-                                </div>
-                            </div>
-                            <div class="conts">
-                                <div class="post_conts">
-                                    <a href="http://vod.afreecatv.com/PLAYER/STATION/41698189" target="vod_player">
-                                        <div class="text">
-                                            <div>
-                                                <strong>[생][생]루나별피아노)지친 당신 맑은선율로 테라피하세요 ♥ 연주 힐링 신청곡 클래식 뉴에이지 OST 재즈 가요 신입여캠 ASMR</strong>
-                                            </div>
-                                            <em class="cate"><span>방송 다시보기</span></em>
-                                        </div>
-                                        <p class="cont">  </p>
-                                    </a>
-                                    <div class="btn-grid ">
-                                        <div class="grid-start">
-                                            <button type="button" class="btn-basic cmmt_list"><span>댓글</span><em>1 </em></button>
-                                            <button type="button" class="btn-basic up"><span>up</span><em>2 </em></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="video-img">
-                                    <a href="http://vod.afreecatv.com/PLAYER/STATION/41698189" class="vod" target="vod_player">
-                                        <div class="lazyload-placeholder" style="height: 132px;"> </div>
-                                        <em class="ic-replay">다시보기</em>
-                                    </a>
-                                    <span>4:13:46</span>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-detail"><span>상세정보</span></button>
-                        </li>
-                        <li>
-                            <div class="autor_wrap">
-                                <span class="thum">
-                                    <div class="lazyload-placeholder" style="height: 40px;"></div>
-                                </span>
-                                <div class="info_box">
-                                    <button type="button" class="nick"><p>LUNA♪SOJIN<em>(shengyi5)</em></p></button>
-                                    <span>2019-02-21 01:02</span>
-                                    <span><em>조회 </em>19</span>
-                                </div>
-                            </div>
-                            <div class="conts">
-                                <div class="post_conts">
-                                    <a href="/asq1177/post/41693879">
-                                        <div class="text">
-                                            <div><strong>저 공연해용~~</strong></div>
-                                            <em class="cate"><span>일반 게시판</span></em>
-                                        </div>
-                                        <p class="cont">루나별님 못오시겟죠...? ㅋㅋㅋ</p>
-                                    </a>
-                                    <div class="btn-grid ">
-                                        <div class="grid-start">
-                                            <button class="btn-basic cmmt_list"><span>댓글</span><em>2 </em></button>
-                                            <button type="button" class="btn-basic up"><span>up</span><em>2 </em></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="video-img">
-                                    <a href="/asq1177/post/41693879">
-                                        <div class="lazyload-placeholder" style="height: 132px;"></div>
-                                    </a>
-                                    <span>1</span>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-detail"><span>상세정보</span></button>
-                        </li>
-                        <li>
-                            <div class="autor_wrap">
-                                <span class="thum">
-                                    <div class="lazyload-placeholder" style="height: 40px;"></div>
-                                </span>
-                                <div class="info_box">
-                                    <button type="button" class="nick"><p>루나별피아노<em>(asq1177)</em></p></button>
-                                    <span>2019-02-19 08:36</span>
-                                    <span><em>조회 </em>43</span>
-                                </div>
-                            </div>
-                            <div class="conts">
-                                <div class="post_conts">
-                                    <a href="http://vod.afreecatv.com/PLAYER/STATION/41637058" target="vod_player">
-                                        <div class="text">
-                                            <div><strong>[생][생]루나별피아노) 예쁜 피아니스트가 피아노로 말해요 ♥ 연주 힐링 신청곡 클래식 뉴에이지 OST 재즈 가요 신입여캠 ASMR</strong></div>
-                                            <em class="cate"><span>방송 다시보기</span></em>
-                                        </div>
-                                        <p class="cont">  </p>
-                                    </a>
-                                    <div class="btn-grid ">
-                                        <div class="grid-start">
-                                            <button type="button" class="btn-basic cmmt_list"><span>댓글</span><em>2 </em></button>
-                                            <button type="button" class="btn-basic up"><span>up</span><em>3 </em></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="video-img">
-                                    <a href="http://vod.afreecatv.com/PLAYER/STATION/41637058" class="vod" target="vod_player">
-                                        <div class="lazyload-placeholder" style="height: 132px;"></div>
-                                        <em class="ic-replay">다시보기</em>
-                                    </a>
-                                    <span>9:27:17</span>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-detail">
-                                <span>상세정보</span>
-                            </button>
-                        </li>
-                        <li>
-                            <div class="autor_wrap">
-                                <span class="thum">
-                                    <div class="lazyload-placeholder" style="height: 40px;"></div>
-                                </span>
-                                <div class="info_box">
-                                    <button type="button" class="nick"><p>루나별피아노<em>(asq1177)</em></p></button>
-                                    <span>2019-02-17 03:56</span>
-                                    <span><em>조회 </em>28</span>
-                                </div>
-                            </div>
-                            <div class="conts">
-                                <div class="post_conts">
-                                    <a href="http://vod.afreecatv.com/PLAYER/STATION/41569453" target="vod_player">
-                                        <div class="text">
-                                            <div>
-                                                <strong>[생] 폐인의 피아노 연습 / 소통 ♥ 연주 힐링 신청곡 클래식 뉴에이지 OST 재즈 가요 신입여캠 ASMR</strong>
-                                            </div>
-                                            <em class="cate"><span>방송 다시보기</span></em>
-                                        </div>
-                                        <p class="cont">  </p>
-                                    </a>
-                                    <div class="btn-grid ">
-                                        <div class="grid-start">
-                                            <button type="button" class="btn-basic cmmt_list"><span>댓글</span><em>0 </em></button>
-                                            <button type="button" class="btn-basic up"><span>up</span><em>2 </em></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="video-img">
-                                    <a href="http://vod.afreecatv.com/PLAYER/STATION/41569453" class="vod" target="vod_player">
-                                        <div class="lazyload-placeholder" style="height: 132px;"></div>
-                                        <em class="ic-replay">다시보기</em>
-                                    </a>
-                                    <span>4:40:26</span>
-                                </div>
-                            </div>
-                            <button type="button" class="btn-detail"><span>상세정보</span></button>
-                        </li>
-                    </ul>
-                </section>
-                
-                <div class="btn-grid board">
-                    <div class="grid-end">
-                        <a class="btn-basic write" href="/asq1177/post/write/0"><span>글쓰기</span></a>
+                        </div>
                     </div>
                 </div>
-                
-                <section class="board-srh_wrap">
-                    <div class="paging">
-                        <a class="page-item on" href="#">1</a>
-                        <a class="page-item" href="#">2</a>
-                        <a class="page-item" href="#">3</a>
-                        <a class="page-item" href="#">4</a>
-                        <a class="page-item" href="#">5</a>
-                        <a class="page-item" href="#">6</a>
-                        <a class="page-item" href="#">7</a>
-                        <a class="page-item" href="#">8</a>
-                        <a class="page-item" href="#">9</a>
-                        <a class="page-item" href="#">10</a>
-                        <span>...</span>
-                        <a class="page-item" href="#">15</a>
-                        <a class="page-item next" href="#">다음</a>
-                    </div>
+            </div>
 
-                </section>
-            </section> -->
+            <section class="board-srh_wrap">
+                <div class="paging">
+                    <a class="page-item on" href="#">1</a>
+                    <a class="page-item" href="#">2</a>
+                    <a class="page-item" href="#">3</a>
+                    <a class="page-item" href="#">4</a>
+                    <a class="page-item" href="#">5</a>
+                    <a class="page-item" href="#">6</a>
+                    <a class="page-item" href="#">7</a>
+                    <a class="page-item" href="#">8</a>
+                    <a class="page-item" href="#">9</a>
+                    <a class="page-item" href="#">10</a>
+                    <span>...</span>
+                    <a class="page-item" href="#">15</a>
+                    <a class="page-item next" href="#">다음</a>
+                </div>
+            </section>
         </div>
+
 
 
         <!-- 푸터 -->

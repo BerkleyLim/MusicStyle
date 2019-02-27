@@ -3,17 +3,14 @@
 /* 카테코리 안의 있는 헤더 */
 .title-information {
     top: 65px;
-    background: #fcfdfd;
+    background: #eee;
     padding: 15px 15px 15px 15px;
-    border: 1px solid #ebecec;
-    border-width: 0 1px 1px 0;
     border-bottom-right-radius: 3px;
-    z-index: 10;
     margin-bottom: 50px;
 }
 
 .title-information .title_area h1 {
-    margin-bottom:30px;
+    margin-bottom:40px;
 }
 
 
@@ -132,7 +129,7 @@ button > * {
 }
 
 .sub-menu.board {
-    border-color: #888;
+    border-color: #eee;
 }
 
 /* .sub-menu .text {
@@ -199,9 +196,7 @@ button > * {
     line-height: 34px;
 }
 
-ul, ol, li {
-    list-style: none;
-}
+
 
 .select-box .select-layer li {
     padding: 0 !important;
@@ -220,263 +215,45 @@ ul, ol, li {
     line-height: 1.2;
 }
 
-/* 여기가 진짜 게시판 */
-.board-feed li {
-    position: relative;
-    padding: 20px 8px 32px;
-    border-bottom: 1px solid #eee;
-    animation: list-up 0.4s ease;
-    -webkit-animation: list-up 0.4s ease;
+/* 게시판 (bootstrap 활용)*/
+.board-feed {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .autor_wrap {
+    /* bootstrap col 클래스 대처용*/
     display: table;
     position: relative;
-}
-
-
-.autor_wrap .thum {
-    display: table-cell;
-    width: 51px;
-    text-align: left;
-    font: 0/0 a;
-}
-
-
-.autor_wrap .thum img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.autor_wrap .info_box {
-    display: table-cell;
-    position: relative;
-    vertical-align: middle;
-}
-
-
-.autor_wrap .info_box > * {
-    line-height: 1.2;
-}
-
-.autor_wrap .info_box .nick {
-    color: #333;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: "NGBS", verdana, applegothic, sans-serif;
-}
-
-.board-feed .autor_wrap .info_box .nick {
-    font-weight: bold;
-}
-
-.autor_wrap .info_box .nick p {
-    position: relative;
-}
-
-.autor_wrap .info_box .nick em {
-    color: #aaa;
-}
-
-.board-feed .autor_wrap .info_box .nick em {
-    font-weight: normal;
-    font-size: 12px;
-}
-
-.board-feed .autor_wrap .info_box span, .board-feed .autor_wrap .info_box span em {
-    color: #888;
-}
-
-
-.board-feed .conts {
-    display: table;
+    max-width: 37.5rem; 
+    max-height:18.75rem;
     width: 100%;
-    height: 132px;
-    margin-top: 12px;
+    height:100%;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
-.board-feed .conts .post_conts {
-    display: table-cell;
-    position: relative;
-    vertical-align: top;
+.information-title {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    color: inherit;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
-.board-feed .conts .post_conts a {
-    display: block;
-    word-break: break-all;
+.information-title:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 }
 
-.board-feed .conts .post_conts .text {
-    display: table;
-    table-layout: fixed;
+.content {
+    max-height:14rem; 
+    border:0px;
 }
 
-.board-feed .conts .post_conts .text > div {
-    display: table-cell;
-}
 
-.board-feed .conts .post_conts .text strong {
-    display: block;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-    -webkit-line-clamp: 1;
-    height: 22px;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-}
 
-.board-feed .conts .post_conts .text strong .ic_noti {
-    display: inline-block;
-    height: 20px;
-    margin: 0 6px 0 0;
-    padding: 0 6px;
-    border: 1px solid #00bbed;
-    border-radius: 30px;
-    color: #00bbed;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 20px;
-    vertical-align: 2px;
-}
-
-.board-feed .conts .post_conts .text .cate {
-    display: table-cell;
-    white-space: nowrap;
-    vertical-align: middle;
-}
-
-.board-feed .conts .post_conts .text .cate span {
-    display: block;
-    position: relative;
-    margin: 0 0 0 25px;
-    color: #666;
-    font-size: 13px;
-}
-
-.board-feed .conts .post_conts .cont {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    position: relative;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 602px;
-    height: 40px;
-    margin-top: 11px;
-    color: #888;
-    font-size: 14px;
-    line-height: 22px;
-    white-space: normal;
-    -webkit-line-clamp: 2;
-}
-
-.btn-grid {
-    font: 0/0 a;
-}
-
-.board-feed .conts .btn-grid {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-}
-
-.btn-grid [class$=start] {
-    float: left;
-    position: relative;
-}
-
-.board-feed .conts .btn-grid .grid-start {
-    padding: 0;
-}
-
-.btn-basic {
-    padding: 0 16px;
-    min-width: 60px;
-    height: 36px;
-    border: 1px solid #d9dddf;
-    border-radius: 2px;
-    color: #333;
-    font-size: 13px;
-    line-height: 34px;
-    text-align: center;
-}
-
-a.btn-basic {
-    display: inline-block;
-    line-height: 36px;
-    box-sizing: border-box;
-}
-
-.btn-grid .btn-basic {
-    margin-left: 8px;
-}
-
-.btn-grid .btn-basic:first-child {
-    margin-left: 0;
-}
-
-button.cmmt_list span {
-    display: inline-block;
-    background: url(/images/bj/sp_bj.png) -70px -190px no-repeat;
-    width: 18px;
-    height: 16px;
-    margin-right: 6px;
-    font: 0/0 a;
-    vertical-align: 12px;
-}
-
-button.up span {
-    display: inline-block;
-    background: url(/images/bj/sp_bj.png) -95px -190px no-repeat;
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    font: 0/0 a;
-    vertical-align: 12px;
-}
-
-button.btn-detail {
-    opacity: 0;
-    visibility: hidden;
-    transition: all .2s ease;
-    width: 21px;
-    height: 21px;
-}
-
-.board-feed li .btn-detail {
-    position: absolute;
-    top: 24px;
-    right: 8px;
-    width: 32px;
-    height: 32px;
-}
-
-.board-feed li .btn-detail span {
-    background-position: -155px -140px;
-    width: 4px;
-    height: 20px;
-}
-
-.btn-grid.board {
-    margin-top: 12px;
-}
-
-.btn-grid [class$=end] {
-    float: right;
-    position: relative;
-    text-align: right;
-}
-
-.btn-basic.write span {
-    position: relative;
-    padding-left: 19px;
-    font-weight: bold;
-}
 
 section[class$=-srh_wrap] {
     padding: 24px 0 44px;
