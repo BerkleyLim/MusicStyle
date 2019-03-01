@@ -125,19 +125,12 @@ button > * {
 .sub-menu {
     margin-top: 20px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 100px;
 }
 
 .sub-menu.board {
     border-color: #eee;
 }
-
-/* .sub-menu .text {
-    float: left;
-    padding-top: 10px;
-    color: #666;
-    font-size: 13px;
-} */
 
 .sub-menu .sort-list {
     float: right;
@@ -219,20 +212,21 @@ button > * {
 .board-feed {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    /* margin-right: -15px;
+    margin-left: -15px; */
 }
 
 .autor_wrap {
     /* bootstrap col 클래스 대처용*/
     display: table;
     position: relative;
-    max-width: 37.5rem; 
-    max-height:18.75rem;
+    max-width: 34.5rem; 
+    max-height:15.625rem;
     width: 100%;
     height:100%;
     padding-right: 0px;
     padding-left: 0px;
+    margin : 0 auto;
 }
 
 .information-title {
@@ -251,8 +245,6 @@ button > * {
     max-height:14rem; 
     border:0px;
 }
-
-
 
 
 section[class$=-srh_wrap] {

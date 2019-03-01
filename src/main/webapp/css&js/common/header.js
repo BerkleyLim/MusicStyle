@@ -3,7 +3,10 @@ $(window).on("scroll touchmove", function () {
 });
 
 $.get(serverRoot + "/header.html", (data) => {
-    $("#header").html(data);
+	$("#header").html(data);
+	$("#information").click(e => {
+		location.href= serverRoot + "information/list.html"
+	})
     loadLoginUser();
 });
 
