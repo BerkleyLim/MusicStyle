@@ -2,14 +2,15 @@ $(window).on("scroll touchmove", function () {
     $('#header_bg').toggleClass('tiny', $(document).scrollTop() > 0);
 });
 
-$.get(serverRoot + "/header.html", (data) => {
+$.get(serverRoot + "header.html", (data) => {
 	$("#header").html(data);
-	$("#information").click(e => {
-		location.href= serverRoot + "information/list.html"
-	})
+	//eventlist();
     loadLoginUser();
 });
 
+function eventlist() {
+	$('.dropdown-toggle').dropdown();
+}
 
 function loadLoginUser() {
 //	$.getJSON(serverRoot + "/json/auth/loginUser", (data) => {
