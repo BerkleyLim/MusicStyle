@@ -8,19 +8,19 @@
             <div class="input-group">
                 <div class="input-group-prepend">
                     <button id="hd-search-menu" class="btn hd-dropdown-color dropdown-toggle" 
-                        type="button" data-toggle="dropdown" 
-                        aria-haspopup="true" aria-expanded="false">전체</button>
-                    <div class="dropdown-menu">
-                        <button class="dropdown-item" type="button">전체</button>
-                        <button class="dropdown-item" type="button">곡목록</button>
-                        <button class="dropdown-item" type="button">악보</button>
-                        <button class="dropdown-item" type="button">음원</button>
-                        <button class="dropdown-item" type="button">커뮤니티</button>
-                        <button class="dropdown-item" type="button">레슨샘찾기</button>
-                        <button class="dropdown-item" type="button">연습실정보</button>
+                        type="button" data-target="#" data-toggle="dropdown" 
+                        aria-haspopup="true" role="button" aria-expanded="false" style="width:140px">전체</button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="hd-search-menu">
+                        <button id="hd-search-all" class="dropdown-item" type="button">전체</button>
+                        <button id="hd-search-information" class="dropdown-item" type="button">곡목록</button>
+                        <button id="hd-search-sheetmusic" class="dropdown-item" type="button">악보</button>
+                        <button id="hd-search-music" class="dropdown-item" type="button">음원</button>
+                        <button id="hd-search-community"class="dropdown-item" type="button">커뮤니티</button>
+                        <button id="hd-search-teacher" class="dropdown-item" type="button">레슨샘찾기</button>
+                        <button id="hd-search-practiceInformation" class="dropdown-item" type="button">연습실정보</button>
                     </div>
                 </div>
-                <input type="text" class="form-control header-search-input" 
+                <input id="hd-search" type="text" class="form-control header-search-input" 
                        aria-label="Text input with dropdown button">
                 <i class="fas fa-search header-icon" onclick=""></i>
             </div>
@@ -32,15 +32,15 @@
         <div class="header_language">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" 
-                       id="dropdownMenu2" data-toggle="dropdown" 
-                       aria-haspopup="true" aria-expanded="false">
+                       id="select-language" data-target="#" data-toggle="dropdown" 
+                       aria-haspopup="true" role="button" aria-expanded="false">
                   Korean
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button class="dropdown-item" type="button">Korean</button>
-                  <button class="dropdown-item" type="button">Japanese</button>
-                  <button class="dropdown-item" type="button">English</button>
-                  <button class="dropdown-item" type="button">etc..</button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="select-language">
+                  <button id="select-korean" class="dropdown-item" type="button">Korean</button>
+                  <button id="select-japanese" class="dropdown-item" type="button">Japanese</button>
+                  <button id="select-English" class="dropdown-item" type="button">English</button>
+                  <button id="" class="dropdown-item" type="button">etc..</button>
                 </div>
               </div>
         </div>
@@ -56,11 +56,11 @@
     </nav>
     
     <nav class="hd-content2 navbar">
-        <a href="/introduction/" >소개</a>
-        <a href="/information/">곡정보</a>
+        <a href="/introduction/"  >소개</a>
+        <a href="/information/" >곡정보</a>
         <a href="/music/" >음원</a>
         <a href="/sheetmusic/" >악보</a>
-        <a href="/searchteacher/" >레스너찾기</a>
+        <a href="/teacher/" >레스너찾기</a>
         <a href="/practiceInformation" >연습실정보</a>
         <a href="/community/" >커뮤니티</a>
     </nav>

@@ -4,15 +4,64 @@ $(window).on("scroll touchmove", function () {
 
 $.get(serverRoot + "header.html", (data) => {
 	$("#header").html(data);
-	eventlist();
+	eventDropdown();
+	headerLink();
 	loadLoginUser();
 });
 
-function eventlist() {
-	$('#hd-search-menu').on('show.bs.dropdown', function () {
-		$('.dropdown-toggle').dropdown()
+// header의 드롭박스 이벤트
+function eventDropdown() {
+	$('.dropdown-toggle').dropdown();
+
+	$("#hd-search-all").click(e => {
+		$("#hd-search-menu").text($("#hd-search-all").text());
 	});
 	
+	$("#hd-search-information").click(e => {
+		$("#hd-search-menu").text($("#hd-search-information").text());
+	});
+	
+	$("#hd-search-sheetmusic").click(e => {
+		$("#hd-search-menu").text($("#hd-search-sheetmusic").text());
+	});
+	
+	$("#hd-search-music").click(e => {
+		$("#hd-search-menu").text($("#hd-search-music").text());
+	});
+	
+	$("#hd-search-community").click(e => {
+		$("#hd-search-menu").text($("#hd-search-community").text());
+	});
+	
+	$("#hd-search-teacher").click(e => {
+		$("#hd-search-menu").text($("#hd-search-teacher").text());
+	});
+	
+	$("#hd-search-practiceInformation").click(e => {
+		$("#hd-search-menu").text($("#hd-search-practiceInformation").text());
+	});
+	
+	// 여기는 다국어 드롭박스이다
+	$("#select-korean").click(e => {
+		$("#select-language").text($("#select-korean").text());
+		// 여기서부터 해당 언어를 이벤트 처리
+	});
+	
+	$("#select-japanese").click(e => {
+		$("#select-language").text($("#select-japanese").text());
+		// 여기서부터 해당 언어를 이벤트 처리
+	});
+	
+	$("#select-English").click(e => {
+		$("#select-language").text($("#select-English").text());
+		// 여기서부터 해당 언어를 이벤트 처리
+	});
+}
+
+function headerLink() {
+	$(".hd-content2 a").click(e => {
+		
+	});
 }
 
 function loadLoginUser() {
