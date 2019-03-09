@@ -1,6 +1,3 @@
-$(function information(menu){
-	$.get(serverRoot + menu , (data) => {
-		location.href = data;
-	});
-})
-
+$.get(serverRoot + "/information/list-test.html", (data) => {
+	$(".information-on").html(data);
+});

@@ -189,12 +189,12 @@ public class informationController {
 //        return boardService.selectLinkOne();
 //    }
     @RequestMapping("/")
-    public String list(
+    public void list(
             HttpServletRequest request, 
             HttpServletResponse response) throws Exception {        
         
         System.out.println(request.getContextPath());
         System.out.println(request.authenticate(response));
-        return "information/list.html";
+//        return "/information/list.html";
     }
 }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <!-- 제목을 뮤직스타일 -->
@@ -7,11 +8,9 @@
         <link rel="stylesheet" type="text/css" href="../css&js/common/common.css">
         <link rel="stylesheet" type="text/css" href="../css&js/information/information.css">
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="../css&js/common/common.js"></script>
-        <script src="../css&js/common/header.js"></script>
-        <script src="../css&js/common/footer.js"></script>
-        <script src="../css&js/information/information.js"></script>
-
+        <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="../node_modules/tooltip.js/dist/umd/tooltip.min.js"></script>
+        
         <script>
         function getInternetExplorerVersion(){
             var e=-1;
@@ -98,7 +97,7 @@
                     </div>
                 </section>
             </section>
-
+            
             <div class="board-feed">
                 <!-- 이부분 handlebars.js로 처리 예정 -->
                 <div class="autor_wrap card mb-3">
@@ -210,5 +209,12 @@
 
         <!-- 푸터 -->
         <footer id="footer"></footer>
+        
+        
+        <script src="../css&js/common/common.js"></script>
+        <script src="../css&js/common/header.js"></script>
+        <script src="../css&js/common/footer.js"></script>
+        <script src="../css&js/information/information.js"></script>
+        
     </body>
 </html>

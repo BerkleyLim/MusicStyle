@@ -4,12 +4,15 @@ $(window).on("scroll touchmove", function () {
 
 $.get(serverRoot + "header.html", (data) => {
 	$("#header").html(data);
-	//eventlist();
-    loadLoginUser();
+	eventlist();
+	loadLoginUser();
 });
 
 function eventlist() {
-	$('.dropdown-toggle').dropdown();
+	$('#hd-search-menu').on('show.bs.dropdown', function () {
+		$('.dropdown-toggle').dropdown()
+	});
+	
 }
 
 function loadLoginUser() {

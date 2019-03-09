@@ -7,6 +7,7 @@
     padding: 15px 15px 15px 15px;
     border-bottom-right-radius: 3px;
     margin-bottom: 50px;
+    width:1100px;
 }
 
 .title-information .title_area h1 {
@@ -210,14 +211,14 @@ button > * {
 
 /* 게시판 (bootstrap 활용)*/
 .board-feed {
-    display: flex;
-    flex-wrap: wrap;
-    /* margin-right: -15px;
-    margin-left: -15px; */
-}
+    display:flex;
+    flex-wrap:wrap;
+    width:1200px;
+    margin : 0 auto
 
-.autor_wrap {
-    /* bootstrap col 클래스 대처용*/
+}
+.board-feed .autor_wrap{
+    /* display: flex; */
     display: table;
     position: relative;
     max-width: 34.5rem; 
@@ -226,8 +227,8 @@ button > * {
     height:100%;
     padding-right: 0px;
     padding-left: 0px;
-    margin : 0 auto;
 }
+
 
 .information-title {
     padding: .75rem 1.25rem;

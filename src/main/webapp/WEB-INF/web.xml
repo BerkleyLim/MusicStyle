@@ -48,8 +48,7 @@
             <param-value>true</param-value>
         </init-param>
     </filter>
-    
-    <!-- 여기는 모든 경로를 지정 -->
+    <!-- CharactorEncodingFilter 관련해서 모든 경로 설정 -->
     <filter-mapping>
         <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -92,10 +91,21 @@
             <max-file-size>5000000</max-file-size>
         </multipart-config>
     </servlet>
+    <!-- DispatcherServlet URL 매핑을 사용 json으로 매핑 -->
     <servlet-mapping>
         <servlet-name>json</servlet-name>
         <url-pattern>/json/*</url-pattern>
     </servlet-mapping>
+    
+    <!-- 곡 정보 이동 경로 설정 (임시) -->
+    <!-- <servlet>
+        <servlet-name>information</servlet-name>
+        <jsp-file>/WEB-INF/jsp/information/list.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>information</servlet-name>
+        <url-pattern>/information/</url-pattern>
+    </servlet-mapping> -->
     
     
     <!-- 서블릿 실행 도중 특정 예외가 발생하면 실행될 JSP를 지정한다. -->
