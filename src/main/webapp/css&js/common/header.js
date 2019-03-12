@@ -64,13 +64,6 @@ function goReplace() {
 	history.pushState(null, null, serverRoot);
 }
 
-
-function headerLink() {
-	$(".hd-content2 a").click(e => {
-		
-	});
-}
-
 function loadLoginUser() {
 //	$.getJSON(serverRoot + "/json/auth/loginUser", (data) => {
 //		
