@@ -5,7 +5,7 @@ $(window).on("scroll touchmove", function () {
 $.get(serverRoot + "header.html", (data) => {
 	$("#header").html(data);
 	eventDropdown();
-	headerLink();
+	outputDesplay();
 	loadLoginUser();
 });
 
@@ -58,10 +58,23 @@ function eventDropdown() {
 	});
 }
 
-function goReplace() {
-	var url = serverRoot + 'information/list.html';
-	location.href = url;
-	history.pushState(null, null, serverRoot);
+// 여기는 main.html을 직접 불려와서 container에 저장한다.
+function outputDesplay() {
+	//$(".header").css("height", "80px");
+	//$(".container").css("padding-top", "100px");
+	//$(".hd-content2").css("display", "none"); // 마이페이지 할때 기능 넣기
+	$.get(serverRoot + "/main.html", (data) => {
+		$(".container").html(data);
+	});
+	
+	// 여기는 바로 페이지 이동없이 바로 곡정보를 이동 시킨다
+	$(document).ready( () => {
+		$("#hd-information").click(e => {
+			$.get(serverRoot + "/information/list.html", (data) => {
+				$(".container").html(data);
+			});
+		});
+	})
 }
 
 function loadLoginUser() {

@@ -97,16 +97,6 @@
         <url-pattern>/json/*</url-pattern>
     </servlet-mapping>
     
-    <!-- 곡 정보 이동 경로 설정 (임시) -->
-    <!-- <servlet>
-        <servlet-name>information</servlet-name>
-        <jsp-file>/WEB-INF/jsp/information/list.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>information</servlet-name>
-        <url-pattern>/information/</url-pattern>
-    </servlet-mapping> -->
-    
     
     <!-- 서블릿 실행 도중 특정 예외가 발생하면 실행될 JSP를 지정한다. -->
     <error-page>
