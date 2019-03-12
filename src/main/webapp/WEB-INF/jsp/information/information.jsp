@@ -4,16 +4,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>      
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset='UTF-8'>
+    <head>
+      <meta charset='UTF-8'>
         <!-- 제목을 뮤직스타일 -->
         <title>뮤직스타일</title>
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="../css&js/common/common.css">
         <link rel="stylesheet" type="text/css" href="../css&js/information/information.css">
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-
+        
 
         <script>
         function getInternetExplorerVersion(){
@@ -34,8 +33,8 @@
             return-1<e&&e<10
         }
         </script>
-</head>
-<body>
+    </head>
+    <body>
         <!-- 헤더 -->
         <header id="header"></header>
         
@@ -45,10 +44,14 @@
         <!-- 푸터 -->
         <footer id="footer"></footer>
         
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- <script src="../node_modules/popper.js/dist/popper.min.js"></script> -->
+        <!-- <script src="../node_modules/tooltip.js/dist/umd/tooltip.min.js"></script> -->
         <script src="../css&js/common/common.js"></script>
         <script src="../css&js/common/header.js"></script>
         <script src="../css&js/common/footer.js"></script>
         <script src="../css&js/information/information.js"></script>
         
-</body>
+    </body>
 </html>

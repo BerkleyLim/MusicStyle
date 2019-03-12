@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+body {margin:0; padding:0;}
+.af_loading {display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-webkit-align-items: center;-moz-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-webkit-justify-content: center;-moz-box-pack: center;-ms-flex-pack: center;justify-content: center;}
+.af_loading:after {
+	display:block;
+	-webkit-animation: rotate 0.9s linear infinite;
+	-ms-animation: rotate 0.9s linear infinite;
+	animation: rotate 0.9s linear infinite;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	border-top: 3px solid #545a6a;
+	border-bottom: 3px solid #d4d4db;
+	border-left: 3px solid #545a6a;
+	border-right: 3px solid #d4d4db;
+	content: '';
+	opacity: .7;
+}
+.af_loading.more:after {width:20px;height:20px;margin:10px 0;border-width:1px;background:none}
+@keyframes rotate {
+	0% {transform:rotateZ(-360deg); -webkit-transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg);}
+	100% {transform:rotateZ(0deg); -webkit-transform:rotateZ(0deg); -ms-transform:rotateZ(0deg);}
+}
+@-webkit-keyframes rotate {
+	0% {transform:rotateZ(-360deg); -webkit-transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg);}
+	100% {transform:rotateZ(0deg); -webkit-transform:rotateZ(0deg); -ms-transform:rotateZ(0deg);}
+}
+@-ms-keyframes rotate {
+	0% {transform:rotateZ(-360deg); -webkit-transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg);}
+	100% {transform:rotateZ(0deg); -webkit-transform:rotateZ(0deg); -ms-transform:rotateZ(0deg);}
+}
+.af_loading.more {position:absolute; top:300px; left:50%;}
+/*
+ * @ PC
+ */
+header .inner_header {position:relative; width:1184px; height:64px; margin:0 auto;}
+.loading-header {position:fixed; top:0; left:0; right:0; background:#fff; width:100%; min-width:1184px; border-bottom:1px solid #f0f0f0; z-index:1500;}
+.loading-header h1 {margin:0;}
+.loading-header h1 a {display:block; background:url("/images/bj/bj_logo.png") 0 50% no-repeat; width:136px; height:65px; font:0/0 a;}
+.loading-header .loading-srh {position:absolute; top:16px; left:156px; background-image:url(/images/svg/loading.svg); width:240px; height:32px; border-radius:5px;}
+.loading-header .loading-util {position:absolute; top:16px; right:0; font:0/0 a;}
+.loading-header .loading-util > * {display:inline-block; background-image:url(/images/svg/loading.svg); height:28px; border-radius:5px;}
+.loading-header .loading-util span {width:28px; margin-right:31px;}
+.loading-header .loading-util em {width:44px;}
+
+
+[class*=-grid-col-]:after {content:""; display:block; clear:both;}
+[class*=-grid-] > div span {display:block; background-image:url(/images/svg/loading.svg); width:100%; height:100%; border-radius:15px;}
+[class*=-grid-] > div {width:100%; box-sizing:border-box;}
+[class*=-grid-col-2] > div {float:left; width:calc(50% - 8px); height:330px;}
+[class*=-grid-col-2] > div:nth-child(2) {float:right;}
+[class*=-grid-row-2] {height:100%;}
+[class*=-grid-row-2] > div {width:100%; height:calc(50% - 8px);}
+[class*=-grid-row-2] > div:nth-child(2) {margin-top:.8rem;}
+[class*=-grid-] > div.list span {height:24px; margin-top:24px; border-radius:5px;}
+[class*=-grid-] > div.list span:first-child {margin-top:0;}
+
+.sct-vod [class*=-grid-col-2] > div {width:279px; height:244px;}
+.sct-vod [class*=-grid-col-2] > div:first-child {width:589px;}
+.sct-vod [class*=-grid-row-2] > div {height:114px;}
+.sct-vod [class*=-grid-row-2] > div span {width:100%;}
+
+.sct-board [class*=-grid-col-2] > div {width:434px; height:193px;}
+.sct-board [class*=-grid-col-2] > div.list {padding-top:12px;}
+
+.sct-uvod [class*=-grid-col-2] > div {height:244px;}
+
+
+.vod-list [class*=-grid-row-2] > div {height:114px;}
+.vod-list [class*=-grid-row-2] > div.list {height:auto;}
+.vod-list [class*=-grid-row-2] > div.list span {margin-top:12px;}
+
+.vod-list.b-feed [class*=-grid-row-2]:after {content:""; display:block; clear:both;}
+.vod-list.b-feed [class*=-grid-row-2] > div {float:left; width:240px; height:135px;}
+.vod-list.b-feed [class*=-grid-row-2] > div.list {float:right; width:616px; margin-top:0;}
+.vod-list.b-feed [class*=-grid-row-2] > div.list span {margin-top:0;}
+.vod-list.b-feed [class*=-grid-row-2] > div.list span:first-child {height:24px; margin-bottom:10px;}
+
+
+.board-feed [class*=-grid-col-1] > div {}
+.board-feed [class*=-grid-col-1] > div:first-child span {display:inline-block; width:calc(100% - 400px); height:24px; vertical-align:middle;}
+.board-feed [class*=-grid-col-1] > div:first-child .thum {width:40px; height:40px; border-radius:50%; margin-right:11px;}
+
+.board-feed [class*=-grid-col-2]:after {display:none;}
+.board-feed [class*=-grid-col-2] {display:table; width:100%; margin-top:16px;}
+.board-feed [class*=-grid-col-2] > div {display:table-cell; height:auto; float:none; width:auto; vertical-align: top;}
+.board-feed [class*=-grid-col-2] > div span {height:24px;}
+.board-feed [class*=-grid-col-2] > div > div:nth-child(2) {width:80%; margin-top:15px;}
+.board-feed [class*=-grid-col-2] > div.video-img {width:266px; padding-left:32px;}
+.board-feed [class*=-grid-col-2] > div.video-img > div:last-child {margin-top:0;}
+.board-feed [class*=-grid-col-2] > div.video-img span {height:132px;}
+
+.board-list [class*=-grid-col-1] > div span {height:24px;}
+.board-list table [class*=-grid-col-1] > div span {width:90%; height:24px; margin:0 auto;}
+
+/* 브라우저 업데이트 */
+.update .header {border-bottom:1px solid #ececec;}
+.update .header h1 a {display:block; background:url("/images/bj/bj_logo.png") 0 0 no-repeat; width:136px; height:23px; margin:17px auto 15px; font:0/0 a;}
+.update .conts {background:url("/images/bj/img_browser.png") 50% 81px no-repeat; padding-top:340px; text-align:center;}
+.update .conts h2 {color:#333; font-size:36px; font-weight:800;}
+.update .conts p {margin-top:15px; color:#888; font-size:15px; line-height:1.5;}
+.update .conts .btn-update {display:inline-block; background:#4279ff; height:52px; margin-top:45px; padding:0 50px; border-radius:5px; color:#fff; font-size:16px; font-weight:bold; line-height:52px;}
+#footer.full {margin-top:270px; padding:0; color:#666; font-size:13px; font-family:tahoma; text-align:center;}
+
+
+
+
+/*
+ * @ MOBILE
+ */
+.m_loading-header {background:#fff; height:40px; padding:8px 77px; box-sizing:border-box;}
+.m_loading-header .tit,
+.m_loading-header .right span {background:#f1f3f8; height:22px;}
+.m_loading-header .right {position:absolute; top:8px; right:14px;}
+.m_loading-header .right span {display:inline-block; width:22px; margin-left:6px;}
+.m_loading-header + #bs-container {}
+.m_af_loading {background:#fff; height:calc(100vh - 40px);}
+.m_af_loading div {position:relative; background:#f1f3f8; height:145px;}
+.m_af_loading div span {position:absolute; bottom:-34px; left:50%; background:#fff; width:68px; height:68px; margin-left:-34px; border-radius:50%;}
+.m_af_loading div:after {position:absolute; bottom:-25px; left:50%; width:50px; height:50px; margin-left:-25px; box-sizing:border-box;
+	-webkit-animation:rotate 0.9s linear infinite;
+	animation:rotate 0.9s linear infinite;
+	border-radius:100%;
+	border-top:3px solid #545a6a;
+	border-bottom:3px solid #d4d4db;
+	border-left:3px solid #545a6a;
+	border-right:3px solid #d4d4db;
+	content:'';
+	opacity:.7;
+}
+@keyframes rotate {
+	0% {transform:rotateZ(-360deg); -webkit-transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg);}
+	100% {transform:rotateZ(0deg); -webkit-transform:rotateZ(0deg); -ms-transform:rotateZ(0deg);}
+}
+@-webkit-keyframes rotate {
+	0% {transform:rotateZ(-360deg); -webkit-transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg);}
+	100% {transform:rotateZ(0deg); -webkit-transform:rotateZ(0deg); -ms-transform:rotateZ(0deg);}
+}
+
+.board-list [class*=-grid-col-2] > div {width:100%; height:1.6rem;}
+.board-list [class*=-grid-row-2] > div:first-child span {display:block; width:8rem; height:1.6rem;}
+.board-list [class*=-grid-row-2] > div:first-child .thum { display:none;}
+.board-list [class*=-grid-row-2] > div:last-child {margin-top:0;}
+.board-list [class*=-grid-row-2] > div:last-child span {height:1.6rem; margin-top:0.8rem;}
+.board-list [class*=-grid-row-2] > div:last-child span:last-child {width:80%; height:1.6rem;}
+
+.board-list.feed [class*=-grid-row-2] > div:first-child span {display:inline-block; width:calc(100% - 60px); height:1.6rem; vertical-align:middle;}
+.board-list.feed [class*=-grid-row-2] > div:first-child .thum {width:4rem; height:4rem; border-radius:50%; margin-right:1.1rem;}
+.board-list.feed [class*=-grid-row-2] > div span{ height:20px;}
+.board-list.feed [class*=-grid-row-2] [class*=-grid-col-2] > div {width:100%; height:auto;}
+.board-list.feed [class*=-grid-row-2] > div:nth-child(2) {margin-top:0;}
+.board-list.feed [class*=-grid-row-2] > div:nth-child(2) span {margin-top:8px; height:1.6rem;}
+.board-list.feed [class*=-grid-row-2] > div:nth-child(2) span:first-child {height:1.6rem;}
+
+.vod-list [class*=-grid-col-2] {padding:1rem 0;}
+.vod-list [class*=-grid-col-2] > div {width:153px; height:86px;}
+.vod-list [class*=-grid-col-2] > div:nth-child(2) {width:calc(100% - 16.3rem);}
+.vod-list [class*=-grid-col-2] > div span {width:100%;height:86px;}
+.vod-list [class*=-grid-col-2] [class*=-grid-row-2] > div {height:1.6rem;}
+.vod-list [class*=-grid-col-2] [class*=-grid-row-2] > div:first-child > span {width:100%; height:1.6rem;}
+.vod-list [class*=-grid-col-2] [class*=-grid-row-2] > div > span {height:1.6rem; width:15rem;}
+
+.sct-vod [class*=-grid-row-3] > div span { height:50px;}
+.sct-vod [class*=-grid-row-3] > div.bigger {margin-bottom:8px;}
+.sct-vod [class*=-grid-row-3] > div.bigger span { min-height:16rem;}
+.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] {padding:1rem 0;}
+.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] > div { width:calc(100% - 160px); height:86px;}
+.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] > div span {height:1.6rem;}
+.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] > div span:last-child {height:1.6rem; margin-top:.8rem;}
+.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] > div:first-child {width:153px;}
+.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] > div:first-child span {width:100%; height:86px; margin-top:0;}
+.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] > div:last-child span:last-child {width:50%;}
+@media (min-width: 767px) {
+	.sct-vod [class*=-grid-row-3] > div span { height:50px;}
+	.sct-vod [class*=-grid-row-3] > div {float:left; width:calc(100% - 346px);}
+	.sct-vod [class*=-grid-row-3] > div.bigger {margin-bottom:0; width:330px; margin-right:16px;}
+	.sct-vod [class*=-grid-row-3] > div.bigger span { min-height:18.5rem;}
+	.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] {padding:0;}
+	.sct-vod [class*=-grid-row-3] [class*=-grid-col-2]:last-child{margin-top:1.4rem;}
+	.sct-vod [class*=-grid-row-3] [class*=-grid-col-2] > div:last-child span:last-child {width:20rem;}
+}
+
+
+.sct-uvod [class*=-grid-row-3] > div span { height:50px;}
+.sct-uvod [class*=-grid-row-3] > div.bigger {margin-bottom:8px;}
+.sct-uvod [class*=-grid-row-3] > div.bigger span { min-height:16rem;}
+.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] {padding:1rem 0;}
+.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] > div { width:calc(100% - 160px); height:86px;}
+.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] > div span {height:1.6rem;}
+.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] > div span:last-child {height:1.6rem; margin-top:.8rem;}
+.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] > div:first-child {width:153px;}
+.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] > div:first-child span {height:86px; margin-top:0;}
+.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] > div:last-child span:last-child {width:50%;}
+
+@media (min-width: 767px) {
+	.sct-uvod [class*=-grid-row-3] > div span { height:50px;}
+	.sct-uvod [class*=-grid-row-3] > div {float:left; width:calc(100% - 346px);}
+	.sct-uvod [class*=-grid-row-3] > div.bigger {margin-bottom:0; width:330px; margin-right:16px;}
+	.sct-uvod [class*=-grid-row-3] > div.bigger span { min-height:18.5rem;}
+	.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] {padding:0;}
+	.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2]:last-child{margin-top:1.4rem;}
+	.sct-uvod [class*=-grid-row-3] [class*=-grid-col-2] > div:last-child span:last-child {width:20rem;}
+}

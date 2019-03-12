@@ -58,6 +58,13 @@ function eventDropdown() {
 	});
 }
 
+function goReplace() {
+	var url = serverRoot + 'information/list.html';
+	location.href = url;
+	history.pushState(null, null, serverRoot);
+}
+
+
 function headerLink() {
 	$(".hd-content2 a").click(e => {
 		
