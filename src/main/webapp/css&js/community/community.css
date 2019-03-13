@@ -1,0 +1,278 @@
+
+
+/* 카테코리 안의 있는 헤더 */
+.title-information {
+    top: 65px;
+    background: #eee;
+    padding: 15px 15px 15px 15px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 50px;
+    width:1100px;
+}
+
+.title-information .title_area h1 {
+    margin-bottom:40px;
+}
+
+
+.title-information .items_wrap button {
+    height: 36px;
+    font: 0/0 a;
+    font-size: 1.2em;
+}
+
+
+
+.search-box {
+    /* position: relative; */
+    text-align: right;
+    font-size: 0;
+    line-height: 0;
+}
+
+.select-box {
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    z-index: 10;
+}
+
+.select-box .selected {
+    display: block;
+    position: relative;
+    height: 34px;
+    padding: 0 38px 0 12px;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+    color: #666;
+    font-size: 13px;
+    line-height: 34px;
+}
+
+.select-box .select-layer {
+    display: none;
+    position: absolute;
+    top: 33px;
+    background: #fff;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+}
+
+.select-box .select-layer[data-align="left"] {
+    left: 0;
+}
+
+.select-box .select-layer li {
+    padding: 0 !important;
+    border: 0 !important;
+    white-space: nowrap;
+    animation: none;
+}
+
+.select-box .select-layer li a {
+    display: block;
+    padding: 10px 34px 10px 16px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.search-box .input-box {
+    display: inline-block;
+    position: relative;
+    margin-left: 4px;
+    vertical-align: -14px;
+}
+
+.search-box .input-box input[type=text] {
+    float: left;
+    width: 186px;
+    height: 34px;
+    padding: 0 0 0 12px;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+    color: #000;
+    font-size: 13px;
+    line-height: 34px;
+}
+
+.search-box .input-box .submit {
+    float: left;
+    background: #fff;
+    width: 58px;
+    height: 36px;
+    margin-left: -3px;
+    border: 1px solid #fa0;
+    border-radius: 2px;
+    color: #fa0;
+    font-size: 13px;
+    text-align: center;
+    line-height: 34px;
+}
+
+button > * {
+    position: relative;
+}
+
+/* 다음으로는 게시판 css */
+.title_wrap h2 {
+    color: #000;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.sub-menu {
+    margin-top: 20px;
+    padding-bottom: 8px;
+    margin-bottom: 100px;
+}
+
+.sub-menu.board {
+    border-color: #eee;
+}
+
+.sub-menu .sort-list {
+    float: right;
+}
+
+.sub-menu .sort-list > * {
+    float: left;
+}
+
+.sub-menu .sort-list .chk-box {
+    margin: 10px 18px 0 0;
+}
+
+
+.view_mode button {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.view_mode button span {
+    display: block;
+    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    font: 0/0 a;
+}
+
+.view_mode .b-feed.on span {
+    background-position: -95px -140px;
+}
+
+.view_mode button span {
+    display: block;
+    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    font: 0/0 a;
+}
+
+.view_mode .b-list span {
+    background-position: -115px -160px;
+}
+
+.select-box .selected {
+    display: block;
+    position: relative;
+    height: 34px;
+    padding: 0 38px 0 12px;
+    border: 1px solid #d9dddf;
+    border-radius: 2px;
+    color: #666;
+    font-size: 13px;
+    line-height: 34px;
+}
+
+
+
+.select-box .select-layer li {
+    padding: 0 !important;
+    border: 0 !important;
+    white-space: nowrap;
+    animation: none;
+}
+
+.select-box .select-layer li a {
+    display: block;
+    padding: 10px 34px 10px 16px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+/* 게시판 (bootstrap 활용)*/
+.board-feed {
+    display:flex;
+    flex-wrap:wrap;
+    width:1200px;
+    margin : 0 auto
+
+}
+.board-feed .autor_wrap{
+    /* display: flex; */
+    display: table;
+    position: relative;
+    max-width: 34.5rem; 
+    max-height:15.625rem;
+    width: 100%;
+    height:100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+.information-title {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    color: inherit;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.information-title:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.content {
+    max-height:14rem; 
+    border:0px;
+}
+
+
+section[class$=-srh_wrap] {
+    padding: 24px 0 44px;
+}
+
+.paging {
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.paging a {
+    display: inline-block;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 2px;
+    color: #555;
+    font-size: 13px;
+    line-height: 28px;
+}
+
+.paging a:first-child {
+    margin-left: 0;
+}
+
+.paging a.on {
+    background: #4279ff;
+    color: #fff;
+}
