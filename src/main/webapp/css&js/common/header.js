@@ -37,8 +37,8 @@ function eventDropdown() {
 		$("#hd-search-menu").text($("#hd-search-teacher").text());
 	});
 	
-	$("#hd-search-practiceInformation").click(e => {
-		$("#hd-search-menu").text($("#hd-search-practiceInformation").text());
+	$("#hd-search-practiceRoom").click(e => {
+		$("#hd-search-menu").text($("#hd-search-practiceRoom").text());
 	});
 	
 	// 여기는 다국어 드롭박스이다
@@ -68,12 +68,12 @@ function outputDesplay() {
 	
 	// 여기는 바로 페이지 이동없이 바로 마이페이지로 이동 시킨다
 	$(document).ready( () => {
-		// 차후, 이부분의 대해서 따로 연구해보겠음
-		$(".header").css("height", "80px");
-		$(".container").css("padding-top", "100px");
-		$(".hd-content2").css("display", "none"); // 마이페이지 할때 기능 넣기
-		
 		$("#hd-mypage").click(e => {
+			// 차후, 이부분의 대해서 따로 연구해보겠음
+			//$(".header").css("height", "80px");
+			//$(".container").css("padding-top", "100px");
+			//$(".hd-content2").css("display", "none"); // 마이페이지 할때 기능 넣기
+			
 			$.get(serverRoot + "/mypage/list.html", (data) => {
 				$(".container").html(data);
 			});
@@ -84,7 +84,7 @@ function outputDesplay() {
 	// 여기는 바로 페이지 이동없이 바로 소개페이지로 이동 시킨다
 	$(document).ready( () => {
 		$("#hd-introduction").click(e => {
-			$.get(serverRoot + "/introduction/list.html", (data) => {
+			$.get(serverRoot + "/introduction/introduction.html", (data) => {
 				$(".container").html(data);
 			});
 		});
@@ -93,7 +93,7 @@ function outputDesplay() {
 	// 여기는 바로 페이지 이동없이 바로 곡정보로 이동 시킨다
 	$(document).ready( () => {
 		$("#hd-information").click(e => {
-			$.get(serverRoot + "/information/list.html", (data) => {
+			$.get(serverRoot + "/information/information.html", (data) => {
 				$(".container").html(data);
 			});
 		});
@@ -102,7 +102,7 @@ function outputDesplay() {
 	// 여기는 바로 페이지 이동없이 바로 음원으로 이동 시킨다
 	$(document).ready( () => {
 		$("#hd-music").click(e => {
-			$.get(serverRoot + "/music/list.html", (data) => {
+			$.get(serverRoot + "/music/music.html", (data) => {
 				$(".container").html(data);
 			});
 		});
@@ -111,7 +111,7 @@ function outputDesplay() {
 	// 여기는 바로 페이지 이동없이 바로 악보로 이동 시킨다
 	$(document).ready( () => {
 		$("#hd-sheetmusic").click(e => {
-			$.get(serverRoot + "/sheetmusic/list.html", (data) => {
+			$.get(serverRoot + "/sheetmusic/sheetmusic.html", (data) => {
 				$(".container").html(data);
 			});
 		});
@@ -120,7 +120,7 @@ function outputDesplay() {
 	// 여기는 바로 페이지 이동없이 바로 레스너찾기로 이동 시킨다
 	$(document).ready( () => {
 		$("#hd-teacher").click(e => {
-			$.get(serverRoot + "/teacher/list.html", (data) => {
+			$.get(serverRoot + "/teacher/teacher.html", (data) => {
 				$(".container").html(data);
 			});
 		});
@@ -128,8 +128,8 @@ function outputDesplay() {
 	
 	// 여기는 바로 페이지 이동없이 바로 연습실정보로 이동 시킨다
 	$(document).ready( () => {
-		$("#hd-practiceinformation").click(e => {
-			$.get(serverRoot + "/practiceinformation/list.html", (data) => {
+		$("#hd-practiceRoom").click(e => {
+			$.get(serverRoot + "/practiceRoom/practiceRoom.html", (data) => {
 				$(".container").html(data);
 			});
 		});
@@ -138,7 +138,7 @@ function outputDesplay() {
 	// 여기는 바로 페이지 이동없이 바로 커뮤니티로 이동 시킨다
 	$(document).ready( () => {
 		$("#hd-community").click(e => {
-			$.get(serverRoot + "/community/list.html", (data) => {
+			$.get(serverRoot + "/community/community.html", (data) => {
 				$(".container").html(data);
 			});
 		});
