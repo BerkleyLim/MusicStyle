@@ -4,3 +4,11 @@
     border: 1px solid;
     padding: 20px 20px 20px 20px;
 }
+
+.input-login {
+    vertical-align: center;
+}
+
+.input-login input {
+    padding : 10px 10px 10px 10px;
+}
