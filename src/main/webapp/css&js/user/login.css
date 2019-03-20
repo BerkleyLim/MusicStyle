@@ -1,14 +1,52 @@
+/* 로그인 공통css 기능 */
+.bgdim {
+    opacity: 0.3;
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
 .login-form {
+    display:flex;
+    flex-wrap: wrap;
     width:500px;
-    height:700px;
+    /* height:700px; */
+    height: 500px;
+    z-index: 9999;
     border: 1px solid;
-    padding: 20px 20px 20px 20px;
+    padding: 40px 40px 40px 40px;
+    margin: 0 auto;
+    background: white;
+    align-items: center;
 }
 
 .input-login {
     vertical-align: center;
 }
 
+.input-login div {
+    margin:10px 0px 10px 0px;
+}
+
 .input-login input {
     padding : 10px 10px 10px 10px;
+}
+
+.button-text-align {
+    width:100%;
+    text-align : center;
+    margin-top:50px;
+}
+
+.API-component {
+    display:table;
+    width:100%;
+    margin-top:50px;
+}
+
+.API-common-button {
+    width:50%;
+    background: blue;
+    padding: 10px 10px 10px 10px;
 }
