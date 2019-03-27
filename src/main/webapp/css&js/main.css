@@ -1,0 +1,44 @@
+.event-main-container {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-items: center;
+    margin-bottom:100px;
+    width:1200px;
+    
+}
+
+
+.event-icon-prev, .event-icon-next {
+    width: 50px;
+    height: 50px;
+    font-size: 600%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.event-cover {
+    width: 800px;
+    height: 400px;
+    border: 1px solid;
+}
+
+
+.main-today-news-header {
+    display: grid;
+}
+
+.main-today-news-header h1 {
+    position: absolute;
+}
+
+.main-today-news-header p {
+    position: relative;
+    text-align: right;
+    margin:10px;
+}
+
+.main-today-news-header p:hover {
+    background:black;
+    opacity:0.2;
+}
