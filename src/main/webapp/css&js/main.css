@@ -1,15 +1,15 @@
 .event-main-container {
     display:flex;
-    flex-wrap:wrap;
     align-items: center;
     justify-items: center;
     margin-bottom:100px;
-    width:1200px;
+    width:1100px;
     
 }
 
 
-.event-icon-prev, .event-icon-next {
+.event-icon-prev {
+    position:relative;
     width: 50px;
     height: 50px;
     font-size: 600%;
@@ -17,28 +17,41 @@
     margin-bottom: 100px;
 }
 
-.event-cover {
-    width: 800px;
-    height: 400px;
-    border: 1px solid;
+.event-icon-next {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    font-size: 600%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.event-banner-cover {
+    position: relative;
+    width: 900px;
+    height: 200px;
+    text-align:center;
 }
 
 
-.main-today-news-header {
+.main-common-header {
     display: grid;
+    padding: 20px, 20px, 20px, 20px;
 }
 
-.main-today-news-header h1 {
+.main-common-header h1 {
     position: absolute;
 }
 
-.main-today-news-header p {
+.main-common-header p {
     position: relative;
     text-align: right;
-    margin:10px;
+    margin:20px;
 }
 
-.main-today-news-header p:hover {
-    background:black;
-    opacity:0.2;
+.event-information, .event-media, .event-music, .event-sheetmusic, .event-teacher, .event-practiceRoom, .event-community {
+    width: 800px;
+    height: 300px;
+    border: 1px solid;
+    padding: 50px, 50px, 50px, 50px;
 }

@@ -20,6 +20,7 @@
     <body>
         <!-- 헤더 -->
         <header id="header"></header>
+        
 
         <!-- 여기는 로그인 팝업 실시! -->
         <div class="login-popup-container"></div>
@@ -28,33 +29,149 @@
         <!-- 본문 작성 -> 1200px 기준 -->
         <div class="container">
             <!-- 이미지 메인 -->
-            <div class="event-main-container">
+            <nav class="nav justify-content-center event-main-container">
                 <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
-                <div class="event-cover"><img src=""></div>
+                <div class="event-banner-cover">
+                    <img src="image/sample-banner.jpg" style="width:800px; height:200px;">
+                </div>
                 <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
-            </div>
+            </nav>
 
             <!-- 오늘의 소식 -->
-            <div class="main-today-news-header">
+            <div class="main-common-header">
                 <h1>오늘의 소식</h1>
                 <p>&gt; 더보기</p>
             </div>
-            <div>다음은 베너로 추가</div>
+            <div class="banner">다음은 베너로 추가</div>
             
             <!-- 공지사항 및 QnA -->
             <div class="row">
-                <div class="col ">
-                    <h1>공지사항</h1>
-                    <p>&gt; 더보기</p>
+                <div class="col main-notice">
+                    <div class="main-common-header">
+                        <h1>공지사항</h1>
+                        <p>&gt; 더보기</p>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>뮤직스타일 이용안내</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>경고 및 제재사항</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col">
-                    <h1>QnA</h1>
-                    <p>&gt; 더보기</p>
+
+                <div class="col main-QnA">
+                    <div class="main-common-header">
+                        <h1>QnA</h1>
+                        <p>&gt; 더보기</p>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>영상 올리는 방법이 궁금해여</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>마이페이지 기능은 무엇인가요?</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <!-- 곡정보 -->
+            <div class="main-common-header">
+                <h1>곡 정보</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-information"><img src=""></div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
             
+            <!-- 영상 -->
+            <div class="main-common-header">
+                <h1>영상</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-media"><img src=""></div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+            
+            <!-- 음원 -->
+            <div class="main-common-header">
+                <h1>영상</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-music"><img src=""></div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+            
+            <!-- 악보 -->
+            <div class="main-common-header">
+                <h1>악보</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-sheetmusic"><img src=""></div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+
+            <!-- 레스너 찾기 -->
+            <div class="main-common-header">
+                <h1>레스너 찾기</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-teacher"><img src=""></div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+
+            <!-- 연습실 정보 -->
+            <div class="main-common-header">
+                <h1>연습실 정보</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-practiceRoom"><img src=""></div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+
+            <!-- 커뮤니티 -->
+            <div class="main-common-header">
+                <h1>커뮤니티</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-community"><img src=""></div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+            <!-- container 안에 있는거 끝 -->
         </div>
         
 
@@ -75,5 +192,6 @@
         <script src="css&js/community/community.js"></script>
         <script src="css&js/user/login.js"></script>
         
+
     </body>
 </html>
