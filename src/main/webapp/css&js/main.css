@@ -4,7 +4,7 @@
     justify-items: center;
     margin-bottom:100px;
     width:1100px;
-    
+    margin-top:10px;
 }
 
 
@@ -50,7 +50,7 @@
 }
 
 .event-information, .event-media, .event-music, .event-sheetmusic, .event-teacher, .event-practiceRoom, .event-community {
-    width: 800px;
+    width: 900px;
     height: 300px;
     border: 1px solid;
     padding: 50px, 50px, 50px, 50px;
