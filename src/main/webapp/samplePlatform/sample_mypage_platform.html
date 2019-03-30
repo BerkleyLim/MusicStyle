@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="../css&js/common/common.css">
+        <link rel="stylesheet" type="text/css" href="../css&js/mypage/mypage.css">
         
     </head>
     <body>
@@ -14,11 +15,12 @@
 
         <!-- 본문 작성 -> 1200px 기준 -->
         <div class="container">
-            <img src="" style="width:1200px;height:300px;">
+            <!-- 사진 -->
+            <img class="mypage-banner" src="../image/defalut-my-profile.png">
 
             <!-- 마이페이지 정보 (커버랑 같이 겹치기) -->
             <div class="profile-information">
-                <div class="profile-img"><img src=""></div>
+                <div class="profile-img"><img src="" style="width:200px;height:200px"></div>
                 <div class="profile-component1">
                     <div class="profile-name">홍길동</div>
                     <div class="profile-introduction">홍길동님의 마이페이지 입니다</div>
@@ -30,7 +32,21 @@
             </div>
 
             <!-- 마이페이지 카테고리 -->
-            <div></div>
+            <div class="mypage-container">
+                <div class="col-sm-3 mypage-menu-container">
+                    <button class="btn">기본정보</button>
+                    <button class="btn">회원정보 및 수정</button>
+                    <button class="btn">영상</button>
+                    <button class="btn">환전 신청</button>
+                    <button class="btn">연습실</button>
+                    <button class="btn">음원</button>
+                    <button class="btn">구입악보</button>
+                </div>
+                <div class="col-sm-9 mypage-target-container">
+                    영역 출력
+                    <!-- 여기는 메뉴를 클릭시 바로 출력 영역 (jQuery 사용) -->
+                </div>
+            </div>
         </div>
 
 
