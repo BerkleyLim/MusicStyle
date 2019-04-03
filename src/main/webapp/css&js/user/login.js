@@ -10,8 +10,10 @@ function loginDesplay() {
 		$(document).ready( () => {
 			$(".bgdim").click(e => {
 				// 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
-				$('.login-popup-container').removeAttr("style");
-				$('.login-popup-container input').val('');
+				//$('.login-popup-container').removeAttr("style");
+				$.get(serverRoot + "/null.html", (data) => {
+					$('.login-popup-container').html(data);
+				});
 			})
 		});
 		
@@ -51,7 +53,9 @@ function signUp() {
 		$(document).ready( () => {
 			$(".bgdim").click(e => {
 				// 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
-				$('.login-popup-container').removeAttr("style");
+				$.get(serverRoot + "/null.html", (data) => {
+					$('.login-popup-container').html(data);
+				});
 			})
 		});
 		

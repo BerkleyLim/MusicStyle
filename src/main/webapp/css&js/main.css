@@ -49,9 +49,23 @@
     margin:20px;
 }
 
-.event-information, .event-media, .event-music, .event-sheetmusic, .event-teacher, .event-practiceRoom, .event-community {
+.event-main-board-card-container {
+    display:flex;
+    align-items: center;
+    justify-items: center;
     width: 900px;
     height: 300px;
     border: 1px solid;
-    padding: 50px, 50px, 50px, 50px;
+    margin:0 auto;
+}
+
+/* 공통 곡작업, 영상, 음원, 악보, 레슨샘 찾기, 연습실 정보 카드형 설정 */
+.event-main-board-card-container .common-main-card {
+    position:relative;
+    margin: 10px 10px 10px 10px;
+    width:200px;
+    height:250px;
+    border:1px solid;
+    align-items: center;
+    justify-items: center;
 }
