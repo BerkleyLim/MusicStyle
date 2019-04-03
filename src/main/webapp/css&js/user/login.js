@@ -1,10 +1,4 @@
-// 헤더의 프로필 창 클릭시
-$(document).ready( () => {
-	$(".header_mymenu button").click(e => {
-		loginDesplay();
-	})
-	
-})
+
 
 function loginDesplay() {
 	$.get(serverRoot + "/user/login.html", (data) => {

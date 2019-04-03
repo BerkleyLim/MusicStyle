@@ -7,6 +7,16 @@ $.get(serverRoot + "header.html", (data) => {
 	eventDropdown();
 	outputDesplay();
 	//loadLoginUser();
+	// 차후 로그인 될 경우 loadLoginUser()에 함수 넣을 예정 (마이페이지 이동처리)
+	// 헤더의 프로필 창 클릭시
+	$(document).ready( () => {
+		$(".header_mymenu button").click(e => {
+			//loginDesplay();
+			$.get(serverRoot + "/mypage/mypage.html", (data) => {
+				$(".container").html(data);
+			})
+		})
+	})
 });
 
 // header의 드롭박스 이벤트
