@@ -11,10 +11,10 @@ $.get(serverRoot + "header.html", (data) => {
 	// 헤더의 프로필 창 클릭시
 	$(document).ready( () => {
 		$(".header_mymenu button").click(e => {
-			//loginDesplay();
-			$.get(serverRoot + "/mypage/mypage.html", (data) => {
-				$(".container").html(data);
-			})
+			loginDesplay();
+//			$.get(serverRoot + "/mypage/mypage.html", (data) => {
+//				$(".container").html(data);
+//			})
 		})
 	})
 });
