@@ -154,7 +154,7 @@ button > * {
 
 .view_mode button span {
     display: block;
-    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    /* background: url(/images/bj/sp_bj.png) -999em -999em no-repeat; */
     width: 16px;
     height: 16px;
     margin: 0 auto;
@@ -167,7 +167,7 @@ button > * {
 
 .view_mode button span {
     display: block;
-    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    /* background: url(/images/bj/sp_bj.png) -999em -999em no-repeat; */
     width: 16px;
     height: 16px;
     margin: 0 auto;
@@ -279,20 +279,10 @@ section[class$=-srh_wrap] {
 
 
 /* 곡 상세 정보 */
-/* 로그인 공통css 기능 */
-/* .bgdim {
-    opacity: 0.3;
-    background: black;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-}
- */
+
 .common-board-detail-container {
-    /* display:flex; */
-    /* flex-wrap: wrap; */
     width:1000px;
-    height: 750px;
+    height: 700px;
     z-index: 9999;
     border: 1px solid;
     padding: 40px 40px 40px 40px;
@@ -302,5 +292,19 @@ section[class$=-srh_wrap] {
 }
 
 .common-content-detail-container {
-    padding:20px, 20px, 20px, 20px;
+    display:table;
+    height:20%;
 }
+
+.album {
+    width:200px;
+    height:200px;
+}
+
+/* 여기는 상세 정보 위치 조정 */
+.information-button-event {
+    display: fixed;
+}
+
+
+

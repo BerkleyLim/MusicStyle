@@ -154,7 +154,7 @@ button > * {
 
 .view_mode button span {
     display: block;
-    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    /* background: url(/images/bj/sp_bj.png) -999em -999em no-repeat; */
     width: 16px;
     height: 16px;
     margin: 0 auto;
@@ -167,7 +167,7 @@ button > * {
 
 .view_mode button span {
     display: block;
-    background: url(/images/bj/sp_bj.png) -999em -999em no-repeat;
+    /* background: url(/images/bj/sp_bj.png) -999em -999em no-repeat; */
     width: 16px;
     height: 16px;
     margin: 0 auto;

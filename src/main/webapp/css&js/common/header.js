@@ -72,7 +72,7 @@ function eventDropdown() {
 function outputDesplay() {
 
 	// 메인 화면 출력
-	$.get(serverRoot + "/main.html", (data) => {
+	$.get(serverRoot + "main.html", (data) => {
 		$(".container").html(data);
 	});
 	
@@ -105,7 +105,9 @@ function outputDesplay() {
 		$("#hd-information").click(e => {
 			$.get(serverRoot + "/information/information.html", (data) => {
 				$(".container").html(data);
+				
 			});
+			clickInformationDetail();
 		});
 	})
 	
