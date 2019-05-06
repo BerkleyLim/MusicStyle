@@ -97,7 +97,6 @@
         <url-pattern>/json/*</url-pattern>
     </servlet-mapping>
     
-    
     <!-- 서블릿 실행 도중 특정 예외가 발생하면 실행될 JSP를 지정한다. -->
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>

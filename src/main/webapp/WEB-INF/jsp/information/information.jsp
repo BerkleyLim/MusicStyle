@@ -39,7 +39,10 @@
         <header id="header"></header>
         
         <!-- 본문 작성 -> 1200px 기준 -->
-        <div class="container information-on"> </div>
+        <div class="container"> </div>
+        
+        <!-- 여기는 게시판 정보를 상세하게 보기 위해 설정 -->
+        <div class="popup-board-detail-container"></div>
         
         <!-- 푸터 -->
         <footer id="footer"></footer>

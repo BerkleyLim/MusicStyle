@@ -1,24 +1,28 @@
 <div class="title-information">
     <nav class="navbar title_area">
         <h1>곡정보</h1>
-        <form>
-            <div class="search-box">
-                <div class="select-box">
-                    <a href="javascript:;" class="selected">제목+내용</a>
-                    <ul class="select-layer" data-align="left">
-                        <li><a href="javascript:;">제목+내용</a></li>
-                        <li><a href="javascript:;">제목</a></li>
-                        <li><a href="javascript:;">내용</a></li>
-                        <li><a href="javascript:;">닉네임</a></li>
-                        <li><a href="javascript:;">아이디</a></li>
-                    </ul>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="txt_inp" title="검색어 입력" value="">
-                    <button type="button" class="submit"><span><i class="fas fa-search"></i></span></button>
+        <div class="input-group-prepend search-box">
+            <div class="dropdown select-box">
+                <button class="btn dropdown-toggle" type="button" 
+                   id="select-box" data-target="#" data-toggle="dropdown" 
+                   aria-haspopup="true" role="button" aria-expanded="false"> 전체장르
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="select-box">
+                    <button id="information-select-all" class="dropdown-item" type="button">전체장르</button>
+                    <button id="information-select-classic" class="dropdown-item" type="button">클래식</button>
+                    <button id="information-select-newage" class="dropdown-item" type="button">뉴에이지</button>
+                    <button id="information-select-jazz" class="dropdown-item" type="button">재즈</button>
+                    <button id="information-select-pop" class="dropdown-item" type="button">팝</button>
+                    <button id="information-select-koreanpop" class="dropdown-item" type="button">가요</button>
+                    <button id="information-select-ost" class="dropdown-item" type="button">OST</button>
+                    <button id="information-select-etc" class="dropdown-item" type="button">그 외</button>
                 </div>
             </div>
-        </form>
+            <div class="input-box">
+                <input type="text" class="form-control" title="검색어 입력" value="">
+                <button type="button" class="submit"><span><i class="fas fa-search"></i></span></button>
+            </div>
+        </div>
     </nav>
     <nav class="navbar items_wrap">
         <button type="button" class="all-information">전체</button>
@@ -33,18 +37,16 @@
 </div>
 
 <div class="information-container">
-    <section class=""> 
-        <div class="title_wrap">
-            <h2>전체 곡 목록</h2>
-        </div>
-        <section class="sub-menu board">
+    <nav class="navbar information-list-setting"> 
+        <h2>전체 곡 목록</h2>
+        <div class="sub-menu board">
             <div class="sort-list">
                 <div class="view_mode">
-                    <button type="button" class="b-feed fas fa-bars on" data-viewtype="3">
-                        <span>카드형</span>
+                    <button type="button" class="feed-type fas fa-bars on" data-viewtype="3">
+                        <!-- <span>카드형</span> -->
                     </button>
-                    <button type="button" class="b-list fas fa-th-large" data-viewtype="1">
-                        <span>게시판형</span>
+                    <button type="button" class="list-type fas fa-th-large" data-viewtype="1">
+                        <!-- <span>게시판형</span> -->
                     </button>
                 </div>
                 <div class="select-box">
@@ -57,8 +59,8 @@
                     </ul>
                 </div>
             </div>
-        </section>
-    </section>
+        </div>
+    </nav>
     
     <div class="board-feed">
         <!-- 이부분 handlebars.js로 처리 예정 -->
