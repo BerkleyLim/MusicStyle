@@ -9,9 +9,9 @@
      단순히 알아보기 쉬울 뿐만 아니라 
      스프링 프레임워크와 연동할 때 DAO 객체를 자동 생성할 수 있다. 
 -->
-<mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.BoardDao">
+<mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.PracticeRoomDao">
 
-  <resultMap type="Board" id="BoardMap">
+  <resultMap type="Board" id="PracticeRoomMap">
     <id column="bno" property="no"/>
     <result column="memno" property="memno"/>
     <result column="path" property="path"/>
@@ -37,7 +37,7 @@
        그 메서드를 자동생성할 때 사용할 수 있다.
   -->
   <select id="selectList" 
-          resultMap="BoardMap"
+          resultMap="PracticeRoomMap"
           parameterType="map">
     SELECT b.BNO, b.PATH, COUNT(l.bno) AS cnt 
     FROM INTR_BOARD b 
@@ -48,7 +48,7 @@
     limit #{startRowNo}, #{pageSize}
   </select>
   
-  <select id="selectOne" parameterType="int" resultMap="BoardMap">
+  <select id="selectOne" parameterType="int" resultMap="PracticeRoomMap">
     SELECT b.BNO, mem.NKNM,mem.MPPHO, b.PATH, b.BOCTT, COUNT(DISTINCT l.lno) AS cnt, b.BRTDT 
     FROM INTR_BOARD b 
     LEFT OUTER JOIN INTR_MEMBER mem 
@@ -60,7 +60,7 @@
     WHERE b.BNO = #{value}
   </select>
   
-  <select id="commentList" parameterType="int" resultMap="BoardMap">
+  <select id="commentList" parameterType="int" resultMap="PracticeRoomMap">
     SELECT m.NKNM, b.CRTDT 
     FROM INTR_BCMMT b 
     LEFT OUTER JOIN INTR_MEMBER m 
@@ -69,7 +69,7 @@
     ORDER BY b.CNO DESC
   </select>
   
-  <select id="hashtagList" parameterType="int" resultMap="BoardMap">
+  <select id="hashtagList" parameterType="int" resultMap="PracticeRoomMap">
     SELECT bo.BNO, ht.TNAME
     FROM INTR_BOARD bo 
     INNER JOIN INTR_BTMACH mt 
@@ -104,7 +104,7 @@
     VALUES (NULL, #{no}, now(), #{cmmt}, #{memNo})
   </insert>
   
-  <select id="isWriter" parameterType="map" resultMap="BoardMap">
+  <select id="isWriter" parameterType="map" resultMap="PracticeRoomMap">
     SELECT BNO FROM `INTR_BOARD` WHERE BNO = #{no} AND MEMNO = #{memNo}
   </select>
   
@@ -121,7 +121,7 @@
     VALUES (NULL, #{no}, #{poX}, #{poY}, #{product}, #{address})
   </insert>
   
-  <select id="selectLinkOne" resultMap="BoardMap">
+  <select id="selectLinkOne" resultMap="PracticeRoomMap">
     SELECT * FROM `INTR_BRLK` ORDER BY LNO DESC LIMIT 1
   </select>
   
@@ -131,11 +131,11 @@
     VALUES (#{memno},now(),#{content},#{path});
   </insert>
   
-  <select id="selectRecent" resultMap="BoardMap">
+  <select id="selectRecent" resultMap="PracticeRoomMap">
     select bno from INTR_BOARD order by bno desc limit 1 
   </select>
   
-  <select id="selectMyBoard" resultMap="BoardMap">
+  <select id="selectMyBoard" resultMap="PracticeRoomMap">
     SELECT b.BNO, COUNT(DISTINCT l.LNO) cnt, COUNT(DISTINCT c.CNO) cmtCnt, b.PATH
     FROM INTR_BOARD b 
         LEFT OUTER JOIN INTR_LKMB l 
