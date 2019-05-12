@@ -14,11 +14,27 @@ public class RedirectController {
 //    @Autowired ServletContext sc;
 //    
     @GetMapping("/information")
+    public ModelAndView movedInformation(ModelMap model) {
+//        model.addAttribute("attribute", "redirectWithRedirectPrefix");
+        //model.addAttribute("attribute", "redirectWithRedirectPrefix");
+        //return new ModelAndView("redirect:/redirectedUrl", model);
+        return new ModelAndView("forward:/information/information.html");
+    }
+    
+    @GetMapping("/sheetmusic")
+    public ModelAndView movedSheetMusic(ModelMap model) {
+//        model.addAttribute("attribute", "redirectWithRedirectPrefix");
+        //model.addAttribute("attribute", "redirectWithRedirectPrefix");
+        //return new ModelAndView("redirect:/redirectedUrl", model);
+        return new ModelAndView("forward:/sheetmusic/sheetmusic.html");
+    }
+    
+    @GetMapping("/media")
     public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model) {
 //        model.addAttribute("attribute", "redirectWithRedirectPrefix");
         //model.addAttribute("attribute", "redirectWithRedirectPrefix");
         //return new ModelAndView("redirect:/redirectedUrl", model);
-        return new ModelAndView("redirect:/information/");
+        return new ModelAndView("forward:/media/media.html");
     }
     
 }
