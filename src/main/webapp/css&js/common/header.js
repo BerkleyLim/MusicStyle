@@ -35,10 +35,6 @@ function eventDropdown() {
 		$("#hd-search-menu").text($("#hd-search-sheetmusic").text());
 	});
 	
-	$("#hd-search-music").click(e => {
-		$("#hd-search-menu").text($("#hd-search-music").text());
-	});
-	
 	$("#hd-search-community").click(e => {
 		$("#hd-search-menu").text($("#hd-search-community").text());
 	});
@@ -70,21 +66,17 @@ function eventDropdown() {
 
 // 여기는 Container를 이동할 경로 설정
 function outputDesplay() {
-	// 메인 화면 출력
-	$.get(serverRoot + "main.html", (data) => {
-		$(".container").html(data);
-	});
+	
 	
 	// 여기는 바로 페이지 이동없이 바로 마이페이지, 소개페이지, 곡정보
 	// 음원, 악보, 레스너찾기, 연습실정보, 커뮤니티로 이동 시킨다
 	//moveMypage();
-	moveIntroduction();
+	/*moveIntroduction();
 	moveInformation();
-	moveMusic();
 	moveSheetmusic();
 	moveTeacher();
 	movePracticeRoom();
-	moveCommunity();
+	moveCommunity();*/
 }
 
 //function loadLoginUser() {
