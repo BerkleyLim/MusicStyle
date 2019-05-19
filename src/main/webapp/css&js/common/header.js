@@ -5,7 +5,7 @@ $(window).on("scroll touchmove", function () {
 $.get(serverRoot + "header.html", (data) => {
 	$("#header").html(data);
 	eventDropdown();
-	outputDesplay();
+	//outputDesplay();
 	//loadLoginUser();
 	// 차후 로그인 될 경우 loadLoginUser()에 함수 넣을 예정 (마이페이지 이동처리)
 	// 헤더의 프로필 창 클릭시 (여기는 임시용으로 사용) => 나중에 moveMypage()로 이용하여 처리할 것이다

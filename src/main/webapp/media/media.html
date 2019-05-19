@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="UTF-8" />
         <!-- 제목을 뮤직스타일 -->
         <title>뮤직스타일</title>
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="/css&js/common/common.css">
-        <link rel="stylesheet" type="text/css" href="/css&js/practiceRoom/practiceRoom.css">
+        <link rel="stylesheet" type="text/css" href="/css&js/information/information.css">
         
         <script>
         function getInternetExplorerVersion(){
@@ -35,45 +37,60 @@
         <!-- 여기는 로그인 팝업 실시! -->
         <div class="login-popup-container"></div>
         
+        <!-- 여기는 게시판 정보를 상세하게 보기 위해 설정 -->
+        <div class="popup-board-detail-container"></div>
+
         <!-- 본문 작성 -> 1200px 기준 -->
         <div class="container">
             <div class="title-information">
                 <nav class="navbar title_area">
-                    <h1>연습실 정보</h1>
-                    <form>
-                        <div class="search-box">
-                            <div class="select-box">
-                                <a href="javascript:;" class="selected">제목+내용</a>
-                                <ul class="select-layer" data-align="left">
-                                    <li><a href="javascript:;">제목+내용</a></li>
-                                    <li><a href="javascript:;">제목</a></li>
-                                    <li><a href="javascript:;">내용</a></li>
-                                    <li><a href="javascript:;">닉네임</a></li>
-                                    <li><a href="javascript:;">아이디</a></li>
-                                </ul>
-                            </div>
-                            <div class="input-box">
-                                <input type="text" class="txt_inp" title="검색어 입력" value="">
-                                <button type="submit" class="submit"><span><i class="fas fa-search"></i></span></button>
+                    <h1>영상정보</h1>
+                    <div class="input-group-prepend search-box">
+                        <div class="dropdown select-box">
+                            <button class="btn dropdown-toggle" type="button" 
+                               id="select-box" data-target="#" data-toggle="dropdown" 
+                               aria-haspopup="true" role="button" aria-expanded="false"> 전체장르
+                            </button>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="select-box">
+                                <button id="information-select-all" class="dropdown-item" type="button">전체장르</button>
+                                <button id="information-select-classic" class="dropdown-item" type="button">클래식</button>
+                                <button id="information-select-newage" class="dropdown-item" type="button">뉴에이지</button>
+                                <button id="information-select-jazz" class="dropdown-item" type="button">재즈</button>
+                                <button id="information-select-pop" class="dropdown-item" type="button">팝</button>
+                                <button id="information-select-koreanpop" class="dropdown-item" type="button">가요</button>
+                                <button id="information-select-ost" class="dropdown-item" type="button">OST</button>
+                                <button id="information-select-etc" class="dropdown-item" type="button">그 외</button>
                             </div>
                         </div>
-                    </form>
+                        <div class="input-box">
+                            <input type="text" class="form-control" title="검색어 입력" value="">
+                            <button type="button" class="submit"><span><i class="fas fa-search"></i></span></button>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="navbar items_wrap">
+                    <button type="button" class="all-information">전체</button>
+                    <button type="button" class="classic-information">클래식</button>
+                    <button type="button" class="newage-information">뉴에이지</button>
+                    <button type="button" class="jazz-information">재즈</button>
+                    <button type="button" class="korean-pop-information">가요</button>
+                    <button type="button" class="pop-information">팝</button>
+                    <button type="button" class="OST-information">OST</button>
+                    <button type="button" class="etc-information">기타장르</button>
                 </nav>
             </div>
             
             <div class="information-container">
-                <section class=""> 
-                    <div class="title_wrap">
-                        <h2>전체 연습실</h2>
-                    </div>
-                    <section class="sub-menu board">
+                <nav class="navbar information-list-setting"> 
+                    <h2>전체 곡 목록</h2>
+                    <div class="sub-menu board">
                         <div class="sort-list">
                             <div class="view_mode">
-                                <button type="button" class="b-feed fas fa-bars on" data-viewtype="3">
-                                    <span>카드형</span>
+                                <button type="button" class="feed-type fas fa-bars on" data-viewtype="3">
+                                    <!-- <span>카드형</span> -->
                                 </button>
-                                <button type="button" class="b-list fas fa-th-large" data-viewtype="1">
-                                    <span>게시판형</span>
+                                <button type="button" class="list-type fas fa-th-large" data-viewtype="1">
+                                    <!-- <span>게시판형</span> -->
                                 </button>
                             </div>
                             <div class="select-box">
@@ -86,18 +103,18 @@
                                 </ul>
                             </div>
                         </div>
-                    </section>
-                </section>
+                    </div>
+                </nav>
                 
                 <div class="board-feed">
                     <!-- 이부분 handlebars.js로 처리 예정 -->
-                    <div class="autor_wrap card mb-3">
+                    <div id="information-detail-00001" class="autor_wrap card mb-3">
                         <div class="information-title">이루마</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="">
@@ -118,7 +135,7 @@
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="">
@@ -139,7 +156,7 @@
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="">
@@ -160,7 +177,7 @@
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="">
@@ -195,6 +212,7 @@
                     </div>
                 </section>
             </div>
+            
         </div>
 
 
@@ -207,7 +225,7 @@
         <script src="/css&js/common/common.js"></script>
         <script src="/css&js/common/header.js"></script>
         <script src="/css&js/common/footer.js"></script>
-        <script src="/css&js/practiceRoom/practiceRoom.js"></script>
+        <script src="/css&js/information/information.js"></script>
         
     </body>
 </html>
