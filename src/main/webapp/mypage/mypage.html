@@ -1,47 +1,83 @@
-<!-- 사진 -->
-<img class="mypage-banner" src="image/defalut-my-profile.png">
-
-<!-- 마이페이지 정보 (커버랑 같이 겹치기) -->
-<div class="profile-information">
-    <div class="profile-img"><img src="" style="width:200px;height:200px"></div>
-    <div class="profile-component1">
-        <div class="profile-name">홍길동</div>
-        <div class="profile-introduction">홍길동님의 마이페이지 입니다</div>
-    </div>
-    <div class="profile-pomponent2">
-        <div class="profile-return">환전 포인트 : 100000 p</div>
-        <div class="profile-cache">보유 캐쉬 : 100000 p</div>
-    </div>
-</div>
-
-<!-- 마이페이지 카테고리 -->
-<div class="mypage-container">
-    <div class="col-sm-3 mypage-menu-container">
-        <button class="btn">기본정보</button>
-        <button class="btn">회원정보 및 수정</button>
-        <button class="btn">환전 신청</button>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 제목을 뮤직스타일 -->
+        <title>뮤직스타일</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css&js/common/common.css">
+        <link rel="stylesheet" type="text/css" href="css&js/mypage/mypage.css">
         
-        <hr>
+    </head>
+    <body>
+        <!-- 헤더 -->
+        <header id="header"></header>
+
+        <!-- 여기는 로그인 팝업 실시! -->
+        <div class="login-popup-container"></div>
+
+        <!-- 본문 작성 -> 1200px 기준 -->
+        <div class="container">
+            <!-- 사진 -->
+            <img class="mypage-banner" src="image/defalut-my-profile.png">
+
+            <!-- 마이페이지 정보 (커버랑 같이 겹치기) -->
+            <div class="profile-information">
+                <div class="profile-img"><img src="" style="width:200px;height:200px"></div>
+                <div class="profile-component1">
+                    <div class="profile-name">홍길동</div>
+                    <div class="profile-introduction">홍길동님의 마이페이지 입니다</div>
+                </div>
+                <div class="profile-pomponent2">
+                    <div class="profile-return">환전 포인트 : 100000 p</div>
+                    <div class="profile-cache">보유 캐쉬 : 100000 p</div>
+                </div>
+            </div>
+
+            <!-- 마이페이지 카테고리 -->
+            <div class="mypage-container">
+                <div class="col-sm-3 mypage-menu-container">
+                    <button class="btn">기본정보</button>
+                    <button class="btn">회원정보 및 수정</button>
+                    <button class="btn">환전 신청</button>
+                    
+                    <hr>
+                    
+                    <h6>업로드 정보</h6>
+                    <button class="btn">영상</button>
+                    <button class="btn">연습실</button>
+                    <button class="btn">음원</button>
+                    <button class="btn">악보</button>
+
+                    <hr>
+
+                    <h6>구매 정보</h6>
+                    <button class="btn">구입음원</button>
+                    <button class="btn">구입악보</button>
+
+                    <hr>
+
+                    <h6>(관리자 기능)</h6>
+                    <button class="btn">곡 정보 추가</button>
+                </div>
+                <div class="col-sm-9 mypage-target-container">
+                    영역 출력
+                    <!-- 여기는 메뉴를 클릭시 바로 출력 영역 (jQuery 사용) -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 푸터 -->
+        <footer id="footer"></footer>
         
-        <h6>업로드 정보</h6>
-        <button class="btn">영상</button>
-        <button class="btn">연습실</button>
-        <button class="btn">음원</button>
-        <button class="btn">악보</button>
-
-        <hr>
-
-        <h6>구매 정보</h6>
-        <button class="btn">구입음원</button>
-        <button class="btn">구입악보</button>
-
-        <hr>
-
-        <h6>(관리자 기능)</h6>
-        <button class="btn">곡 정보 추가</button>
-    </div>
-    <div class="col-sm-9 mypage-target-container">
-        영역 출력
-        <!-- 여기는 메뉴를 클릭시 바로 출력 영역 (jQuery 사용) -->
-    </div>
-</div>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- <script src="../node_modules/popper.js/dist/popper.min.js"></script> -->
+        <!-- <script src="../node_modules/tooltip.js/dist/umd/tooltip.min.js"></script> -->
+        <script src="css&js/common/common.js"></script>
+        <script src="css&js/common/header.js"></script>
+        <script src="css&js/common/footer.js"></script>
+        <script src="css&js/mypage/mypage.js"></script>
+    </body>
+</html>

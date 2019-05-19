@@ -1,17 +1,17 @@
-// 여기는 바로 페이지 이동없이 바로 곡정보로 이동 시킨다
-function moveInformation() {
-	$(document).ready( () => {
-		$(".move-information").click(e => {
-			$.get(serverRoot + "/information/information.html", (data) => {
-				$(".container").html(data);
-			});
-			clickInformationDetail();
-		});
-	})
-}
+//// 여기는 바로 페이지 이동없이 바로 곡정보로 이동 시킨다
+//function moveInformation() {
+//	$(document).ready( () => {
+//		$(".move-information").click(e => {
+//			$.get(serverRoot + "/information/information.html", (data) => {
+//				$(".container").html(data);
+//			});
+//			clickInformationDetail();
+//		});
+//	})
+//}
 
 
-function clickInformationDetail() {
+//function clickInformationDetail() {
 // 여기서 상세정보 클리하고, informationNumber값을 먼저 지정
 	var informationNumber = 00001;
 
@@ -34,5 +34,5 @@ function clickInformationDetail() {
 			});
 		});
 	})
-}
+//}
 
