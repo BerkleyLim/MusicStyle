@@ -117,16 +117,16 @@ button > * {
 }
 
 /* 다음으로는 게시판 css */
-.title_wrap h2 {
+h2 {
     color: #000;
     font-size: 28px;
     font-weight: normal;
 }
 
-.sub-menu {
-    margin-top: 20px;
-    padding-bottom: 8px;
-    margin-bottom: 100px;
+.information-list-setting {
+    width:1100px;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
 .sub-menu.board {
@@ -148,33 +148,28 @@ button > * {
 
 .view_mode button {
     float: left;
+    justify-items: center;
     width: 30px;
     height: 30px;
+    font-size: 1.25em;
 }
 
 .view_mode button span {
     display: block;
-   /*  background: url(/images/bj/sp_bj.png) -999em -999em no-repeat; */
-    width: 16px;
-    height: 16px;
-    margin: 0 auto;
-    font: 0/0 a;
-}
-
-.view_mode .b-feed.on span {
-    background-position: -95px -140px;
-}
-
-.view_mode button span {
-    display: block;
+    /* 여기는 바로 배경색깔을 집어 넣는다*/
     /* background: url(/images/bj/sp_bj.png) -999em -999em no-repeat; */
     width: 16px;
     height: 16px;
     margin: 0 auto;
     font: 0/0 a;
+    vertical-align:middle;
 }
 
-.view_mode .b-list span {
+.view_mode .feed-type.on span {
+    background-position: -95px -140px;
+}
+
+.view_mode .list-type span {
     background-position: -115px -160px;
 }
 
@@ -229,6 +224,10 @@ button > * {
     padding-left: 0px;
 }
 
+.autor_wrap:hover{
+    background: gray;
+    opacity:0.2;
+}
 
 .information-title {
     padding: .75rem 1.25rem;
@@ -276,3 +275,50 @@ section[class$=-srh_wrap] {
     background: #4279ff;
     color: #fff;
 }
+
+
+/* 곡 상세 정보 */
+/* 상세 정보 폼*/
+.common-board-detail-container {
+    width:1000px;
+    height: 700px;
+    z-index: 9999;
+    border: 1px solid;
+    padding: 40px 40px 40px 40px;
+    margin: 0 auto;
+    background: white;
+    overflow:scroll;
+}
+
+.title-detail-information {
+    top: 65px;
+    background: #eee;
+    padding: 15px 15px 15px 15px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 50px;
+    width:900px;
+}
+
+/* 장르 정보 관련 */
+.common-content-detail-container {
+    height: 20%;
+    margin-bottom: 150px;
+    align-items: center;
+}
+
+.album {
+    display:inline-block;
+    width:200px;
+    height:200px;
+}
+
+/* 장르 정보 관련 컨테이너 */
+.detail-container {
+    margin-left: 50px;
+}
+
+
+/* 여기는 상세 정보 위치 조정 */
+
+
+
