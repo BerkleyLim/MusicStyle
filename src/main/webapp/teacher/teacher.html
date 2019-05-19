@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="/css&js/common/common.css">
+        <link rel="stylesheet" type="text/css" href="/css&js/user/login.css">
         <link rel="stylesheet" type="text/css" href="/css&js/teacher/teacher.css">
         
         <script>
@@ -32,11 +33,17 @@
         <!-- 헤더 -->
         <header id="header"></header>
 
+        <!-- 여기는 로그인 팝업 실시! -->
+        <div class="login-popup-container"></div>
+        
+        <!-- 여기는 게시판 정보를 상세하게 보기 위해 설정 -->
+        <div class="popup-board-detail-container"></div>
+
         <!-- 본문 작성 -> 1200px 기준 -->
         <div class="container">
             <div class="title-information">
                 <nav class="navbar title_area">
-                    <h1>레슨샘 찾기</h1>
+                    <h1>레슨너 찾기</h1>
                     <form>
                         <div class="search-box">
                             <div class="select-box">
@@ -79,18 +86,16 @@
             </div>
             
             <div class="information-container">
-                <section class=""> 
-                    <div class="title_wrap">
-                        <h2>레슨 샘 목록</h2>
-                    </div>
-                    <section class="sub-menu board">
+                <nav class="navbar information-list-setting"> 
+                    <h2>전체 레스너</h2>
+                    <div class="sub-menu board">
                         <div class="sort-list">
                             <div class="view_mode">
-                                <button type="button" class="b-feed fas fa-bars on" data-viewtype="3">
-                                    <span>카드형</span>
+                                <button type="button" class="feed-type fas fa-bars on" data-viewtype="3">
+                                    <!-- <span>카드형</span> -->
                                 </button>
-                                <button type="button" class="b-list fas fa-th-large" data-viewtype="1">
-                                    <span>게시판형</span>
+                                <button type="button" class="list-type fas fa-th-large" data-viewtype="1">
+                                    <!-- <span>게시판형</span> -->
                                 </button>
                             </div>
                             <div class="select-box">
@@ -103,18 +108,60 @@
                                 </ul>
                             </div>
                         </div>
-                    </section>
-                </section>
+                    </div>
+                </nav>
                 
                 <div class="board-feed">
                     <!-- 이부분 handlebars.js로 처리 예정 -->
-                    <div class="autor_wrap card mb-3">
+                    <div id="information-detail-00001" class="autor_wrap card mb-3" style="height:250px;">
+                        <div class="information-title">클래식, 뉴에이지, 재즈, 반주 등 모든걸 책임지는 레스너</div>
+                        <div class="card-body">
+                            <div class="card mb-3 content" >
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="">
+                                            <h5 class="card-title">이름 : 루나별</h5>
+                                            <p class="card-text">● 악기 : 피아노<br>
+                                                    ● 장소 : 서울특별시, 신림, 신논현, 강남<br>
+                                                    ● 상세정보 : 안녕하세요 저는 한국예술종합학교를 졸업한.....</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="autor_wrap card mb-3" style="height:250px;">
+                        <div class="information-title">클래식, 뉴에이지, 재즈와 함께 CCM을 같이 배우고 싶은 취미생 구합니다.</div>
+                        <div class="card-body">
+                            <div class="card mb-3 content" >
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="" >
+                                            <h5 class="card-title">이름 : 루나별</h5>
+                                            <p class="card-text">● 악기 : 피아노<br>
+                                                    ● 장소 : 서울특별시, 신림, 신논현, 강남<br>
+                                                    ● 상세정보 : 안녕하세요 저는 한국예술종합학교를 졸업한.....</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="autor_wrap card mb-3" style="height:250px;">
                         <div class="information-title">이루마</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="">
@@ -135,49 +182,7 @@
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title">장르 : 뉴에이지</h5>
-                                            <p class="card-text">● 발매날짜 : 1996년 <br>
-                                                    ● 앨범명 : <br>
-                                                    ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title">장르 : 뉴에이지</h5>
-                                            <p class="card-text">● 발매날짜 : 1996년 <br>
-                                                    ● 앨범명 : <br>
-                                                    ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="..." class="card-img" alt="..." style="width:150px;height:150px">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="">
@@ -193,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-
+            
                 <section class="board-srh_wrap">
                     <div class="paging">
                         <a class="page-item on" href="#">1</a>
@@ -212,7 +217,10 @@
                     </div>
                 </section>
             </div>
+            
         </div>
+
+
 
 
 
@@ -222,6 +230,7 @@
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/css&js/common/common.js"></script>
+        <script src="/css&js/user/login.js"></script>
         <script src="/css&js/common/header.js"></script>
         <script src="/css&js/common/footer.js"></script>
         <script src="/css&js/teacher/teacher.js"></script>
