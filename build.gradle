@@ -24,7 +24,7 @@ compileJava {
 war {
 	//war ������ ����� ���ϸ� ����
 	//�̻��� ������Ʈ ������ ����
-	archiveName = "interior.war"
+	archiveName = "musicstyle.war"
 }
 
 //������Ʈ���� ����ϴ� ���� ���̺귯���� �ܺ��� ���丮�� �����ϴ� ��� �߰�
@@ -59,32 +59,41 @@ dependencies {
     // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
     // compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.5'
         
+        
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
-    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.46'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
         
         
     // MyBatis Liberary
     // https://mvnrepository.com/artifact/org.mybatis/mybatis
-    compile group: 'org.mybatis', name: 'mybatis', version: '3.5.0'
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.6'
+
     
     //MyBatis-Spring Library
     // https://mvnrepository.com/artifact/org.mybatis/mybatis-spring
-    compile group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.0'
+    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.6'
+
+    // MyBatis-Spring Library    
+    // https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.4'
     
     //Spring web MVC
     // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
-    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.5.RELEASE'
-    
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.2.13.RELEASE'
+
     //Spring IOC container Library
     // https://mvnrepository.com/artifact/org.springframework/spring-context
-    //compile group: 'org.springframework', name: 'spring-context', version: '5.1.5.RELEASE'
-    
+    //implementation group: 'org.springframework', name: 'spring-context', version: '5.2.13.RELEASE'
+
     //Spring jdbc Library
     // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
-    compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.5.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.2.13.RELEASE'
     
     // https://mvnrepository.com/artifact/org.springframework/spring-aop
-    compile group: 'org.springframework', name: 'spring-aop', version: '5.1.5.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-aop', version: '5.2.13.RELEASE'
+    
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.3.9.RELEASE'
     
     
     //Datasource Library(DB ConnectionPool)
@@ -134,7 +143,8 @@ dependencies {
     
     //AOP �
     // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
-    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.1'
+    implementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.6'
+
     
     // Android Settings library
     //compile group: 'com.android.support', name: 'appcompat-v7', version: '24.1.1'
