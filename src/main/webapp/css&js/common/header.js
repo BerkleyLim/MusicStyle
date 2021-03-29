@@ -64,20 +64,35 @@ function eventDropdown() {
 	});
 }
 
+
+/*
 // 여기는 Container를 이동할 경로 설정
 function outputDesplay() {
 	
 	
 	// 여기는 바로 페이지 이동없이 바로 마이페이지, 소개페이지, 곡정보
 	// 음원, 악보, 레스너찾기, 연습실정보, 커뮤니티로 이동 시킨다
-	//moveMypage();
-	/*moveIntroduction();
+	moveMypage();
+	moveIntroduction();
 	moveInformation();
 	moveSheetmusic();
 	moveTeacher();
 	movePracticeRoom();
-	moveCommunity();*/
+	moveCommunity();
 }
+*/
+
+// 마이페이지 이동
+function moveMypage() {
+
+}
+
+// 소개 이동
+function moveIntroduction(){
+    $("#moveIntroduction").click(e => {
+        $.get(serverRoot + "/json/introduction/")
+    });
+}   
 
 //function loadLoginUser() {
 //	$.getJSON(serverRoot + "/json/auth/loginUser", (data) => {
