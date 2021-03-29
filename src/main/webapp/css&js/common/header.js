@@ -89,9 +89,7 @@ function moveMypage() {
 
 // 소개 이동
 function moveIntroduction(){
-    $("#moveIntroduction").click(e => {
-        $.get(serverRoot + "/json/introduction/")
-    });
+    location.replace("/json/introduction/");
 }   
 
 //function loadLoginUser() {

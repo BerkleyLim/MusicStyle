@@ -1,10 +1,6 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.web.json;
 
-import java.io.File;
-
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -15,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/information")
-public class informationController {
+public class InformationController {
     @Autowired ServletContext sc;
     
     @GetMapping("/")
