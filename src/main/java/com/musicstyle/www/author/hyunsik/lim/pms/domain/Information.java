@@ -1,6 +1,7 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.domain;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class Information implements Serializable {
     private static final long serialVersionUID = 1L;
