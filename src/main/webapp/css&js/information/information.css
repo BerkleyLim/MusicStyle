@@ -280,6 +280,11 @@ section[class$=-srh_wrap] {
     color: #fff;
 }
 
+.row div.display {
+	font-size:9px; 
+	/*float:right;*/
+	color: #555;
+}
 
 /* 곡 상세 정보 */
 /* 상세 정보 폼*/
