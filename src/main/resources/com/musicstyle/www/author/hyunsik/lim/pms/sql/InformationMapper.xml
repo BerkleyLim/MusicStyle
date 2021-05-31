@@ -12,22 +12,15 @@
 <mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.InformationDao">
 
   <resultMap type="Information" id="InformationMap">
-    <id column="bno" property="no"/>
-    <result column="memno" property="memno"/>
-    <result column="path" property="path"/>
-    <result column="boctt" property="content"/>
-    <result column="brtdt" property="createDate"/>
-    <result column="cnt" property="count"/>
-    <result column="nknm" property="nickname"/>
-    <result column="tname" property="hashtag"/>
-    <result column="crtdt" property="comments"/>
-    <result column="cmtCnt" property="commtCnt"/>
-    <result column="mppho" property="profile"/>
-    <result column="pox" property="poX"/>
-    <result column="poy" property="poY"/>
-    <result column="addr" property="address"/>
-    <result column="prnm" property="product"/>
-    <result column="lno" property="lno"/>
+    <id column="ino" property="no"/>
+    <result column="username" property="username"/>
+    <result column="title" property="title"/>
+    <result column="view" property="view"/>
+    <result column="img" property="img"/>
+    <result column="genre" property="genre"/>
+    <result column="release_date" property="release_date"/>
+    <result column="musicLink" property="music_link"/>
+    <result column="content" property="content"/>
   </resultMap>
   
   <!-- SQL 문 id를 설정할 때 SQL문을 사용하는 메서드 이름과 같게하면
