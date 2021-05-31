@@ -205,14 +205,14 @@ h2 {
 }
 
 /* 게시판 (bootstrap 활용)*/
-.board-feed {
+.teacher-feed {
     display:flex;
     flex-wrap:wrap;
     width:1200px;
     margin : 0 auto
 
 }
-.board-feed .autor_wrap{
+.teacher-feed .autor_wrap{
     /* display: flex; */
     display: table;
     position: relative;

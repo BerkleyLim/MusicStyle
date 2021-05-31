@@ -102,7 +102,7 @@ var date = {
 
 var html = template(date);
 
-$('.information-feed').append(html);
+$('.media-feed').append(html);
 
 
 // 정적인 페이지일 때만 잠시 임시로 수행

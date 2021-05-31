@@ -8,11 +8,15 @@ public class Information implements Serializable {
     
     private long ino;
     private String username;
+    private int view;
+    private String artist;
     private String titie;
     private String img;
     private String genre;
-    private String releaseDate;
+    private Date releaseDate;
+    private String albumName;
     private String musicLink;
     private String content;
+    private Date uploadDate;
     
 }
