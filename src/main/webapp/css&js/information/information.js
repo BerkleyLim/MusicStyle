@@ -95,7 +95,7 @@ var date = {
     information: [
         {no:1, username:"berkley", view:3000000, title:"Yellow moon", 
             img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
-            albumName:"Yellow moon", musicLink:"", content:"이 곡은 클래식을 기반해서.....", uploadDate:2020-05-31}
+            albumName:"Yellow moon", musicLink:"", content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
     ]
     
 }
