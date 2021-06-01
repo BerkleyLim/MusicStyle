@@ -85,29 +85,34 @@ $(document).ready(()=> {
 
 
 // 핸들바 템플릿 가져오기
-var source = $("information-template").html();
+var source = $("#information-template").html();
 
 // 핸들바 템플릿 컴파일
-var template = Handlebars.complie(source);
+var template = Handlebars.compile(source);
 
 // 핸들바 템플릿에 바인딩할 데이터
-var date = {
+var data = {
     information: [
-        {no:1, username:"berkley", view:3000000, title:"Yellow moon", 
+        {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
             img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
-            albumName:"Yellow moon", musicLink:"", content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
+            albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"},
+        {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
+        img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
+        albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
     ]
     
 }
 
-var html = template(date);
+// 핸들바 템플릿에 데이터를 바인딩해서 HTML 설정
+var html = template(data);
 
+// 생성된 HTML을 DOM에 주입
 $('.information-feed').append(html);
 
 
 // 정적인 페이지일 때만 잠시 임시로 수행
 $(document).ready(()=> {
-	$("#information-detail-00001").click(e => {
+	$("#information-detail-" + string.substring(18,)).click(e => {
 		$.get(serverRoot + "information/information-detail.html", (data) => {
 			$('.popup-board-detail-container').html(data);
 			$('.popup-board-detail-container').css("display","flex");
