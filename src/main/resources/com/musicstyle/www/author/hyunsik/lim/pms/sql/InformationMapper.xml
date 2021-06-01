@@ -35,6 +35,12 @@
   -->
   
   
+  <insert id="insert" parameterType="Information">
+    INSERT INTO `INTR_BOARD`
+    (`MEMNO`, `BRTDT`, `BOCTT`, `PATH`) 
+    VALUES (#{memno},now(),#{content},#{path});
+  </insert>
+  
   <select id=""
           resultMap="InformationMap"
           parameterType="map">
