@@ -11,16 +11,20 @@
 -->
 <mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.InformationDao">
 
+   <!-- result column="DB 필드명" property="DTO 프로퍼티명" -->
   <resultMap type="Information" id="InformationMap">
-    <id column="ino" property="no"/>
+    <id column="no" property="ino"/>
     <result column="username" property="username"/>
-    <result column="title" property="title"/>
     <result column="view" property="view"/>
+    <result column="artist" property="artist"/>
+    <result column="title" property="title"/>
     <result column="img" property="img"/>
     <result column="genre" property="genre"/>
-    <result column="release_date" property="release_date"/>
-    <result column="musicLink" property="music_link"/>
+    <result column="release_date" property="releaseDate"/>
+    <result column="album_name" property="albumName"/>
+    <result column="music_link" property="musicLink"/>
     <result column="content" property="content"/>
+    <result column="upload_date" property="uploadDate"/>
   </resultMap>
   
   <!-- SQL 문 id를 설정할 때 SQL문을 사용하는 메서드 이름과 같게하면
@@ -29,6 +33,18 @@
        스프링 프레임워크와 연동할 때 DAO객체를 자동생성하고 
        그 메서드를 자동생성할 때 사용할 수 있다.
   -->
+  
+  
+  <select id=""
+          resultMap="InformationMap"
+          parameterType="map">
+  
+  
+          
+  </select>
+  
+  
+  
   <select id="selectList" 
           resultMap="InformationMap"
           parameterType="map">

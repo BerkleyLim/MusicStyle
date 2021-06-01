@@ -18,6 +18,7 @@ public class InformationController {
     public ModelAndView movedInformation(ModelMap model) {
         return new ModelAndView("forward:/information/information.html");
     }
+    
 //    
 //    BoardService boardService;
 //    
