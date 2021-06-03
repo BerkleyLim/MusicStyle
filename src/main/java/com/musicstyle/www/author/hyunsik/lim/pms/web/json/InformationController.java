@@ -1,23 +1,54 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.web.json;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.musicstyle.www.author.hyunsik.lim.pms.domain.Information;
+import com.musicstyle.www.author.hyunsik.lim.pms.service.InformationService;
 
 @RestController
 @RequestMapping("/information")
 public class InformationController {
     @Autowired ServletContext sc;
     
+    InformationService informationService;
+
     @GetMapping("/")
     public ModelAndView movedInformation(ModelMap model) {
         return new ModelAndView("forward:/information/information.html");
     }
+    
+    public InformationController(InformationService informationService) {
+        this.informationService = informationService;
+    }
+    
+    // 파일 입력시
+    @RequestMapping("add")
+    public Object add(Information information, 
+            MultipartFile[] files, HttpSession session) {
+        
+        return null;
+    }
+    
+    // 리스트 조회
+    @RequestMapping("list")
+    public Object list(
+            @RequestParam(value="pageNo", defaultValue="1") int pageNo,
+            @RequestParam(value="pageSize", defaultValue="5") int pageSize) {
+        return informationService.list(pageNo, pageSize);
+    }
+    
+    
+    
     
 //    
 //    BoardService boardService;

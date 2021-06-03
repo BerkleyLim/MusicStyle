@@ -1,8 +1,12 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.service;
 
+import java.util.List;
+
+import com.musicstyle.www.author.hyunsik.lim.pms.domain.Information;
+
 public interface InformationService {
-    // List<Board> list(int pageNo, int pageSize);
-    // Board get(int no);
+    List<Information> list(int pageNo, int pageSize);
+    Information get(int no);
     // List<Board> commentList(int no);
     // List<Board> hashtagList(int no);
     // List<Board> selectListInMain();

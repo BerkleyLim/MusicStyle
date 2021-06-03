@@ -1,34 +1,45 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.service.impl;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
-import com.musicstyle.www.author.hyunsik.lim.pms.service.BoardService;
+import com.musicstyle.www.author.hyunsik.lim.pms.dao.InformationDao;
+import com.musicstyle.www.author.hyunsik.lim.pms.domain.Information;
+import com.musicstyle.www.author.hyunsik.lim.pms.service.InformationService;
 
 @Service
-public class InformationServiceImpl implements BoardService {
+public class InformationServiceImpl implements InformationService {
 
-    // BoardDao boardDao;
+     InformationDao informationDao;
     // MainDao mainDao;
     // TagDao tagDao;
     
-    // public BoardServiceImpl(TagDao tagDao, BoardDao boardDao, MainDao mainDao) {
-    //     this.boardDao = boardDao;
-    //     this.mainDao = mainDao;
-    //     this.tagDao = tagDao;
-    // }
+     public InformationServiceImpl(/*TagDao tagDao, BoardDao boardDao,*/ InformationDao informationDao) {
+         this.informationDao = informationDao;
+//         this.mainDao = mainDao;
+//         this.tagDao = tagDao;
+     }
     
-    // @Override
-    // public List<Board> list(int pageNo, int pageSize) {
-    //     HashMap<String,Object> params = new HashMap<>();
-    //     params.put("startRowNo", (pageNo - 1) * pageSize);
-    //     params.put("pageSize", pageSize);
+     @Override
+     public List<Information> list(int pageNo, int pageSize) {
+         HashMap<String,Object> params = new HashMap<>();
+         params.put("startRowNo", (pageNo - 1) * pageSize);
+         params.put("pageSize", pageSize);
         
-    //     System.out.println((pageNo - 1) * pageSize);
-    //     System.out.println(pageSize);
+         System.out.println((pageNo - 1) * pageSize);
+         System.out.println(pageSize);
         
-    //     return boardDao.selectList(params);
-    // }
-    // @Override
+         return informationDao.selectList(params);
+     }
+     
+      @Override
+      public Information get(int no) {
+          return informationDao.selectOne(no);
+      }
+    
+     // @Override
     // public int addLike(int no, int memNo) {
     //     HashMap<String,Object> params = new HashMap<>();
     //     params.put("no", no);
@@ -49,10 +60,7 @@ public class InformationServiceImpl implements BoardService {
     //     params.put("memNo", memNo);
     //     return boardDao.isLikeOne(params);
     // }
-    // @Override
-    // public Board get(int no) {
-    //     return boardDao.selectOne(no);
-    // }
+
 
     // @Override
     // public List<Board> commentList(int no) {

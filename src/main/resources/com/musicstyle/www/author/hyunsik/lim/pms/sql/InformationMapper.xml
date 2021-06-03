@@ -37,21 +37,25 @@
   
   <insert id="insert" parameterType="Information">
     INSERT INTO `INTR_BOARD`
-    (`MEMNO`, `BRTDT`, `BOCTT`, `PATH`) 
+    (`no`, `username`, `view`, `artist`, `title`, 
+     `img`, `genre`, `release_date`, `album_name`, 
+     `music_link`, `content`, `upload_date`) 
     VALUES (#{memno},now(),#{content},#{path});
   </insert>
   
-  <select id=""
+  <select id="selectList"
           resultMap="InformationMap"
           parameterType="map">
-  
+    
   
           
   </select>
   
   
   
-  <select id="selectList" 
+  <!-- 
+  
+   <select id="selectList" 
           resultMap="InformationMap"
           parameterType="map">
     SELECT b.BNO, b.PATH, COUNT(l.bno) AS cnt 
@@ -62,6 +66,8 @@
     order by bno desc
     limit #{startRowNo}, #{pageSize}
   </select>
+  
+   -->
   
   <select id="selectOne" parameterType="int" resultMap="InformationMap">
     SELECT b.BNO, mem.NKNM,mem.MPPHO, b.PATH, b.BOCTT, COUNT(DISTINCT l.lno) AS cnt, b.BRTDT 
