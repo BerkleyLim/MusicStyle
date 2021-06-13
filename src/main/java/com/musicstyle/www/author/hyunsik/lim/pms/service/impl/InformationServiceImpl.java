@@ -34,10 +34,10 @@ public class InformationServiceImpl implements InformationService {
          return informationDao.selectList(params);
      }
      
-      @Override
-      public Information get(int no) {
-          return informationDao.selectOne(no);
-      }
+//      @Override
+//      public Information get(int no) {
+//          return informationDao.selectOne(no);
+//      }
     
      // @Override
     // public int addLike(int no, int memNo) {

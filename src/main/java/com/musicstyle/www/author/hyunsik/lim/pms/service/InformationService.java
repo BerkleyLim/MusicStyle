@@ -6,7 +6,7 @@ import com.musicstyle.www.author.hyunsik.lim.pms.domain.Information;
 
 public interface InformationService {
     List<Information> list(int pageNo, int pageSize);
-    Information get(int no);
+    //Information get(int no);
     // List<Board> commentList(int no);
     // List<Board> hashtagList(int no);
     // List<Board> selectListInMain();

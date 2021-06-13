@@ -43,7 +43,7 @@ public class InformationController {
     @RequestMapping("list")
     public Object list(
             @RequestParam(value="pageNo", defaultValue="1") int pageNo,
-            @RequestParam(value="pageSize", defaultValue="5") int pageSize) {
+            @RequestParam(value="pageSize", defaultValue="10") int pageSize) {
         return informationService.list(pageNo, pageSize);
     }
     

@@ -35,6 +35,7 @@
   -->
   
   
+  <!-- 
   <insert id="insert" parameterType="Information">
     INSERT INTO `INTR_BOARD`
     (`no`, `username`, `view`, `artist`, `title`, 
@@ -42,16 +43,28 @@
      `music_link`, `content`, `upload_date`) 
     VALUES (#{memno},now(),#{content},#{path});
   </insert>
+  -->
   
   <select id="selectList"
           resultMap="InformationMap"
           parameterType="map">
-    
-  
-          
+    select * from INFORMATION
+     <!-- limit #{startRowNo}, #{pageSize} -->          
   </select>
   
-  
+  <!--
+  <select id="selectOne" parameterType="int" resultMap="InformationMap">
+    SELECT b.BNO, mem.NKNM,mem.MPPHO, b.PATH, b.BOCTT, COUNT(DISTINCT l.lno) AS cnt, b.BRTDT 
+    FROM INTR_BOARD b 
+    LEFT OUTER JOIN INTR_MEMBER mem 
+    ON b.MEMNO = mem.MEMNO 
+    LEFT OUTER JOIN INTR_LKMB l 
+    ON b.BNO = l.BNO 
+    LEFT OUTER JOIN INTR_BTMACH hm 
+    ON b.BNO = hm.BNO 
+    WHERE b.BNO = #{value}
+  </select>
+  -->
   
   <!-- 
   
@@ -69,7 +82,7 @@
   
    -->
   
-  <select id="selectOne" parameterType="int" resultMap="InformationMap">
+ <!-- <select id="selectOne" parameterType="int" resultMap="InformationMap">
     SELECT b.BNO, mem.NKNM,mem.MPPHO, b.PATH, b.BOCTT, COUNT(DISTINCT l.lno) AS cnt, b.BRTDT 
     FROM INTR_BOARD b 
     LEFT OUTER JOIN INTR_MEMBER mem 
@@ -80,6 +93,8 @@
     ON b.BNO = hm.BNO 
     WHERE b.BNO = #{value}
   </select>
+  
+  -->
   
   <select id="commentList" parameterType="int" resultMap="InformationMap">
     SELECT m.NKNM, b.CRTDT 

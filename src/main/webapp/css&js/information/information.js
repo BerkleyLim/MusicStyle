@@ -92,23 +92,40 @@ var template = Handlebars.compile(source);
 
 
 
+
+
+var array = new Array();
+
+$.getJSON(serverRoot + "/json/information/list", (informationData) => {
+    for (var i=0; i < informationData.length; i++) {
+        var temp = {no:informationData.no, /*username:"berkley", */ view:informationData.view, artist:information.artist, 
+                    title:informationData.title, img:informationData.img, genre:informationData.genre, 
+                    releaseDate:information.releaseDate, Name:information.name, /*musicLink:"", */ content:information.content, uploadDate:information.uploadDate}
+        array.push(temp);
+    }
+}) 
+
+       //  {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
+       //    img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
+       //    albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
+
 // 핸들바 템플릿에 바인딩할 데이터
 var data = {
-    information: [
+   information : array 
+   
+   
+   
+   //[
         
-    
-        
-        
-        
-    //    {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
-    //        img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
-    //        albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"},
-    //    {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
-    //    img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
-    //    albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
+       // {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
+       //     img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
+       //     albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"},
+       // {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
+       // img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
+       // albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
         
       
-    ]
+    //]
     
 }
 

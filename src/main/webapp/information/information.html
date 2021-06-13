@@ -112,7 +112,7 @@
                 
                 <!-- handlebars.js로 처리 -->
                 <script id="information-template" type="text/x-handlebars-template">
-                    {{#information}}
+                    {{#each information}}
                     <div id="information-detail-{{no}}" class="autor_wrap card mb-3">
                         <div class="information-title">{{artist}} - {{title}}</div>
                         <div class="card-body">
@@ -137,7 +137,7 @@
                             </div>
                         </div>
                     </div>
-                {{/information}}
+                {{/each}}
               </script>
             
                 <section class="board-srh_wrap">
