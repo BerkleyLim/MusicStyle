@@ -6,11 +6,11 @@ import java.sql.Date;
 public class Information implements Serializable {
     private static final long serialVersionUID = 1L;
     
-    private long ino;
+    private int ino;
     private String username;
     private int view;
     private String artist;
-    private String titie;
+    private String title;
     private String img;
     private String genre;
     private Date releaseDate;

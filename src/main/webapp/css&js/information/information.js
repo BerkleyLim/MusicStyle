@@ -96,7 +96,7 @@ var template = Handlebars.compile(source);
 
 var array = new Array();
 
-$.getJSON(serverRoot + "/json/information/list", (informationData) => {
+$.getJSON(serverRoot + "/json/information/list", {"pageNo":1, "pageSize":10}, (informationData) => {
     for (var i=0; i < informationData.length; i++) {
         var temp = {no:informationData.no, /*username:"berkley", */ view:informationData.view, artist:information.artist, 
                     title:informationData.title, img:informationData.img, genre:informationData.genre, 
