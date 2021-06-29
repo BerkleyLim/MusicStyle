@@ -96,11 +96,12 @@ var template = Handlebars.compile(source);
 
 var array = new Array();
 
-$.getJSON(serverRoot + "/json/information/list", {"pageNo":1, "pageSize":10}, (informationData) => {
+$.getJSON(serverRoot + "json/information/list", (informationData) => {
+    console.log(informationData.length)
     for (var i=0; i < informationData.length; i++) {
-        var temp = {no:informationData.no, /*username:"berkley", */ view:informationData.view, artist:information.artist, 
+        var temp = {no:informationData.ino, /*username:"berkley", */ view:informationData.view, artist:informationData.artist, 
                     title:informationData.title, img:informationData.img, genre:informationData.genre, 
-                    releaseDate:information.releaseDate, Name:information.name, /*musicLink:"", */ content:information.content, uploadDate:information.uploadDate}
+                    releaseDate:informationData.releaseDate, Name:informationData.name, /*musicLink:"", */ content:informationData.content, uploadDate:informationData.uploadDate}
         array.push(temp);
     }
 }) 

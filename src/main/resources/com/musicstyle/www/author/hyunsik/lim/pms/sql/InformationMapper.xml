@@ -49,7 +49,7 @@
           resultMap="InformationMap"
           parameterType="map">
     select * from INFORMATION
-      <!-- limit #{startRowNo}, #{pageSize} -->          
+       limit #{startRowNo}, #{pageSize}         
   </select>
   
   <!--
