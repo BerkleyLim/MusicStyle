@@ -24,7 +24,7 @@
     <result column="album_name" property="albumName"/>
     <result column="music_link" property="musicLink"/>
     <result column="content" property="content"/>
-    <result column="upload_date" property="uploadDate"/>
+    <result column="upload_date" property="upLoadDate"/>
   </resultMap>
   
   <!-- SQL 문 id를 설정할 때 SQL문을 사용하는 메서드 이름과 같게하면
@@ -49,7 +49,7 @@
           resultMap="InformationMap"
           parameterType="map">
     select * from INFORMATION
-       limit #{startRowNo}, #{pageSize}         
+        limit #{startRowNo}, #{pageSize}  
   </select>
   
   <!--
@@ -95,97 +95,6 @@
   </select>
   
   -->
-  
-  <select id="commentList" parameterType="int" resultMap="InformationMap">
-    SELECT m.NKNM, b.CRTDT 
-    FROM INTR_BCMMT b 
-    LEFT OUTER JOIN INTR_MEMBER m 
-    ON b.MEMNO = m.MEMNO 
-    WHERE b.BNO = #{value}
-    ORDER BY b.CNO DESC
-  </select>
-  
-  <select id="hashtagList" parameterType="int" resultMap="InformationMap">
-    SELECT bo.BNO, ht.TNAME
-    FROM INTR_BOARD bo 
-    INNER JOIN INTR_BTMACH mt 
-    ON bo.BNO = mt.BNO 
-    LEFT OUTER JOIN INTR_HASHTAG ht 
-    ON mt.HTNO = ht.HTNO
-    WHERE bo.BNO = #{value}
-  </select>
-  
-  <select id="isLike" parameterType="int" resultType="Map">
-    SELECT m.MEMNO, l.BNO 
-    FROM INTR_MEMBER m 
-    INNER JOIN INTR_LKMB l 
-    ON m.MEMNO = l.MEMNO 
-    WHERE m.MEMNO = #{value}
-  </select>
-  
-  <select id="isLikeOne" parameterType="map" resultType="Map">
-    SELECT * FROM `INTR_LKMB` WHERE BNO = #{no} AND MEMNO = #{memNo}
-  </select>
-  
-  <insert id="addLike" parameterType="map">
-    INSERT INTO `INTR_LKMB` (`LNO`, `BNO`, `MEMNO`) VALUES (NULL, #{no}, #{memNo});
-  </insert>
-  
-  <delete id="deleteLike" parameterType="map">
-    DELETE FROM `INTR_LKMB` WHERE BNO = #{no} AND MEMNO = #{memNo}
-  </delete>
-  
-  <insert id="addcomment" parameterType="map">
-    INSERT INTO `INTR_BCMMT` (`CNO`, `BNO`, `CMCTT`, `CRTDT`, `MEMNO`) 
-    VALUES (NULL, #{no}, now(), #{cmmt}, #{memNo})
-  </insert>
-  
-  <select id="isWriter" parameterType="map" resultMap="InformationMap">
-    SELECT BNO FROM `INTR_BOARD` WHERE BNO = #{no} AND MEMNO = #{memNo}
-  </select>
-  
-  <select id="selectLink" parameterType="int" resultType="Map">
-    SELECT * FROM `INTR_BRLK` WHERE BNO = #{no}
-  </select>
-  
-  <delete id="deleteLink" parameterType="int">
-    DELETE FROM `INTR_BRLK` WHERE `INTR_BRLK`.`LNO` = #{no}
-  </delete>
-  
-  <insert id="addLink" parameterType="Board">
-    INSERT INTO `INTR_BRLK` (`LNO`, `BNO`, `POX`, `POY`, `PRNM`, `ADDR`)
-    VALUES (NULL, #{no}, #{poX}, #{poY}, #{product}, #{address})
-  </insert>
-  
-  <select id="selectLinkOne" resultMap="InformationMap">
-    SELECT * FROM `INTR_BRLK` ORDER BY LNO DESC LIMIT 1
-  </select>
-  
-   <insert id="insert" parameterType="Board">
-    INSERT INTO `INTR_BOARD`
-    (`MEMNO`, `BRTDT`, `BOCTT`, `PATH`) 
-    VALUES (#{memno},now(),#{content},#{path});
-  </insert>
-  
-  <select id="selectRecent" resultMap="InformationMap">
-    select bno from INTR_BOARD order by bno desc limit 1 
-  </select>
-  
-  <select id="selectMyBoard" resultMap="InformationMap">
-    SELECT b.BNO, COUNT(DISTINCT l.LNO) cnt, COUNT(DISTINCT c.CNO) cmtCnt, b.PATH
-    FROM INTR_BOARD b 
-        LEFT OUTER JOIN INTR_LKMB l 
-        ON b.BNO = l.BNO 
-        LEFT OUTER JOIN INTR_BCMMT c 
-        ON b.BNO = c.BNO 
-    WHERE b.memno = #{bno}
-    GROUP BY b.BNO
-    ORDER BY b.BNO DESC
-  </select>
-  
-  <select id="totalBoardCount" parameterType="int" resultType="int">
-    SELECT COUNT(*) FROM INTR_BOARD WHERE MEMNO = #{no}
-  </select>
   
 </mapper>
 

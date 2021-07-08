@@ -1,21 +1,3 @@
-//// 여기는 바로 페이지 이동없이 바로 곡정보로 이동 시킨다
-//function moveInformation() {
-//	$(document).ready( () => {
-//		$(".move-information").click(e => {
-//			$.get(serverRoot + "/information/information.html", (data) => {
-//				$(".container").html(data);
-//			});
-//		});
-//	})
-//}
-
-
-// 여기는 어차피 곡정보 불려오는 것 
-// handlebars.js로 이용하여 리스트 출력할 것이다!
-//$.getJSON(serverRoot + "json/information/list", (data) => {
-//	desplayInformation();
-//})
-
 
 // 여기서 상세정보 클릭하고, informationNumber값을 먼저 지정
 //function desplayInformation() {
@@ -91,19 +73,10 @@ var source = $("#information-template").html();
 var template = Handlebars.compile(source);
 
 
+$.getJSON(serverRoot + "json/information/list", {"pageNo":1, "pageSize":20}, (data) => {
+    var html = template({information:data});
+    $('.information-feed').append(html);
 
-
-
-var array = new Array();
-
-$.getJSON(serverRoot + "json/information/list", (informationData) => {
-    console.log(informationData.length)
-    for (var i=0; i < informationData.length; i++) {
-        var temp = {no:informationData.ino, /*username:"berkley", */ view:informationData.view, artist:informationData.artist, 
-                    title:informationData.title, img:informationData.img, genre:informationData.genre, 
-                    releaseDate:informationData.releaseDate, Name:informationData.name, /*musicLink:"", */ content:informationData.content, uploadDate:informationData.uploadDate}
-        array.push(temp);
-    }
 }) 
 
        //  {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
@@ -111,10 +84,9 @@ $.getJSON(serverRoot + "json/information/list", (informationData) => {
        //    albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
 
 // 핸들바 템플릿에 바인딩할 데이터
-var data = {
-   information : array 
-   
-   
+//var data = {
+//   information : array
+  
    
    //[
         
@@ -128,15 +100,19 @@ var data = {
       
     //]
     
-}
+//}
 
 // 핸들바 템플릿에 데이터를 바인딩해서 HTML 설정
-var html = template(data);
+//var html = template(data);
 
 // 생성된 HTML을 DOM에 주입
-$('.information-feed').append(html);
+//$('.information-feed').append(html);
 
 
+
+
+
+/*
 // 정적인 페이지일 때만 잠시 임시로 수행
 $(document).ready(()=> {
 	$("#information-detail-" + string.substring(18,)).click(e => {
@@ -159,3 +135,4 @@ $(document).ready(()=> {
 		});
 	});
 });
+*/
