@@ -1,4 +1,3 @@
-
 // 여기서 상세정보 클릭하고, informationNumber값을 먼저 지정
 //function desplayInformation() {
 //	var informationNumber = 00001;
@@ -112,10 +111,11 @@ $.getJSON(serverRoot + "json/information/list", {"pageNo":1, "pageSize":20}, (da
 
 
 
-/*
+
 // 정적인 페이지일 때만 잠시 임시로 수행
 $(document).ready(()=> {
-	$("#information-detail-" + string.substring(18,)).click(e => {
+	$('.information-detail').click(e => {
+        console.log("작동성공");
 		$.get(serverRoot + "information/information-detail.html", (data) => {
 			$('.popup-board-detail-container').html(data);
 			$('.popup-board-detail-container').css("display","flex");
@@ -135,4 +135,3 @@ $(document).ready(()=> {
 		});
 	});
 });
-*/

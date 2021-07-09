@@ -52,6 +52,11 @@
         limit #{startRowNo}, #{pageSize}  
   </select>
   
+  <select id="selectOne" parameterType="int" resultMap="InformationMap">
+    select * from INFORMATION
+    where no = #{value}
+  </select>
+  
   <!--
   <select id="selectOne" parameterType="int" resultMap="InformationMap">
     SELECT b.BNO, mem.NKNM,mem.MPPHO, b.PATH, b.BOCTT, COUNT(DISTINCT l.lno) AS cnt, b.BRTDT 
