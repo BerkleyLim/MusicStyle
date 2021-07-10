@@ -76,6 +76,29 @@ $.getJSON(serverRoot + "json/information/list", {"pageNo":1, "pageSize":20}, (da
     var html = template({information:data});
     $('.information-feed').append(html);
 
+    // 정적인 페이지일 때만 잠시 임시로 수행
+    $(document).ready(()=> {
+        $('.information-detail').click(e => {
+            console.log($('.information-detail').val());
+            $.get(serverRoot + "information/information-detail.html", (data) => {
+                $('.popup-board-detail-container').html(data);
+                $('.popup-board-detail-container').css("display","flex");
+                
+                // 여기서 곡정보 종료
+                $(document).ready( () => {
+                    $(".bgdim").click(e => {
+                        // 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
+                        $('.popup-board-detail-container').removeAttr("style");
+                        
+                        $.get(serverRoot + "/null.html", (data) => {
+                            $('.popup-board-detail-container').html(data);
+                        });
+                    })
+                });
+                
+            });
+        });
+    });
 }) 
 
        //  {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
@@ -113,25 +136,25 @@ $.getJSON(serverRoot + "json/information/list", {"pageNo":1, "pageSize":20}, (da
 
 
 // 정적인 페이지일 때만 잠시 임시로 수행
-$(document).ready(()=> {
-	$('.information-detail').click(e => {
-        console.log("작동성공");
-		$.get(serverRoot + "information/information-detail.html", (data) => {
-			$('.popup-board-detail-container').html(data);
-			$('.popup-board-detail-container').css("display","flex");
-			
-			// 여기서 곡정보 종료
-			$(document).ready( () => {
-				$(".bgdim").click(e => {
-					// 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
-					$('.popup-board-detail-container').removeAttr("style");
-					
-					$.get(serverRoot + "/null.html", (data) => {
-						$('.popup-board-detail-container').html(data);
-					});
-				})
-			});
-			
-		});
-	});
-});
+//$(document).ready(()=> {
+//	$('.information-detail').click(e => {
+//       console.log("작동성공");
+//		$.get(serverRoot + "information/information-detail.html", (data) => {
+//			$('.popup-board-detail-container').html(data);
+//			$('.popup-board-detail-container').css("display","flex");
+//			
+//			// 여기서 곡정보 종료
+//			$(document).ready( () => {
+//				$(".bgdim").click(e => {
+//					// 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
+//					$('.popup-board-detail-container').removeAttr("style");
+//					
+//					$.get(serverRoot + "/null.html", (data) => {
+//						$('.popup-board-detail-container').html(data);
+//					});
+//				})
+//			});
+//			
+//		});
+//	});
+//});
