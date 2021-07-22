@@ -78,15 +78,20 @@ $.getJSON(serverRoot + "json/information/list", {"pageNo":1, "pageSize":20}, (da
 
     // 정적인 페이지일 때만 잠시 임시로 수행
     $(document).ready(()=> {
-        $('.information-detail').click(e => {
-            console.log($('.information-detail').val());
+        function informationDetail(ino) {
             $.get(serverRoot + "information/information-detail.html", (data) => {
-                $('.popup-board-detail-container').html(data);
-                $('.popup-board-detail-container').css("display","flex");
+                source = $('#information-detail-template').html(data);  
+            });
+            template = Handlebars.compile(source);
+            
+            $.getJSON(serverRoot + "json/information/" + ino, (dataNo) => {
+                    html = template()
+                    $('.popup-board-detail-container').append(html);  
+                    $('.popup-board-detail-container').css("display","flex");
                 
-                // 여기서 곡정보 종료
-                $(document).ready( () => {
-                    $(".bgdim").click(e => {
+                    // 여기서 곡정보 종료
+                    $(document).ready( () => {
+                        $(".bgdim").click(e => {
                         // 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
                         $('.popup-board-detail-container').removeAttr("style");
                         
@@ -95,9 +100,9 @@ $.getJSON(serverRoot + "json/information/list", {"pageNo":1, "pageSize":20}, (da
                         });
                     })
                 });
-                
-            });
-        });
+             })
+            
+        }
     });
 }) 
 
