@@ -7,7 +7,7 @@ import com.musicstyle.www.author.hyunsik.lim.pms.domain.Information;
 
 public interface InformationDao {
      List<Information> selectList(Map<String,Object> params);
-//     Information selectOne(int no);
+     Information selectOne(int no);
     // List<Information> commentList(int no);
     // List<Information> hashtagList(int no);
     // List<Information> isLike(int no);

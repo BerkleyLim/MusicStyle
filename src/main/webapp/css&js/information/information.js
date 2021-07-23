@@ -65,47 +65,52 @@ $(document).ready(()=> {
 
 
 
-// 핸들바 템플릿 가져오기
-var source = $("#information-template").html();
-
-// 핸들바 템플릿 컴파일
-var template = Handlebars.compile(source);
 
 
 $.getJSON(serverRoot + "json/information/list", {"pageNo":1, "pageSize":20}, (data) => {
+    // 핸들바 템플릿 가져오기
+    var source = $("#information-template").html();
+
+    // 핸들바 템플릿 컴파일
+    var template = Handlebars.compile(source);
     var html = template({information:data});
     $('.information-feed').append(html);
 
-    // 정적인 페이지일 때만 잠시 임시로 수행
-    $(document).ready(()=> {
-        function informationDetail(ino) {
-            $.get(serverRoot + "information/information-detail.html", (data) => {
-                source = $('#information-detail-template').html(data);  
-            });
-            template = Handlebars.compile(source);
-            
-            $.getJSON(serverRoot + "json/information/" + ino, (dataNo) => {
-                    html = template()
-                    $('.popup-board-detail-container').append(html);  
-                    $('.popup-board-detail-container').css("display","flex");
-                
-                    // 여기서 곡정보 종료
-                    $(document).ready( () => {
-                        $(".bgdim").click(e => {
-                        // 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
-                        $('.popup-board-detail-container').removeAttr("style");
-                        
-                        $.get(serverRoot + "/null.html", (data) => {
-                            $('.popup-board-detail-container').html(data);
-                        });
-                    })
-                });
-             })
-            
-        }
-    });
 }) 
 
+// 곡 정보 상세히 보기, 이벤트 리스너
+//$(document).ready(()=> {
+    function informationDetail(ino) {
+        //console.log(ino);
+        //console.log(serverRoot + "json/information/" + ino);
+        
+        $.getJSON(serverRoot + "json/information/" + ino, (dataNo) => {
+            //var source = $("#information-detail-template").html();  
+            //var source = data;
+            var source = $("#information-detail-template").html();  
+            var template = Handlebars.compile(source);
+            
+            //console.log('compile.error');
+            
+            var html = template({informationDetail:dataNo});
+            $('.popup-board-detail-container').html(html);  
+            $('.popup-board-detail-container').css("display","flex");
+        
+            // 여기서 곡정보 종료
+            $(document).ready( () => {
+                $(".bgdim").click(e => {
+                    // 여기서 이벤트는 style이라는 속성으로 css로 사용 (display:none)
+                    $('.popup-board-detail-container').removeAttr("style");
+                    
+                    $.get(serverRoot + "/null.html", (deleteData) => {
+                        $('.popup-board-detail-container').html(deleteData);
+                    });
+                })
+            });
+        })
+        
+    }
+//});
        //  {no:1, /*username:"berkley", */ view:3000000, artist:"이루마", title:"Yellow moon", 
        //    img:"/image/sample-yiruma-chaconne.png", genre:"뉴에이지", releaseDate:1998, 
        //    albumName:"Yellow moon", /*musicLink:"", */ content:"이 곡은 클래식을 기반해서.....", uploadDate:"2020-05-31"}
