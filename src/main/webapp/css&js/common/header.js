@@ -69,6 +69,13 @@ function eventDropdown() {
 // 음원, 악보, 레스너찾기, 연습실정보, 커뮤니티로 이동 시킨다
 function movePage(page){
     location.replace("/json/" + page + "/");
+    
+    var state = { 'page_id': 1, 'user_id': 5 };
+    var title = "뮤직스타일";
+    var url = '/' + page;
+     
+    //history.pushState(state, title, url);
+    history.pushState(null, null, url);
 }   
 
 
