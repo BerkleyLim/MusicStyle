@@ -42,7 +42,7 @@
 
         <!-- 본문 작성 -> 1200px 기준 -->
         <div class="container">
-            <div class="title-information">
+            <div class="title-practiceRoom">
                 <nav class="navbar title_area">
                     <h1>연습실정보</h1>
                     <div class="input-group-prepend search-box">
@@ -52,14 +52,14 @@
                                aria-haspopup="true" role="button" aria-expanded="false"> 전체
                             </button>
                             <div class="dropdown-menu" role="menu" aria-labelledby="select-box">
-                                <button id="information-select-all" class="dropdown-item" type="button">전체</button>
-                                <button id="information-select-classic" class="dropdown-item" type="button"></button>
-                                <button id="information-select-newage" class="dropdown-item" type="button">뉴에이지</button>
-                                <button id="information-select-jazz" class="dropdown-item" type="button">재즈</button>
-                                <button id="information-select-pop" class="dropdown-item" type="button">팝</button>
-                                <button id="information-select-koreanpop" class="dropdown-item" type="button">가요</button>
-                                <button id="information-select-ost" class="dropdown-item" type="button">OST</button>
-                                <button id="information-select-etc" class="dropdown-item" type="button">그 외</button>
+                                <button id="practiceRoom-select-all" class="dropdown-item" type="button">전체</button>
+                                <button id="practiceRoom-select-classic" class="dropdown-item" type="button"></button>
+                                <button id="practiceRoom-select-newage" class="dropdown-item" type="button">뉴에이지</button>
+                                <button id="practiceRoom-select-jazz" class="dropdown-item" type="button">재즈</button>
+                                <button id="practiceRoom-select-pop" class="dropdown-item" type="button">팝</button>
+                                <button id="practiceRoom-select-koreanpop" class="dropdown-item" type="button">가요</button>
+                                <button id="practiceRoom-select-ost" class="dropdown-item" type="button">OST</button>
+                                <button id="practiceRoom-select-etc" class="dropdown-item" type="button">그 외</button>
                             </div>
                         </div>
                         <div class="input-box">
@@ -76,12 +76,12 @@
                     <button type="button" class="guitar-practiceRoom">기타</button>
                     <button type="button" class="violin-practiceRoom">바이올린</button>
                     <button type="button" class="Kmusic-practiceRoom">국악</button>
-                    <button type="button" class="etc-information">다른 악기</button>
+                    <button type="button" class="etc-practiceRoom">다른 악기</button>
                 </nav>
             </div>
             
-            <div class="information-container">
-                <nav class="navbar information-list-setting"> 
+            <div class="practiceRoom-container">
+                <nav class="navbar practiceRoom-list-setting"> 
                     <h2>전체 연습실</h2>
                     <div class="sub-menu board">
                         <div class="sort-list">
@@ -108,8 +108,29 @@
                 
                 <div class="practiceRoom-feed">
                     <!-- 이부분 handlebars.js로 처리 예정 -->
-                    <div id="information-detail-00001" class="autor_wrap card mb-3">
-                        <div class="information-title">산본 그랜드 피아노 연습실</div>
+                    <div id="practiceRoom-detail-00001" class="autor_wrap card mb-3">
+                        <div class="practiceRoom-title">산본 그랜드 피아노 연습실</div>
+                        <div class="card-body">
+                            <div class="card mb-3 content" >
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="">
+                                            <h5 class="card-title"></h5>
+                                            <p class="card-text">● 위치 : 서울 <br>
+                                                    ● 연습실문의 : 010-3333-4444<br>
+                                                    ● 대여가격 : 협의</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practiceRoom-detail-00001" class="autor_wrap card mb-3">
+                        <div class="practiceRoom-title">산본 그랜드 피아노 연습실</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
@@ -130,7 +151,7 @@
                         </div>
                     </div>
                     <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
+                        <div class="practiceRoom-title">이루마</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
@@ -151,28 +172,7 @@
                         </div>
                     </div>
                     <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title">장르 : 뉴에이지</h5>
-                                            <p class="card-text">● 발매날짜 : 1996년 <br>
-                                                    ● 앨범명 : <br>
-                                                    ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
+                        <div class="practiceRoom-title">이루마</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
