@@ -1,7 +1,7 @@
 
 
 /* 카테코리 안의 있는 헤더 */
-.title-information {
+.title-practiceRoom {
     top: 65px;
     background: #eee;
     padding: 15px 15px 15px 15px;
@@ -10,12 +10,12 @@
     width:1100px;
 }
 
-.title-information .title_area h1 {
+.title-practiceRoom .title_area h1 {
     margin-bottom:40px;
 }
 
 
-.title-information .items_wrap button {
+.title-practiceRoom .items_wrap button {
     height: 36px;
     font: 0/0 a;
     font-size: 1.2em;
@@ -123,7 +123,7 @@ h2 {
     font-weight: normal;
 }
 
-.information-list-setting {
+.practiceRoom-list-setting {
     width:1100px;
     margin-top:50px;
     margin-bottom:50px;
@@ -229,7 +229,7 @@ h2 {
     opacity:0.2;
 }
 
-.information-title {
+.practiceRoom-title {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
     color: inherit;
@@ -237,7 +237,7 @@ h2 {
     border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
-.information-title:first-child {
+.practiceRoom-title:first-child {
     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 }
 
@@ -290,7 +290,7 @@ section[class$=-srh_wrap] {
     overflow:scroll;
 }
 
-.title-detail-information {
+.title-detail-practiceRoom {
     top: 65px;
     background: #eee;
     padding: 15px 15px 15px 15px;

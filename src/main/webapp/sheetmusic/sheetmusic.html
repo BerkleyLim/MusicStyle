@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="UTF-8" />
         <!-- 제목을 뮤직스타일 -->
         <title>뮤직스타일</title>
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="/css&js/common/common.css">
+        <link rel="stylesheet" type="text/css" href="/css&js/user/login.css">
         <link rel="stylesheet" type="text/css" href="/css&js/sheetmusic/sheetmusic.css">
         
         <script>
@@ -37,7 +40,7 @@
 
         <!-- 본문 작성 -> 1200px 기준 -->
         <div class="container">
-            <div class="title-information">
+            <div class="title-sheetmusic">
                 <nav class="navbar title_area">
                     <h1>악보</h1>
                     <div class="input-group-prepend search-box">
@@ -47,14 +50,14 @@
                                aria-haspopup="true" role="button" aria-expanded="false"> 전체장르
                             </button>
                             <div class="dropdown-menu" role="menu" aria-labelledby="select-box">
-                                <button id="information-select-all" class="dropdown-item" type="button">전체장르</button>
-                                <button id="information-select-classic" class="dropdown-item" type="button">클래식</button>
-                                <button id="information-select-newage" class="dropdown-item" type="button">뉴에이지</button>
-                                <button id="information-select-jazz" class="dropdown-item" type="button">재즈</button>
-                                <button id="information-select-pop" class="dropdown-item" type="button">팝</button>
-                                <button id="information-select-koreanpop" class="dropdown-item" type="button">가요</button>
-                                <button id="information-select-ost" class="dropdown-item" type="button">OST</button>
-                                <button id="information-select-etc" class="dropdown-item" type="button">그 외</button>
+                                <button id="sheetmusic-select-all" class="dropdown-item" type="button">전체장르</button>
+                                <button id="sheetmusic-select-classic" class="dropdown-item" type="button">클래식</button>
+                                <button id="sheetmusic-select-newage" class="dropdown-item" type="button">뉴에이지</button>
+                                <button id="sheetmusic-select-jazz" class="dropdown-item" type="button">재즈</button>
+                                <button id="sheetmusic-select-pop" class="dropdown-item" type="button">팝</button>
+                                <button id="sheetmusic-select-koreanpop" class="dropdown-item" type="button">가요</button>
+                                <button id="sheetmusic-select-ost" class="dropdown-item" type="button">OST</button>
+                                <button id="sheetmusic-select-etc" class="dropdown-item" type="button">그 외</button>
                             </div>
                         </div>
                         <div class="input-box">
@@ -64,19 +67,19 @@
                     </div>
                 </nav>
                 <nav class="navbar items_wrap">
-                    <button type="button" class="all-information">전체</button>
-                    <button type="button" class="classic-information">클래식</button>
-                    <button type="button" class="newage-information">뉴에이지</button>
-                    <button type="button" class="jazz-information">재즈</button>
-                    <button type="button" class="korean-pop-information">가요</button>
-                    <button type="button" class="pop-information">팝</button>
-                    <button type="button" class="OST-information">OST</button>
-                    <button type="button" class="etc-information">기타장르</button>
+                    <button type="button" class="all-sheetmusic">전체</button>
+                    <button type="button" class="classic-sheetmusic">클래식</button>
+                    <button type="button" class="newage-sheetmusic">뉴에이지</button>
+                    <button type="button" class="jazz-sheetmusic">재즈</button>
+                    <button type="button" class="korean-pop-sheetmusic">가요</button>
+                    <button type="button" class="pop-sheetmusic">팝</button>
+                    <button type="button" class="OST-sheetmusic">OST</button>
+                    <button type="button" class="etc-sheetmusic">기타장르</button>
                 </nav>
             </div>
             
-            <div class="information-container">
-                <nav class="navbar information-list-setting"> 
+            <div class="sheetmusic-container">
+                <nav class="navbar sheetmusic-list-setting"> 
                     <h2>전체 악보</h2>
                     <div class="sub-menu board">
                         <div class="sort-list">
@@ -103,8 +106,8 @@
                 
                 <div class="sheetmusic-feed">
                     <!-- 이부분 handlebars.js로 처리 예정 -->
-                    <div id="information-detail-00001" class="autor_wrap card mb-3">
-                        <div class="information-title">불꽃심장</div>
+                    <div id="sheetmusic-detail-00001" class="autor_wrap card mb-3">
+                        <div class="sheetmusic-title">불꽃심장</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
@@ -126,7 +129,7 @@
                         </div>
                     </div>
                     <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
+                        <div class="sheetmusic-title">이루마</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
@@ -148,7 +151,7 @@
                         </div>
                     </div>
                     <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
+                        <div class="sheetmusic-title">이루마</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
@@ -170,7 +173,7 @@
                         </div>
                     </div>
                     <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="information-title">이루마</div>
+                        <div class="sheetmusic-title">이루마</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
