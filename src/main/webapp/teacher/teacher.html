@@ -118,21 +118,23 @@
                 
                 <script id="teacher-template" type="text/x-handlebars-template">
                     {{#each teacher}}
-                    <div id="teacher-detail-00001" class="autor_wrap card mb-3 teacher" style="height:250px;">
-                        <div class="teacher-title">클래식, 뉴에이지, 재즈, 반주 등 모든걸 책임지는 레스너</div>
+                    <div class="autor_wrap card mb-3 teacher-detail" style="height:250px;" onclick=teacherDetail({{tno}})>
+                        <div class="teacher-title">{{title}}</div>
                         <div class="card-body">
                             <div class="card mb-3 content" >
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
-                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
+                                        <img src="{{img}}" class="card-img" alt="..." style="width:150px;height:150px">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="">
-                                            <h5 class="card-title">이름 : 루나별</h5>
-                                            <p class="card-text">● 악기 : 피아노<br>
-                                                    ● 장소 : 서울특별시, 신림, 신논현, 강남<br>
-                                                    ● 상세정보 : 안녕하세요 저는 한국예술종합학교를 졸업한.....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <div class="row" style="vertical-align:bottom">
+                                            <h5 class="card-title col-md-8 align-self-center">이름 : {{name}}</h5> <div class="display col align-self-center justify-content-end">조회수 : 10</div>
+                                        </div>
+                                            <p class="card-text">● 악기 : {{instrument}}<br>
+                                                    ● 장소 : {{place}}<br>
+                                                    ● 상세정보 : {{content}}</p>
+                                            <p class="card-text"><small class="text-muted">{{update_date}}</small></p>
                                         </div>
                                     </div>
                                 </div>
@@ -141,6 +143,39 @@
                     </div>
                     {{/each}}
                 </script>
+                
+                
+                <!-- 상세보기 -->
+              <script id="teacher-detail-template" type="text/x-handlebars-template">
+                {{#teacherDetail}}
+                <div class="bgdim"></div>
+                <div class="common-board-detail-container">
+                    <h5 class="title-detail-teacher">{{title}}</h5>
+                    <div style="font-size:9px; color: #555; float:right;">조회수 : 10 </div>
+                    <nav class="nav common-content-detail-container">
+                        <img src="{{img}}" class="teacherProfile">
+                        <div class="detail-container">
+                            <div class="">강의 악기 : {{instrument}}</div>
+                            <div class="">장소 : {{place}}</div>
+                        </div>
+                    </nav>
+                    
+                    <h3>상세정보</h3>
+                    
+                    <!-- 내용 작성 -->
+                    <div style="height:80%">
+                        {{content}}
+                    </div>
+                    
+                    <!-- 여기는 하단에 놓는다 -->
+                    <nav class="navbar information-button-event" >
+                        <div>이전 상세목록</div>
+                        <div>선생님 정보 더보기</div>
+                        <div>다음 상세목록</div>
+                    </nav>
+                </div>
+                {{/teacherDetail}}
+            </script>
             
                 <section class="board-srh_wrap">
                     <div class="paging">
