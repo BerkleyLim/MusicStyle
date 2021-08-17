@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class TeacherController {
     @Autowired ServletContext sc;
 //    
-//    BoardService boardService;
+    TeacherService teacherService;
 //    
     @GetMapping("/")
     public ModelAndView movedTeacher(ModelMap model) {

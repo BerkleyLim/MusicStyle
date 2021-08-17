@@ -9,7 +9,7 @@
      단순히 알아보기 쉬울 뿐만 아니라 
      스프링 프레임워크와 연동할 때 DAO 객체를 자동 생성할 수 있다. 
 -->
-<mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.TeacherDao">
+<mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.sql.TeacherDao">
 
   <resultMap type="Board" id="TeacherMap">
     <id column="bno" property="no"/>
@@ -36,120 +36,6 @@
        스프링 프레임워크와 연동할 때 DAO객체를 자동생성하고 
        그 메서드를 자동생성할 때 사용할 수 있다.
   -->
-  <select id="selectList" 
-          resultMap="TeacherMap"
-          parameterType="map">
-    SELECT b.BNO, b.PATH, COUNT(l.bno) AS cnt 
-    FROM INTR_BOARD b 
-    LEFT OUTER JOIN INTR_LKMB l 
-    ON b.BNO = l.BNO 
-    GROUP BY BNO 
-    order by bno desc
-    limit #{startRowNo}, #{pageSize}
-  </select>
-  
-  <select id="selectOne" parameterType="int" resultMap="TeacherMap">
-    SELECT b.BNO, mem.NKNM,mem.MPPHO, b.PATH, b.BOCTT, COUNT(DISTINCT l.lno) AS cnt, b.BRTDT 
-    FROM INTR_BOARD b 
-    LEFT OUTER JOIN INTR_MEMBER mem 
-    ON b.MEMNO = mem.MEMNO 
-    LEFT OUTER JOIN INTR_LKMB l 
-    ON b.BNO = l.BNO 
-    LEFT OUTER JOIN INTR_BTMACH hm 
-    ON b.BNO = hm.BNO 
-    WHERE b.BNO = #{value}
-  </select>
-  
-  <select id="commentList" parameterType="int" resultMap="TeacherMap">
-    SELECT m.NKNM, b.CRTDT 
-    FROM INTR_BCMMT b 
-    LEFT OUTER JOIN INTR_MEMBER m 
-    ON b.MEMNO = m.MEMNO 
-    WHERE b.BNO = #{value}
-    ORDER BY b.CNO DESC
-  </select>
-  
-  <select id="hashtagList" parameterType="int" resultMap="TeacherMap">
-    SELECT bo.BNO, ht.TNAME
-    FROM INTR_BOARD bo 
-    INNER JOIN INTR_BTMACH mt 
-    ON bo.BNO = mt.BNO 
-    LEFT OUTER JOIN INTR_HASHTAG ht 
-    ON mt.HTNO = ht.HTNO
-    WHERE bo.BNO = #{value}
-  </select>
-  
-  <select id="isLike" parameterType="int" resultType="Map">
-    SELECT m.MEMNO, l.BNO 
-    FROM INTR_MEMBER m 
-    INNER JOIN INTR_LKMB l 
-    ON m.MEMNO = l.MEMNO 
-    WHERE m.MEMNO = #{value}
-  </select>
-  
-  <select id="isLikeOne" parameterType="map" resultType="Map">
-    SELECT * FROM `INTR_LKMB` WHERE BNO = #{no} AND MEMNO = #{memNo}
-  </select>
-  
-  <insert id="addLike" parameterType="map">
-    INSERT INTO `INTR_LKMB` (`LNO`, `BNO`, `MEMNO`) VALUES (NULL, #{no}, #{memNo});
-  </insert>
-  
-  <delete id="deleteLike" parameterType="map">
-    DELETE FROM `INTR_LKMB` WHERE BNO = #{no} AND MEMNO = #{memNo}
-  </delete>
-  
-  <insert id="addcomment" parameterType="map">
-    INSERT INTO `INTR_BCMMT` (`CNO`, `BNO`, `CMCTT`, `CRTDT`, `MEMNO`) 
-    VALUES (NULL, #{no}, now(), #{cmmt}, #{memNo})
-  </insert>
-  
-  <select id="isWriter" parameterType="map" resultMap="TeacherMap">
-    SELECT BNO FROM `INTR_BOARD` WHERE BNO = #{no} AND MEMNO = #{memNo}
-  </select>
-  
-  <select id="selectLink" parameterType="int" resultType="Map">
-    SELECT * FROM `INTR_BRLK` WHERE BNO = #{no}
-  </select>
-  
-  <delete id="deleteLink" parameterType="int">
-    DELETE FROM `INTR_BRLK` WHERE `INTR_BRLK`.`LNO` = #{no}
-  </delete>
-  
-  <insert id="addLink" parameterType="Board">
-    INSERT INTO `INTR_BRLK` (`LNO`, `BNO`, `POX`, `POY`, `PRNM`, `ADDR`)
-    VALUES (NULL, #{no}, #{poX}, #{poY}, #{product}, #{address})
-  </insert>
-  
-  <select id="selectLinkOne" resultMap="TeacherMap">
-    SELECT * FROM `INTR_BRLK` ORDER BY LNO DESC LIMIT 1
-  </select>
-  
-   <insert id="insert" parameterType="Board">
-    INSERT INTO `INTR_BOARD`
-    (`MEMNO`, `BRTDT`, `BOCTT`, `PATH`) 
-    VALUES (#{memno},now(),#{content},#{path});
-  </insert>
-  
-  <select id="selectRecent" resultMap="TeacherMap">
-    select bno from INTR_BOARD order by bno desc limit 1 
-  </select>
-  
-  <select id="selectMyBoard" resultMap="TeacherMap">
-    SELECT b.BNO, COUNT(DISTINCT l.LNO) cnt, COUNT(DISTINCT c.CNO) cmtCnt, b.PATH
-    FROM INTR_BOARD b 
-        LEFT OUTER JOIN INTR_LKMB l 
-        ON b.BNO = l.BNO 
-        LEFT OUTER JOIN INTR_BCMMT c 
-        ON b.BNO = c.BNO 
-    WHERE b.memno = #{bno}
-    GROUP BY b.BNO
-    ORDER BY b.BNO DESC
-  </select>
-  
-  <select id="totalBoardCount" parameterType="int" resultType="int">
-    SELECT COUNT(*) FROM INTR_BOARD WHERE MEMNO = #{no}
-  </select>
   
 </mapper>
 
