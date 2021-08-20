@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,8 +25,10 @@ public class TeacherController {
     }
     
     @RequestMapping("list")
-    public Object list() {
-        return teacherService.list
+    public Object list(
+            @RequestParam(value="pageNo", defaultValue="1") int pageNo,
+            @RequestParam(value="pageSize", defaultValue="10") int pageSize) {
+        return teacherService.list(pageNo, pageSize);
     }
 //    public BoardController(BoardService boardService) {
 //        this.boardService = boardService;
