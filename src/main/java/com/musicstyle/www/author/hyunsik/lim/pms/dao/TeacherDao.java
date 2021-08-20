@@ -7,4 +7,5 @@ import com.musicstyle.www.author.hyunsik.lim.pms.domain.Teacher;
 
 public interface TeacherDao {
     List<Teacher> selectList(Map<String,Object> param);
+    Teacher selectOne(int tno);
 }

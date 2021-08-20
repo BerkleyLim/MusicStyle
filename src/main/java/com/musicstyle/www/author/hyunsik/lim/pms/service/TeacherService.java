@@ -6,4 +6,5 @@ import com.musicstyle.www.author.hyunsik.lim.pms.domain.Teacher;
 
 public interface TeacherService {
     List<Teacher> list(int pageNo, int pageSize);
+    Teacher get(int no);
 }

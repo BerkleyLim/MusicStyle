@@ -12,10 +12,10 @@ import com.musicstyle.www.author.hyunsik.lim.pms.service.TeacherService;
 @Service
 public class TeacherServiceImpl implements TeacherService {
     
-    TeacherDao teacherdao;
+    TeacherDao teacherDao;
     
-    public TeacherServiceImpl(TeacherDao teacherdao) {
-        teacherdao = this.teacherdao;
+    public TeacherServiceImpl(TeacherDao teacherDao) {
+        teacherDao = this.teacherDao;
     }
 
     @Override
@@ -29,5 +29,11 @@ public class TeacherServiceImpl implements TeacherService {
         System.out.println(pageSize);
        
         return teacherDao.selectList(params);
+    }
+    
+    @Override
+    public Teacher get(int no) {
+        // TODO Auto-generated method stub
+        return teacherDao.selectOne(no);
     }
 }

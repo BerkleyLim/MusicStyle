@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.musicstyle.www.author.hyunsik.lim.pms.service.TeacherService;
+
 @RestController
 @RequestMapping("/teacher")
 public class TeacherController {
@@ -19,6 +21,11 @@ public class TeacherController {
     @GetMapping("/")
     public ModelAndView movedTeacher(ModelMap model) {
         return new ModelAndView("forward:/teacher/teacher.html");
+    }
+    
+    @RequestMapping("list")
+    public Object list() {
+        return teacherService.list
     }
 //    public BoardController(BoardService boardService) {
 //        this.boardService = boardService;

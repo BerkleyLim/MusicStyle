@@ -33,6 +33,11 @@
         select * from TEACHER
         limit #{startRowNo}, #{pageSize};
     </select>
+    
+    <select id="selectOne" resultMap="Teacher" parameterType="int">
+        select * from TEACHER
+        where no=#{tno};
+    </select>
 </mapper>
 
 
