@@ -38,14 +38,13 @@
   -->
   
   <!-- 양식 -->
-  <select id="DAO_Method_name" resultMap="BoardMap" parameterType="map">
+ <!--  <select id="DAO_Method_name" resultMap="BoardMap" parameterType="map" >
     <!-- SQL 문법 입력 -->
-  </select>
+<!-- </select> -->  
   
-  <select id="DAO_Method_name" parameterType="int" resultType="int">
+ <!--  <select id="DAO_Method_name" resultMap="BoardMap" parameterType="map" >
     <!-- SQL 문법 입력 -->
-  </select>
-  
+<!-- </select> -->   
   
   <!-- 예시 -->
   <select id="selectList" 

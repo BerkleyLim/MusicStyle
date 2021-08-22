@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 제목을 뮤직스타일 -->
+        <title>뮤직스타일</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css&js/common/common.css">
+        <link rel="stylesheet" type="text/css" href="css&js/introduction/introduction.css">
+        <link rel="stylesheet" type="text/css" href="css&js/information/information.css">
+        <link rel="stylesheet" type="text/css" href="css&js/music/music.css">
+        <link rel="stylesheet" type="text/css" href="css&js/sheetmusic/sheetmusic.css">
+        <link rel="stylesheet" type="text/css" href="css&js/practiceRoom/practiceRoom.css">
+        <link rel="stylesheet" type="text/css" href="css&js/community/community.css">
+        <link rel="stylesheet" type="text/css" href="css&js/user/login.css">
+        <link rel="stylesheet" type="text/css" href="css&js/main.css">
+        
+                
+    </head>
+    <body>
+        <!-- 헤더 -->
+        <header id="header">
+            <!-- 헤더 작성 : 맴버, 소개, 곡목록, 악보, 음원, 커뮤니티, 다국어기능, 검색 -->
+<div class="header">
+    <nav class="hd-content1 navbar">
+        <div class="header_logo">
+            <a href="/">로고(추가예정)<img src=""></a>
+        </div>
+        <div class="header_search">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button id="hd-search-menu" class="btn hd-dropdown-color dropdown-toggle" 
+                        type="button" data-target="#" data-toggle="dropdown" 
+                        aria-haspopup="true" role="button" aria-expanded="false" style="width:140px">전체</button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="hd-search-menu">
+                        <button id="hd-search-all" class="dropdown-item" type="button">전체</button>
+                        <button id="hd-search-information" class="dropdown-item" type="button">곡목록</button>
+                        <button id="hd-search-media" class="dropdown-item" type="button">영상</button>
+                        <button id="hd-search-sheetmusic" class="dropdown-item" type="button">악보</button>
+                        <button id="hd-search-music" class="dropdown-item" type="button">음원</button>
+                        <button id="hd-search-community"class="dropdown-item" type="button">커뮤니티</button>
+                        <button id="hd-search-teacher" class="dropdown-item" type="button">레슨샘찾기</button>
+                        <button id="hd-search-practiceRoom" class="dropdown-item" type="button">연습실정보</button>
+                    </div>
+                </div>
+                <input id="hd-search" type="text" class="form-control header-search-input" 
+                       aria-label="Text input with dropdown button">
+                <i class="fas fa-search header-icon" onclick=""></i>
+            </div>
+        </div>
+
+        <!-- 여기는 그냥 100px의 여백 두기 -->
+        <div style="display:flex;width:100px;"></div>
+
+        <div class="header_language">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" 
+                       id="select-language" data-target="#" data-toggle="dropdown" 
+                       aria-haspopup="true" role="button" aria-expanded="false">
+                  Korean
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="select-language">
+                  <button id="select-korean" class="dropdown-item" type="button">Korean</button>
+                  <button id="select-japanese" class="dropdown-item" type="button">Japanese</button>
+                  <button id="select-English" class="dropdown-item" type="button">English</button>
+                  <button id="" class="dropdown-item" type="button">etc..</button>
+                </div>
+              </div>
+        </div>
+        
+        <i class="fas fa-list header-icon"></i>
+
+        <div class="header_mymenu">
+            <button type="button">
+	            <i class="fas fa-user-circle"></i>
+	            <span class="header-nickname">홍길동</span>
+            </button>
+        </div>
+        
+    </nav>
+    
+    <nav class="hd-content2 navbar">
+        <button type="button" id="hd-introduction">소개</button>
+        <button type="button" id="hd-information" >곡정보</button>
+        <button type="button" id="hd-media" >영상</button>
+        <button type="button" id="hd-music" >음원</button>
+        <button type="button" id="hd-sheetmusic" >악보</button>
+        <button type="button" id="hd-teacher" >레스너찾기</button>
+        <button type="button" id="hd-practiceRoom" >연습실정보</button>
+        <button type="button" id="hd-community" >커뮤니티</button>
+    </nav>
+    
+</div>
+        </header>
+        
+
+        <!-- 여기는 로그인 팝업 실시! -->
+        <div class="login-popup-container"></div>
+        
+        
+        <!-- 본문 작성 -> 1200px 기준 -->
+        <div class="container">
+            <!-- 이미지 메인 -->
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-banner-cover">
+                    <img src="image/sample-banner.jpg" style="width:800px; height:200px;">
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+
+            <!-- 오늘의 소식 -->
+            <div class="main-common-header">
+                <h1>오늘의 소식</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <div class="banner">다음은 베너로 추가</div>
+            
+            <!-- 공지사항 및 QnA -->
+            <div class="row">
+                <div class="col main-notice">
+                    <div class="main-common-header">
+                        <h1>공지사항</h1>
+                        <p>&gt; 더보기</p>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>뮤직스타일 이용안내</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>경고 및 제재사항</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col main-QnA">
+                    <div class="main-common-header">
+                        <h1>QnA</h1>
+                        <p>&gt; 더보기</p>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>영상 올리는 방법이 궁금해여</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>마이페이지 기능은 무엇인가요?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 곡정보 -->
+            <div class="main-common-header">
+                <h1>곡 정보</h1>
+                <p onclick="movePage('information')">&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-main-board-card-container event-information">
+                    <button type="button" class="common-main-card">1</button>
+                    <button type="button" class="common-main-card">2</button>
+                    <button type="button" class="common-main-card">3</button>
+                    <button type="button" class="common-main-card">4</button>
+                    <button type="button" class="common-main-card">5</button>
+                    <button type="button" class="common-main-card">6</button>
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+            
+            <!-- 영상 -->
+            <div class="main-common-header">
+                <h1>영상</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-main-board-card-container event-media">
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+            
+            <!-- 음원 -->
+            <div class="main-common-header">
+                <h1>음원</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-main-board-card-container event-music">
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+            
+            <!-- 악보 -->
+            <div class="main-common-header">
+                <h1>악보</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-main-board-card-container event-sheetmusic">
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+
+            <!-- 레스너 찾기 -->
+            <div class="main-common-header">
+                <h1>레스너 찾기</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-main-board-card-container event-teacher">
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+
+            <!-- 연습실 정보 -->
+            <div class="main-common-header">
+                <h1>연습실 정보</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-main-board-card-container event-practiceRoom">
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+
+            <!-- 커뮤니티 -->
+            <div class="main-common-header">
+                <h1>커뮤니티</h1>
+                <p>&gt; 더보기</p>
+            </div>
+            <nav class="nav justify-content-center event-main-container">
+                <div class="event-icon-prev"><i class="fas fa-angle-left"></i></div>
+                <div class="event-main-board-card-container event-community">
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                    <button type="button" class="common-main-card"></button>
+                </div>
+                <div class="event-icon-next"><i class="fas fa-angle-right"></i></div>
+            </nav>
+            <!-- container 안에 있는거 끝 -->
+        </div>
+        
+
+
+        <!-- 푸터 -->
+        <footer id="footer"></footer>
+        
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="css&js/common/common.js"></script>
+        <script src="css&js/common/header.js"></script>
+        <script src="css&js/common/footer.js"></script>
+        <script src="css&js/introduction/introduction.js"></script>
+        <script src="css&js/information/information.js"></script>
+        <script src="css&js/music/music.js"></script>
+        <script src="css&js/teacher/teacher.js"></script>
+        <script src="css&js/practiceRoom/practiceRoom.js"></script>
+        <script src="css&js/community/community.js"></script>
+        <script src="css&js/user/login.js"></script>
+        
+
+    </body>
+</html>
