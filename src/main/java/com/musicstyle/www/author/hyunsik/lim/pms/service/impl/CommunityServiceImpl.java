@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import com.musicstyle.www.author.hyunsik.lim.pms.service.BoardService;
 
 @Service
-public class CommunityServiceImpl implements BoardService {
+public class CommunityServiceImpl implements CommunityService {
 
     // BoardDao boardDao;
     // MainDao mainDao;

@@ -1,6 +1,6 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.service;
 
-public interface communityService {
+public interface CommunityService {
     // List<Board> list(int pageNo, int pageSize);
     // Board get(int no);
     // List<Board> commentList(int no);
