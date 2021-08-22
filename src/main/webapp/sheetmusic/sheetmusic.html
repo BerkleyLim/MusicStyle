@@ -105,96 +105,70 @@
                 </nav>
                 
                 <div class="sheetmusic-feed">
-                    <!-- 이부분 handlebars.js로 처리 예정 -->
-                    <div id="sheetmusic-detail-00001" class="autor_wrap card mb-3">
-                        <div class="sheetmusic-title">불꽃심장</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="/image/sheetmusic-Sakurafish.pdf" class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title">장르 : 뉴에이지, 가요</h5>
-                                            <p class="card-text">● 사용악기 :  <br>
-                                                    ● 난이도 :  <br>
-                                                    ● 작곡가명 : 스탈어린이<br>
-                                                    ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="sheetmusic-title">이루마</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title">장르 : 뉴에이지, 가요</h5>
-                                            <p class="card-text">● 사용악기 :  <br>
-                                                    ● 난이도 :  <br>
-                                                    ● 작곡가명 : 스탈어린이<br>
-                                                    ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="sheetmusic-title">이루마</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title">장르 : 뉴에이지, 가요</h5>
-                                            <p class="card-text">● 사용악기 :  <br>
-                                                    ● 난이도 :  <br>
-                                                    ● 작곡가명 : 스탈어린이<br>
-                                                    ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="autor_wrap card mb-3" style="height:250px;">
-                        <div class="sheetmusic-title">이루마</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title">장르 : 뉴에이지, 가요</h5>
-                                            <p class="card-text">● 사용악기 :  <br>
-                                                    ● 난이도 :  <br>
-                                                    ● 작곡가명 : 스탈어린이<br>
-                                                    ● 상세정보 : 이 곡은 클래식을 기반으로 해서....</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+            
+                <!-- 이부분 handlebars.js로 처리 예정 -->
+                <script id="sheetmusic-template" type="text/x-handlebars-template">
+                    {{#each sheetmusic}}
+                    <div class="autor_wrap card mb-3 sheetmusic-detail" onclick="sheetmusicDetail(sno)">
+                        <div class="sheetmusic-title">{{title}}</div>
+                        <div class="card-body">
+                            <div class="card mb-3 content" >
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src={{img}} class="card-img" alt="..." style="width:150px;height:150px">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="">
+                                            <h5 class="card-title">장르 : {{genre}}</h5>
+                                            <p class="card-text">● 사용악기 : {{instrument}} <br>
+                                                    ● 난이도 : {{level}} <br>
+                                                    ● 작곡가명 : {{artist}}<br>
+                                                    ● 상세정보 : {{content}}</p>
+                                            <p class="card-text"><small class="text-muted">{{update_date}}</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+            
+            <!-- 상세보기 -->
+              <script id="sheetmusic-detail-template" type="text/x-handlebars-template">
+                {{#sheetmusicDetail}}
+                <div class="bgdim"></div>
+                <div class="common-board-detail-container">
+                    <h5 class="title-detail-information">{{artist}} - {{title}}</h5>
+                    <div style="font-size:9px; color: #555; float:right;">조회수 : 1000 </div>
+                    <nav class="nav common-content-detail-container">
+                        <img src="{{img}}" class="album">
+                        <div class="detail-container">
+                            <div class="">장르 : {{genre}}</div>
+                            <div class="">사용악기 : {{instrument}}년</div>
+                            <div class="">난이도 : {{level}}</div>
+                            <div class="">작곡가 명 : {{artist}}</div>
+                            <div class="">음원 듣기 : {{musicLink}}</div>
+                        </div>
+                    </nav>
+                    
+                    <h3>상세정보</h3>
+                    
+                    <!-- 내용 작성 -->
+                    <div style="height:80%">
+                        {{content}}
+                    </div>
+                    
+                    <!-- 여기는 하단에 놓는다 -->
+                    <nav class="navbar information-button-event" >
+                        <div>이전 상세목록</div>
+                        <div>악보 더보기</div>
+                        <div>다음 상세목록</div>
+                    </nav>
+                </div>
+                {{/informationDetail}}
+              </script>
             
                 <section class="board-srh_wrap">
                     <div class="paging">

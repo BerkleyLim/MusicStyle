@@ -107,50 +107,72 @@
                 </nav>
                 
                 <div class="practiceRoom-feed">
-                    <!-- 이부분 handlebars.js로 처리 예정 -->
-                    <div id="practiceRoom-detail-00001" class="autor_wrap card mb-3">
-                        <div class="practiceRoom-title">산본 그랜드 피아노 연습실</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title"></h5>
-                                            <p class="card-text">● 위치 : 서울 <br>
-                                                    ● 연습실문의 : 010-3333-4444<br>
-                                                    ● 대여가격 : 협의</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="practiceRoom-detail-00001" class="autor_wrap card mb-3">
-                        <div class="practiceRoom-title">산본 그랜드 피아노 연습실</div>
-                        <div class="card-body">
-                            <div class="card mb-3 content" >
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <img src="/image/sample-yiruma-chaconne.png" class="card-img" alt="..." style="width:150px;height:150px">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="">
-                                            <h5 class="card-title"></h5>
-                                            <p class="card-text">● 위치 : 경기도 <br>
-                                                    ● 연습실문의 : 010-7248-1111<br>
-                                                    ● 대여가격 : 협의</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                
+                <!-- 이부분 handlebars.js로 처리 예정 -->
+                <script id="practiceRoom-template" type="text/x-handlebars-template">    
+                    {{#each practiceRoom}}
+                    <div class="autor_wrap card mb-3 practiceRoom-detail" onClick="practiceRoomDetail(pno)">
+                        <div class="practiceRoom-title">{{title}}</div>
+                        <div class="card-body">
+                            <div class="card mb-3 content" >
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{img}}" class="card-img" alt="..." style="width:150px;height:150px">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="">
+                                            <h5 class="card-title"></h5>
+                                            <p class="card-text">
+                                                    ● 성함 : {{name}} <br>
+                                                    ● 위치 : {{place}} <br>
+                                                    ● 문의 번호 : {{phone}}<br>
+                                                    ● 대여가격 : {{price}}
+                                                    ● 상세정보 : {{content}}</p>
+                                            <p class="card-text"><small class="text-muted">{{updateDate}}</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+                
+               <!-- 상세보기 -->
+               <script id="practiceRoom-detail-template" type="text/x-handlebars-template">
+	                {{#practiceRoomDetail}}
+	                <div class="bgdim"></div>
+	                <div class="common-board-detail-container">
+	                    <h5 class="title-detail-information">{{artist}} - {{title}}</h5>
+	                    <div style="font-size:9px; color: #555; float:right;">조회수 : {{view}} </div>
+	                    <nav class="nav common-content-detail-container">
+	                        <img src="{{img}}" class="album">
+	                        <div class="detail-container">
+	                            <div class="">성함 : {{name}}</div>
+	                            <div class="">위치 : {{place}}년</div>
+	                            <div class="">문의 번호 : {{phone}}</div>
+	                            <div class="">대여가격 : {{price}}</div>
+	                        </div>
+	                    </nav>
+	                    
+	                    <h3>상세정보</h3>
+	                    
+	                    <!-- 내용 작성 -->
+	                    <div style="height:80%">
+	                        {{content}}
+	                    </div>
+	                    
+	                    <!-- 여기는 하단에 놓는다 -->
+	                    <nav class="navbar information-button-event" >
+	                        <div>이전 상세목록</div>
+	                        <div>연습실 더보기</div>
+	                        <div>다음 상세목록</div>
+	                    </nav>
+	                </div>
+	                {{/practiceRoomDetail}}
+               </script>
+                
             
                 <section class="board-srh_wrap">
                     <div class="paging">
