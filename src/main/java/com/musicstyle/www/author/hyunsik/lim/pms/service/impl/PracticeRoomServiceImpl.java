@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.musicstyle.www.author.hyunsik.lim.pms.dao.PracticeRoomDao;
 import com.musicstyle.www.author.hyunsik.lim.pms.domain.PracticeRoom;
-import com.musicstyle.www.author.hyunsik.lim.pms.service.BoardService;
+import com.musicstyle.www.author.hyunsik.lim.pms.service.PracticeRoomService;
 
 @Service
-public class PracticeRoomServiceImpl implements BoardService {
+public class PracticeRoomServiceImpl implements PracticeRoomService {
     PracticeRoomDao PracticeRoomDao;
    // MainDao mainDao;
    // TagDao tagDao;

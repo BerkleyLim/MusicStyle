@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.musicstyle.www.author.hyunsik.lim.pms.dao.MediaDao;
 import com.musicstyle.www.author.hyunsik.lim.pms.domain.Media;
-import com.musicstyle.www.author.hyunsik.lim.pms.service.BoardService;
+import com.musicstyle.www.author.hyunsik.lim.pms.service.MediaService;
 
 @Service
-public class MediaServiceImpl implements BoardService {
+public class MediaServiceImpl implements MediaService {
 
     MediaDao MediaDao;
    // MainDao mainDao;

@@ -11,7 +11,7 @@
 -->
 <mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.UserDao">
 
-  <resultMap type="Board" id="UserMap">
+  <resultMap type="User" id="UserMap">
     <id column="bno" property="no"/>
     <result column="memno" property="memno"/>
     <result column="path" property="path"/>

@@ -7,22 +7,19 @@ import org.springframework.stereotype.Service;
 
 import com.musicstyle.www.author.hyunsik.lim.pms.dao.SheetMusicDao;
 import com.musicstyle.www.author.hyunsik.lim.pms.domain.SheetMusic;
-import com.musicstyle.www.author.hyunsik.lim.pms.service.BoardService;
+import com.musicstyle.www.author.hyunsik.lim.pms.service.SheetMusicService;
 
 @Service
-public class SheetMusicServiceImpl implements BoardService {
+public class SheetMusicServiceImpl implements SheetMusicService {
     SheetMusicDao SheetMusicDao;
-   // MainDao mainDao;
-   // TagDao tagDao;
    
-    public SheetMusicServiceImpl(/*TagDao tagDao, BoardDao boardDao,*/ SheetMusicDao SheetMusicDao) {
+    public SheetMusicServiceImpl(SheetMusicDao SheetMusicDao) {
         this.SheetMusicDao = SheetMusicDao;
-//        this.mainDao = mainDao;
-//        this.tagDao = tagDao;
     }
    
     @Override
     public List<SheetMusic> list(int pageNo, int pageSize) {
+        // TODO Auto-generated method stub
         HashMap<String,Object> params = new HashMap<>();
         params.put("startRowNo", (pageNo - 1) * pageSize);
         params.put("pageSize", pageSize);
@@ -33,9 +30,10 @@ public class SheetMusicServiceImpl implements BoardService {
         return SheetMusicDao.selectList(params);
     }
     
-     @Override
-     public SheetMusic get(int no) {
-         return SheetMusicDao.selectOne(no);
-     }
+    @Override
+    public SheetMusic get(int no) {
+        // TODO Auto-generated method stub
+        return SheetMusicDao.selectOne(no);
+    }
    
 }

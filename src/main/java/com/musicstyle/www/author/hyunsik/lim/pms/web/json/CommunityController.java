@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/board")
+@RequestMapping("/community")
 public class CommunityController {
 //    
 //    @Autowired ServletContext sc;
