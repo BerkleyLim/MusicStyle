@@ -1,6 +1,10 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.service;
 
+import com.musicstyle.www.author.hyunsik.lim.pms.domain.SheetMusic;
+
 public interface BoardService {
+
+    SheetMusic get(int no);
     // List<Board> list(int pageNo, int pageSize);
     // Board get(int no);
     // List<Board> commentList(int no);
