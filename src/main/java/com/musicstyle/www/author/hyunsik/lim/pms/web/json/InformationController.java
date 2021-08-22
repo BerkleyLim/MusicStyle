@@ -49,6 +49,7 @@ public class InformationController {
     }
     
     
+    // 리스트 상세 조회
     @RequestMapping("{ino}")
     public Object listDetail(@PathVariable int ino) {
         return informationService.get(ino);
