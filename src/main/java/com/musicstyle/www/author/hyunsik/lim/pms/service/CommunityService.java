@@ -1,22 +1,22 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.service;
 
 public interface CommunityService {
-    // List<Board> list(int pageNo, int pageSize);
-    // Board get(int no);
-    // List<Board> commentList(int no);
-    // List<Board> hashtagList(int no);
-    // List<Board> selectListInMain();
-    // List<Board> isLike(int no);
+    // List<Community> list(int pageNo, int pageSize);
+    // Community get(int no);
+    // List<Community> commentList(int no);
+    // List<Community> hashtagList(int no);
+    // List<Community> selectListInMain();
+    // List<Community> isLike(int no);
     // int addLike(int no, int memNo);
     // int deleteLike(int no, int memNo);
-    // List<Board> isLikeOne(int no, int memNo);
+    // List<Community> isLikeOne(int no, int memNo);
     // int addcomment(int no, String cmmt, int memNo);
-    // Board isWriter(int no, int memNo);
-    // List<Board> selectLink(int no);
+    // Community isWriter(int no, int memNo);
+    // List<Community> selectLink(int no);
     // int deleteLink(int no);
-    // int addLink(Board board);
-    // Board selectLinkOne();
-    // void add(Board board);
-    // List<Board> mpboard(int userNo);
-    // int mpBoardCnt(int userNo);
+    // int addLink(Community Community);
+    // Community selectLinkOne();
+    // void add(Community Community);
+    // List<Community> mpCommunity(int userNo);
+    // int mpCommunityCnt(int userNo);
 }

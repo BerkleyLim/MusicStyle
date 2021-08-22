@@ -2,7 +2,7 @@ package com.musicstyle.www.author.hyunsik.lim.pms.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.musicstyle.www.author.hyunsik.lim.pms.service.BoardService;
+import com.musicstyle.www.author.hyunsik.lim.pms.service.CommunityService;
 
 @Service
 public class CommunityServiceImpl implements CommunityService {

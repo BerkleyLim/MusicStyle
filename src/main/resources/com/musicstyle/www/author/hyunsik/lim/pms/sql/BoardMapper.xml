@@ -38,7 +38,7 @@
   -->
   
   <!-- 양식 -->
-  <select id="DAO_Method_name" resultMap="BoardMap" parameterType="int">
+  <select id="DAO_Method_name" resultMap="BoardMap" parameterType="map">
     <!-- SQL 문법 입력 -->
   </select>
   
