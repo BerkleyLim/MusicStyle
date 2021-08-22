@@ -37,14 +37,6 @@
        그 메서드를 자동생성할 때 사용할 수 있다.
   -->
   
-  <!-- 양식 -->
- <!--  <select id="DAO_Method_name" resultMap="BoardMap" parameterType="map" >
-    <!-- SQL 문법 입력 -->
-<!-- </select> -->  
-  
- <!--  <select id="DAO_Method_name" resultMap="BoardMap" parameterType="map" >
-    <!-- SQL 문법 입력 -->
-<!-- </select> -->   
   
   <!-- 예시 -->
   <select id="selectList" 
