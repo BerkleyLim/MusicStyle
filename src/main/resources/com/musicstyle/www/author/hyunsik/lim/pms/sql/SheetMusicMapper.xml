@@ -11,7 +11,7 @@
 -->
 <mapper namespace="com.musicstyle.www.author.hyunsik.lim.pms.sql.SheetMusicDao">
 
-  <resultMap type="Board" id="SheetMusicMap">
+  <resultMap type="SheetMusic" id="SheetMusicMap">
     <id column="bno" property="no"/>
     <result column="memno" property="memno"/>
     <result column="path" property="path"/>
@@ -37,14 +37,14 @@
        그 메서드를 자동생성할 때 사용할 수 있다.
   -->
   <select id="selectList"
-          resultMap="InformationMap"
+          resultMap="SheetMusicMap"
           parameterType="map">
-    select * from INFORMATION
+    select * from SHEETMUSIC
         limit #{startRowNo}, #{pageSize}  
   </select>
   
-  <select id="selectOne" parameterType="int" resultMap="InformationMap">
-    select * from INFORMATION
+  <select id="selectOne" parameterType="int" resultMap="SheetMusicMap">
+    select * from SHEETMUSIC
     where no = #{value}
   </select>
 </mapper>

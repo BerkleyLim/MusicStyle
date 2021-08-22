@@ -68,14 +68,23 @@ function eventDropdown() {
 // 여기는 바로 페이지 이동없이 바로 마이페이지, 소개페이지, 곡정보
 // 음원, 악보, 레스너찾기, 연습실정보, 커뮤니티로 이동 시킨다
 function movePage(page){
+    
+    // 1번 => 현재폼의 정보를 다음 페이지로 전송
+    //document.id.action="/json/" + page + "/";
+    //document.id.submit();
+    
+    // 2번(값을 정해야 하는 프로퍼티) => 순서대로 이동
+    //location.href="/json/" + page + "/";
+    
+    // 3번(파라미터로 동작하는 메소드) => 페이지 자체 변경
     location.replace("/json/" + page + "/");
     
-    var state = { 'page_id': 1, 'user_id': 5 };
-    var title = "뮤직스타일";
-    var url = '/' + page;
-     
-    //history.pushState(state, title, url);
-    history.pushState(null, null, url);
+//    var state = { 'page_id': 1, 'user_id': 5 };
+//    var title = "뮤직스타일";
+//    var url = '/' + page;
+//     
+//    //history.pushState(state, title, url);
+//    history.pushState(null, null, url);
 }   
 
 
