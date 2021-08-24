@@ -38,8 +38,8 @@ public class PracticeRoomController {
     
     
     // 리스트 상세 조회
-    @RequestMapping("{ino}")
-    public Object listDetail(@PathVariable int ino) {
-        return practiceRoomService.get(ino);
+    @RequestMapping("{pno}")
+    public Object listDetail(@PathVariable int pno) {
+        return practiceRoomService.get(pno);
     }
 }

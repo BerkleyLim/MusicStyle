@@ -37,8 +37,8 @@ public class SheetMusicController {
     
     
     // 리스트 상세 조회
-    @RequestMapping("{ino}")
-    public Object listDetail(@PathVariable int ino) {
-        return sheetMusicService.get(ino);
+    @RequestMapping("{sno}")
+    public Object listDetail(@PathVariable int sno) {
+        return sheetMusicService.get(sno);
     }
 }

@@ -5,6 +5,7 @@ import javax.servlet.ServletContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +30,12 @@ public class TeacherController {
             @RequestParam(value="pageNo", defaultValue="1") int pageNo,
             @RequestParam(value="pageSize", defaultValue="10") int pageSize) {
         return teacherService.list(pageNo, pageSize);
+    }
+    
+    // 리스트 상세 조회
+    @RequestMapping("{tno}")
+    public Object listDetail(@PathVariable int tno) {
+        return teacherService.get(tno);
     }
 //    public BoardController(BoardService boardService) {
 //        this.boardService = boardService;

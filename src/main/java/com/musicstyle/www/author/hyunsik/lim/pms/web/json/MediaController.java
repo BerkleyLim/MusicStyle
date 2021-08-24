@@ -38,9 +38,9 @@ public class MediaController {
     
     
     // 리스트 상세 조회
-    @RequestMapping("{ino}")
-    public Object listDetail(@PathVariable int ino) {
-        return mediaService.get(ino);
+    @RequestMapping("{,no}")
+    public Object listDetail(@PathVariable int mno) {
+        return mediaService.get(mno);
     }
     
 }
