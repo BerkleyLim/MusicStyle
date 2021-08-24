@@ -29,12 +29,12 @@
        스프링 프레임워크와 연동할 때 DAO객체를 자동생성하고 
        그 메서드를 자동생성할 때 사용할 수 있다.
   -->
-    <select id="selectList" resultMap="TeacherMap" parameterType="Map">
+    <select id="selectList" resultMap="TeacherMap" parameterType="map">
         select * from TEACHER
         limit #{startRowNo}, #{pageSize};
     </select>
     
-    <select id="selectOne" resultMap="Teacher" parameterType="int">
+    <select id="selectOne" resultMap="TeacherMap" parameterType="int">
         select * from TEACHER
         where no=#{tno};
     </select>
