@@ -68,3 +68,32 @@ function signUp() {
 	})
 }
 
+
+
+// 페이스북 로그인 구현
+ window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 'your-app-id',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v11.0'
+    });
+  };
+  
+  
+FB.ui({
+  method: 'share',
+  href: 'https://developers.facebook.com/docs/'
+}, function(response){});
+
+FB.login(function(response) {
+    if (response.authResponse) {
+     console.log('Welcome!  Fetching your information.... ');
+     FB.api('/me', function(response) {
+       console.log('Good to see you, ' + response.name + '.');
+     });
+    } else {
+     console.log('User cancelled login or did not fully authorize.');
+    }
+});
+
