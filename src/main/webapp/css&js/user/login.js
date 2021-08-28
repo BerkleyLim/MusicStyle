@@ -69,6 +69,8 @@ function signUp() {
 }
 
 
+// 카카오
+
 
 // 페이스북 로그인 구현
 window.fbAsyncInit = function() {
