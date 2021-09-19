@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+    
+
+    <!-- 다음과 같이 spring IoC를 사용할 환경 변수를 세팅해준다. -->
+    <context:component-scan base-package="com.musicstyle.www.author.hyunsik.lim.pms">
+        <context:exclude-filter type="regex" expression="com.musicstyle.www.author.hyunsik.lim.pms.web.*"/>
+    </context:component-scan>
+    
+    <!-- mybatis 환경설정 -->
+    <bean id="sqlSessionFactory"
+          class="org.mybatis.spring.SqlSessionFactoryBean">
+          <!-- 데이터 소스 -->
+      <property name="dataSource" ref="dataSource" />
+      <property name="mapperLocations" 
+                value="classpath*:com/musicstyle/www/author/hyunsik/lim/pms/sql/*Mapper.xml" />  
+      <property name="typeAliasesPackage" 
+                value="com.musicstyle.www.author.hyunsik.lim.pms.domain"/>   
+    </bean>
+    
+    <!-- 데이터베이스 연결(JDBC) -->
+    <bean id="dataSource" 
+          class="org.apache.commons.dbcp.BasicDataSource" 
+          destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+    </bean>
+    
+    <!-- 데이터 베이스 연결할 경로 -->
+    <context:property-placeholder 
+        location="classpath:jdbc.properties,
+        		  classpath:aws.properties"/> 
+        
+    <!-- spring 으로 이용한 데이터베이스 사용방법 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.musicstyle.www.author.hyunsik.lim.pms.dao" />
+    </bean>
+    
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="list*" read-only="true"/>
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- aop 관련 -->
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" 
+                     pointcut="execution(* com.musicstyle.www.author.hyunsik.lim.pms.service.impl.*.*(..))"/>
+    </aop:config>     
+</beans>
+
+
+
+
+
+

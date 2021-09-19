@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    
+    <!-- 여기서  autowired할 패키지경로를 기재,  
+         여러개의 패키지로 구분할수도 있고(콤모로 구분), 상위 패키지를 한번에 등록 가능
+         autowired할 클래스에 @component로 표시
+         @RequestMapping을 제외한 @Controller, @Repository, @Service 
+         이들은 모두 @Component를 메타 어노테이션으로 갖고 있는 어노테이션이다.
+    -->
+    <context:component-scan base-package="com.musicstyle.www.author.hyunsik.lim.pms.web">
+        <context:exclude-filter type="aspectj" 
+            expression="com.musicstyle.www.author.hyunsik.lim.pms.web.*Controller"/>
+    </context:component-scan>
+    
+    <mvc:annotation-driven enable-matrix-variables="true"/>
+
+</beans>
+
+
+
+
+
+
