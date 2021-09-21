@@ -11,10 +11,10 @@ $.get(serverRoot + "header.html", (data) => {
 	// 헤더의 프로필 창 클릭시 (여기는 임시용으로 사용) => 나중에 moveMypage()로 이용하여 처리할 것이다
 	$(document).ready( () => {
 		$(".header_mymenu button").click(e => {
-			loginDesplay();
-//			$.get(serverRoot + "/mypage/mypage.html", (data) => {
-//				$(".container").html(data);
-//			})
+			//loginDesplay();
+			$.get(serverRoot + "/mypage/mypage.html", (data) => {
+				$(".container").html(data);
+			})
 		})
 	})
 });
