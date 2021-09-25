@@ -1,13 +1,22 @@
 package com.musicstyle.www.author.hyunsik.lim.pms.web.json;
 
+import javax.servlet.ServletContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    @Autowired ServletContext sc;
+    
+    @RequestMapping("/")
+    public ModelAndView moveMypage() {
+        return new ModelAndView("forward:/mypage/mypage.html");
+    }
 //    
-//    @Autowired ServletContext sc;
 //    
 //    BoardService boardService;
 //    

@@ -7,10 +7,16 @@ function moveMypage() {
 			//$(".container").css("padding-top", "100px");
 			//$(".hd-content2").css("display", "none"); // 마이페이지 할때 기능 넣기
 			
-			$.get(serverRoot + "/mypage/list.html", (data) => {
+			$.get(serverRoot + "/mypage/mypage.html", (data) => {
 				$(".container").html(data);
 			});
 		});
 	})
 }
 
+
+function moveMyInformation() {
+    $.getJSON(serverRoot + "/mypage/myInformation.html", (data) => {
+        $(".mypage-target-container").html(data);
+    })
+}

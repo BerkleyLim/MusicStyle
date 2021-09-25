@@ -12,9 +12,11 @@ $.get(serverRoot + "header.html", (data) => {
 	$(document).ready( () => {
 		$(".header_mymenu button").click(e => {
 			//loginDesplay();
-			$.get(serverRoot + "/mypage/mypage.html", (data) => {
-				$(".container").html(data);
-			})
+//			$.get(serverRoot + "json/user/", (data) => {
+//				$(".container").html(data);
+//			})
+        movePage("/user");
+
 		})
 	})
 });
